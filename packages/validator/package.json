@@ -1,6 +1,6 @@
 {
   "name": "@roshin/extend-validator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "JS 检测器",
   "main": "index.js",
   "module": "dist/extend-validator.esm-bundler.js",
