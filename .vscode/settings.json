@@ -1,0 +1,142 @@
+// 编辑器常规设置
+
+{
+  "cSpell.userWords": [], // only use words from .cspell.json
+  "cSpell.enabled": true,
+  "search.followSymlinks": false, // 关闭rg.exe进程(是否在搜索中跟踪符号链接)
+  "npm.enableScriptExplorer": true, // 启用NPM脚本视图
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  /* ------ 主题美化 ------ */
+  "editor.fontFamily": "'Source Code Pro', 'Menlo', Consolas, Monaco, 'Courier New'", // 控制字体系列。
+  "editor.fontWeight": "normal", // 控制字体粗细
+  "editor.fontSize": 14, // 以像素为单位控制字号。
+  "editor.lineHeight": 24, // 设置行高，使用 0 的话将通过字号计算行高
+  "editor.lineNumbers": "on", // 控制行号显示，可能的值为 "开"、"关"、"相对"，"相对"将显示从当前光标位置开始计数的行数。
+  "editor.fontLigatures": true, // 启用字体连字
+  "editor.renderWhitespace": "none", // 控制编辑器中呈现空白字符的方式
+  "editor.roundedSelection": false, // 控制选区是否圆角
+  "workbench.iconTheme": "seti", // 指定在工作台中使用的图标主题，或指定 "null" 以不显示任何文件图标
+  "workbench.colorTheme": "One Dark Pro", // 指定用在工作台中的颜色主题
+  "editor.cursorBlinking": "blink", // 控制光标的动画样式。
+  // "editor.minimap.enabled": true,							// 控制是否显示缩略图。
+  // "editor.minimap.renderCharacters": true,		// 渲染每行的实际字符，而不是色块。
+  // "editor.codeLens": true,										// 控制是否在编辑器中显示 CodeLens。
+  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?", // 执行文字相关的导航或操作时用作文字分隔符的字符
+
+  /* ------ 编辑器本身 ------ */
+  "editor.largeFileOptimizations": false, // 对大型文件进行特殊处理，禁用某些内存密集型功能
+  "editor.snippetSuggestions": "top", // 控制代码片段是否与其他建议一起显示及其排列的位置。
+  "files.eol": "\n", // 换行
+  // 控制是否在键入时自动显示建议。
+  "editor.quickSuggestions": {
+    "other": true, // 其他地方显示建议
+    "comments": true, // 注释内显示建议
+    "strings": true // 字符串内显示建议
+  },
+  // 根据活动编辑器控制窗口标题。变量是根据上下文替换的:
+  // - "${activeEditorShort}": 文件名 (例如 myFile.txt)。
+  // - "${activeEditorMedium}": 相对于工作区文件夹的文件路径 (例如, myFolder/myFileFolder/myFile.txt)。
+  // - "${activeEditorLong}": 文件的完整路径 (例如 /Users/Development/myFolder/myFileFolder/myFile.txt)。
+  // - "${activeFolderShort}": 文件所在的文件夹名称 (例如, myFileFolder)。
+  // - "${activeFolderMedium}": 相对于工作区文件夹的、包含文件的文件夹的路径, (例如 myFolder/myFileFolder)。
+  // - "${activeFolderLong}": 文件所在文件夹的完整路径 (例如 /Users/Development/myFolder/myFileFolder)。
+  // - "${folderName}": 文件所在工作区文件夹的名称 (例如 myFolder)。
+  // - "${folderpath}": 文件所在工作区文件夹的路径 (例如 /Users/Development/myFolder)。
+  // - "${rootName}": 工作区的名称 (例如, myFolder 或 myWorkspace)。
+  // - "${rootPath}": 工作区的文件路径 (例如 /Users/Development/myWorkspace)。
+  // - "${appName}": 例如 VS Code。
+  // - "${dirty}": 表示活动编辑器为脏的脏指示器。
+  // - "${separator}": 一种条件分隔符 ("-"), 仅在被包含值或静态文本的变量包围时显示。
+  "window.title": "${dirty}${activeEditorShort}${separator}${folderName}${separator}${rootPath}",
+  "window.zoomLevel": 0, // 调整窗口的缩放级别。原始大小是 0，每次递增(例如 1)或递减(例如 -1)表示放大或缩小 20%。也可以输入小数以便以更精细的粒度调整缩放级别。
+  // 在使用搜索功能时，将这些文件夹/文件排除在外
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/target": true,
+    "**/logs": true
+  },
+
+  /* ------ 关于缩进 ------ */
+  "editor.detectIndentation": true, // 全部统一成2空格缩进
+  "editor.tabSize": 2, // 重新设定tabsize
+  "editor.insertSpaces": true, // 使用空格缩进
+  "editor.renderIndentGuides": true, // 是否显示缩进参考线
+
+  /* ------ 关于Git ------ */
+  "git.confirmSync": true, // 同步 Git 存储库前请先进行确认。
+  "git.enableSmartCommit": true, // 在没有暂存的更改时提交所有更改
+
+  /* ------ 关于保存 ------ */
+  "editor.formatOnType": true, // 控制编辑器在键入一行后是否自动格式化该行
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "javascript.format.enable": false, // JavaScript 格式化程序
+  "editor.formatOnSave": false, // 每次保存的时候自动格式化
+  // 在保存时运行的代码操作类型。
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true, // 控制是否应在文件保存时运行自动修复操作
+    "source.fixAll.eslint": true // 控制是否应在文件保存时通过eslint运行自动修复操作
+  },
+
+  /* ------ 代码格式检查 eslint ------ */
+  "eslint.enable": true, // 启用eslint
+  "eslint.run": "onType", // 在save（onSave）或type（onType）上运行linter
+  // eslint 配置选项
+  "eslint.options": {
+    // "plugins": ["html"],
+    // "configFile": ".eslintrc.js",
+    // "extensions": [".js", ".vue", ".ejs", "ts", ".tsx"]
+  },
+  // 应该由ESLint验证的语言id数组
+  "eslint.validate": [
+    "javascript", // 用eslint的规则检测js文件
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html"
+    // { "language": "typescript", "autoFix": true },			// 检测 typescript 文件，开启保存自动修复的功能
+    // { "language": "html", "autoFix": true },						// 检测 html 文件，开启保存自动修复的功能
+    // { "language": "vue", "autoFix": true }							// 检测 vue 文件，开启保存自动修复的功能
+  ],
+
+  /* ------ 代码规范 prettier ------ */
+  // "prettier.singleQuote": true,							// 使用带引号替代双引号
+  // "prettier.semi": true,										// 去掉代码结尾的分号
+  // "prettier.arrowParens": "always",					// 箭头函数加上括号
+  "prettier.eslintIntegration": true,
+
+  /* ------ javascript ------ */
+  "javascript.updateImportsOnFileMove.enabled": "always", // import路径移动或者重命名时，自动更新
+  "javascript.implicitProjectConfig.checkJs": false, // 启用或禁用 JavaScript 文件的语义检查
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true, // 让函数(名)和后面的括号之间加个空格
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // 针对 [javascript] ，配置默认格式化程序
+  },
+
+  /* ------ 其他 ------ */
+  "[html]": { "editor.defaultFormatter": "vscode.html-language-features" }, // 针对 [html] 语言，配置默认格式化程序
+  // 配置语言的文件关联
+  "files.associations": {
+    "*.cnf": "ini",
+    "*.css": "css",
+    "*.scss": "scss",
+    "*.pss": "postcss",
+    "*.js": "javascript"
+  }
+}

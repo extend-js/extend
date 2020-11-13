@@ -1,0 +1,29 @@
+# 规范整理目录和文件名称(https://ls-lint.org)
+# 规则
+#  regex => 正则表达式
+#  lowercase => 每个字母必须小写 忽略非字母
+#  camelcase || camelCase => 字符串必须为驼峰 仅允许使用字母和数字
+#  pascalcase || PascalCase => 字符串必须为驼峰(首字母大写) 仅允许使用字母和数字
+#  snakecase || snake_case => 字符串必须为蛇形命名(下划线相连) snake_case 仅小写字母，数字 和 _
+#  kebabcase || kebab-case => 字符串必须为短横线命名(短横线相连) 仅小写字母，数字 和 -
+#  pointcase || point.case => 字符串必须为点号命名(点号相连) 仅小写字母，数字 和 .
+# 目录名称可以通过 .dir 定义规则
+
+ls:
+  packages:
+    .dir: kebabcase | lowercase
+
+  packages/*/{src,__tests__}:
+    .js: camelCase | PascalCase
+    .ts: camelCase | PascalCase
+    .d.ts: camelCase | PascalCase
+    .spec.ts: camelCase | PascalCase
+    .mock.ts: camelCase | PascalCase
+    .test.ts: camelCase | PascalCase
+
+ignore:
+  - .git 
+  - dist
+  - temp
+  - coverage
+  - node_modules

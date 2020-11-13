@@ -1,0 +1,15 @@
+// 编辑器推荐插件
+
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint", // 代码格式检查
+    "esbenp.prettier-vscode", // 代码格式化
+    "loiane.ts-extension-pack", // typescript 扩展插件
+    "zhuangtongfa.material-theme", // 主题
+    "qinjia.seti-icons", // 字体图标
+    "goessner.mdmath", // markdown 预览
+    "davidanson.vscode-markdownlint", // markdown 快捷键
+    "donjayamanne.githistory", // git历史提交
+    "eamodio.gitlens"
+  ]
+}

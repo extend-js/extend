@@ -1,0 +1,40 @@
+{
+  // 编译选项,可以被忽略，这时编译器会使用默认值
+  "compilerOptions": {
+    "baseUrl": ".", // 解析非相对模块名的基准目录
+    "outDir": "dist", // 重定向输出目录
+    "sourceMap": false, // 生成相应的 .map文件
+    "target": "ESNext", // 指定ECMAScript目标版本
+    // "module": "CommonJS", // 指定生成哪个模块系统代码
+    "moduleResolution": "node", // 决定如何处理模块
+    "allowJs": true, // 允许编译 js 文件
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入
+    "strict": true, // 启用所有严格类型检查选项
+    "noUnusedLocals": true, // 若有未使用的局部变量则抛错
+    "experimentalDecorators": true, // 启用实验性的ES装饰器
+    "resolveJsonModule": true, // 包含导入带 .json 扩展的模块
+    "esModuleInterop": true, // 允许从没有设置默认导出的模块中默认导入
+    "removeComments": false, // 删除所有注释，除了以 /!*开头的版权信息。
+    "jsx": "preserve", // 在 .tsx文件里支持JSX
+    "lib": ["ESNext", "DOM"], // 指定默认注入的库的列表
+    "types": ["typescript", "jest", "ts-jest", "node"], // 要包含的类型声明文件名列表
+    "rootDir": ".", // 仅用来控制输出的目录结构
+    "noImplicitAny": false, // 在表达式和声明上有隐含的 any类型时报错
+    "declaration": true, // 生成相应的 .d.ts文件。
+    // "noUnusedParameters": true, // 若有未使用的参数则抛错
+    // "isolatedModules": true, // 将每个文件作为单独的模块
+    // "forceConsistentCasingInFileNames": true, // 禁止对同一个文件的不一致的引用
+    // "noFallthroughCasesInSwitch": true, // 报告switch语句的fallthrough错误。（即，不允许switch的case语句贯穿）
+    // 模块名到基于 baseUrl 的路径映射的列表(就是别名)
+    "paths": {
+      "@/*": ["packages/*/src"],
+      "extends-internal": ["packages/internal/src"],
+      "extends-validator": ["packages/validator/src"]
+    }
+  },
+  "include": [
+    "packages/global.d.ts",
+    "packages/*/src"
+  ],
+  "exclude": ["/node_modules/**", "/scripts/**"]
+}

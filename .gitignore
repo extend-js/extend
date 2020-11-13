@@ -1,0 +1,35 @@
+# 关于日志文件
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 关于运行时产生的数据
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# 依赖库
+node_modules/
+jspm_packages/
+
+# 关于缓存
+.npm
+.eslintcache
+.cache
+.sass-cache
+
+# 生成输出
+.nuxt
+*.tgz
+.next
+dist
+scripts-temp
+coverage
+temp
+
+# IDE / Editor
+.idea
+.DS_Store
