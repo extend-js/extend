@@ -1,6 +1,6 @@
 {
   "name": "@roshin/extend-internal",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "提供内部使用的公共方法，不作为依赖包发布",
   "main": "index.js",
   "module": "dist/extend-internal.esm-bundler.js",

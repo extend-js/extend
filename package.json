@@ -1,7 +1,7 @@
 {
   "name": "@roshin/extend",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "一个轻量级 JS/TS 扩展工具库",
   "license": "MIT",
   "workspaces": [
