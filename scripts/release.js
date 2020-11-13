@@ -153,6 +153,8 @@ async function prompts() {
  * @param { string } _version 将要更新的目标版本
  */
 function updateVersions(_version) {
+  if (!_version) return;
+
   updatePackage(resolveRoot(), _version); // 更新根目录的 package.json 版本以及依赖关系
   // 更新所有包的 package.json 版本以及依赖关系
   targets.forEach((target) => {
@@ -241,6 +243,7 @@ async function publishPackage(_name, _version, runIfNotDry) {
  * @param { string } _version 版本号
  */
 async function changelog(_version) {
+  if (!_version) return;
   await run(`yarn`, ['changelog']);
 
   const { stdout } = await run('git', ['diff'], { stdio: 'pipe' });
@@ -258,6 +261,7 @@ async function changelog(_version) {
  * @param { string } _version 版本号
  */
 async function commitGit(_version) {
+  if (!_version) return;
   await runIfNotDry('git', ['tag', `v${_version}`]);
   await runIfNotDry('git', ['push', 'origin', `refs/tags/v${_version}`]);
   await runIfNotDry('git', ['push']);
