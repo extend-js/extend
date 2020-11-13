@@ -1,0 +1,46 @@
+{
+  "name": "@roshin/extend-validator",
+  "version": "0.0.0",
+  "description": "JS 检测器",
+  "main": "index.js",
+  "module": "dist/extend-validator.esm-bundler.js",
+  "types": "dist/extend-validator.d.ts",
+  "license": "MIT",
+  "buildOptions": {
+    "name": "extendValidator",
+    "formats": [
+      "esm-bundler",
+      "esm-browser",
+      "cjs",
+      "global"
+    ]
+  },
+  "unpkg": "dist/extend-validator.global.js",
+  "jsdelivr": "dist/extend-validator.global.js",
+  "sideEffects": false,
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "keywords": [
+    "roshin",
+    "typescript",
+    "javascript",
+    "js",
+    "utils",
+    "rollup",
+    "lerna"
+  ],
+  "author": {
+    "name": "Roshin",
+    "email": "1425258785@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/extend-js/extend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/extend-js/extend/issues"
+  },
+  "homepage": "https://github.com/extend-js/extend/tree/master/packages/validator#readme"
+}

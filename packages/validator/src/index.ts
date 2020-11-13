@@ -1,0 +1,9 @@
+export { default as getTag } from './getTag';
+export { default as isNil } from './isNil';
+export { default as isObject } from './isObject';
+export { default as isObjectLike } from './isObjectLike';
+export { default as isObjectHost } from './isObjectHost';
+export { default as isObjectPlain } from './isObjectPlain';
+export { default as isFunction } from './isFunction';
+export { default as isNative } from './isNative';
+export { default as isNumber } from './isNumber';
