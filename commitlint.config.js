@@ -31,7 +31,7 @@ const types = [
 ];
 
 // 支持的 scope
-const scopes = ['init', 'validator', 'scripts'];
+const scopes = ['init', 'validator', 'scripts', 'test'];
 
 function parseMessage(message) {
   const PATTERN = /^(\w+)(?:\(([^)]+)\))?\\: (.+)$/;
