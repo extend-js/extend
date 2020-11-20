@@ -22,7 +22,7 @@
     "test": "jest --runInBand",
     "test:coverage": "jest --coverage --verbose -u --bail",
     "test:watch": "jest --runInBand --watch",
-    "cov": "codecov",
+    "codecov": "codecov",
     "doc": "typedoc dist/ --target ES6 --mode file --out docs --externalPattern",
     "doc:json": "typedoc dist/ --target ES6 --mode file --json docs/typedoc.json",
     "release": "node scripts/release.js",
