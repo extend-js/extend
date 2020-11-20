@@ -1,0 +1,19 @@
+# 指定运行环境为 node
+language: node_js
+
+# 指定 nodejs 版本
+node_js:
+  - '10'
+  - '12'
+  - '14'
+
+# 缓存 node_js 依赖，提升第二次构建的效率
+cache:
+  directories:
+    - node_modules
+    - '$HOME/.npm'
+
+# 运行的脚本命令
+script:
+  - npm run test:coverage # 单元测试并收集测试覆盖信息
+  - npm run codecov # 将单元测试结果上传到 codecov
