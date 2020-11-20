@@ -119,7 +119,10 @@
   // "prettier.semi": true,										// 去掉代码结尾的分号
   // "prettier.arrowParens": "always",					// 箭头函数加上括号
   "prettier.eslintIntegration": true,
-
+  
+  /* ------ i18n 插件 ------ */
+  "i18n-ally.displayLanguage": "zh-CN",
+  
   /* ------ javascript ------ */
   "javascript.updateImportsOnFileMove.enabled": "always", // import路径移动或者重命名时，自动更新
   "javascript.implicitProjectConfig.checkJs": false, // 启用或禁用 JavaScript 文件的语义检查
