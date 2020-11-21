@@ -123,19 +123,10 @@ export default {};
     );
   }
 
-  // __tests__/index.test.ts
-  const testsPath = resolveTarget(target, `__tests__/index.test.ts`);
+  // __tests__/.gitkeep
+  const testsPath = resolveTarget(target, `__tests__/.gitkeep`);
   if (!fse.existsSync(testsPath)) {
-    fse.outputFileSync(
-      testsPath,
-      `
-describe('template', () => {
-  it('常规测试', () => {
-    expect('template').toMatch(/template/);
-  });
-});
-    `.trim() + '\n'
-    );
+    fse.outputFileSync(testsPath, ``);
   }
 
   // index.js

@@ -23,39 +23,28 @@ import 'jest-extended'; // 导入一部分匹配器
  *   expect(compileAndroidCode).toThrow();
  *   expect(compileAndroidCode).toThrow(ConfigError); //判断抛出异常
  * }）
- *
- * 重写 console 的部分函数，以测试 console 的输出
- * @type {typeof console}
  */
 
-console = Object.assign(
-  console,
-  ['log', 'info', 'warn', 'error'].reduce((res, k) => {
-    Reflect.set(res, k, jest.fn(Reflect.get(console, k)));
-    return res;
-  }, Object.create(null))
-);
+/**
+ * 在每个 test 用例执行前执行
+ * 在单个测试文件内，它对每个 test 都有效，如果它放在 describe 内部，那么它只对 describe 内部的 test 用例有效
+ */
+beforeEach(() => {});
 
-let warn: jest.SpyInstance;
-const asserted: Set<string> = new Set();
+/**
+ * 在每个 test 用例执行后执行
+ * 同 beforeEach
+ */
+afterEach(() => {});
 
-beforeEach(() => {
-  asserted.clear();
-  warn = jest.spyOn(console, 'warn');
-  warn.mockImplementation(() => {});
-});
+/**
+ * 在所有 test 用例执行前执行
+ * 同 beforeEach
+ */
+beforeAll(() => {});
 
-afterEach(() => {
-  const assertedArray = Array.from(asserted);
-  const nonAssertedWarnings = warn.mock.calls
-    .map((args) => args[0])
-    .filter((received) => {
-      return !assertedArray.some((assertedMsg) => {
-        return received.indexOf(assertedMsg) > -1;
-      });
-    });
-  warn.mockRestore();
-  if (nonAssertedWarnings.length) {
-    throw new Error(`测试用例引发意外警告:\n - ${nonAssertedWarnings.join('\n - ')}`);
-  }
-});
+/**
+ * 在所有 test 用例执行后执行
+ * 同 beforeEach
+ */
+afterAll(() => {});
