@@ -7,13 +7,32 @@ node_js:
   - '12'
   - '14'
 
+# 指定分支，只有指定的分支提交时才会运行脚本
+branchs:
+  only:
+    - master
+
+# 安装依赖之前，先升级 yarn 版本
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- -- version 0.23.2
+  - export PATH="$HOME/.yarn/bin:$PATH"
+
+# 安装依赖
+install:
+  - yarn
+
 # 缓存 node_js 依赖，提升第二次构建的效率
 cache:
   directories:
     - node_modules
-    - '$HOME/.npm'
+    - $HOME/.cache/yarn
 
 # 运行的脚本命令
 script:
-  - npm run test:coverage # 单元测试并收集测试覆盖信息
-  - npm run codecov # 将单元测试结果上传到 codecov
+  - yarn test:coverage # 单元测试并收集测试覆盖信息
+  - yarn codecov # 将单元测试结果上传到 codecov
+
+# 在多个操作系统上运行
+os:
+  - linux
+  - osx
