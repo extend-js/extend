@@ -16,6 +16,16 @@ module.exports = {
   setupFilesAfterEnv: ['./tests/jest-start.ts'],
   // Jest应该在其中输出其覆盖文件的目录
   coverageDirectory: 'coverage',
+  // 如果测试覆盖率未达到 100%，则测试失败
+  // 这里可用于预防代码构建和提交
+  // coverageThreshold: {
+  //   global: {
+  //     branches: 100,
+  //     functions: 100,
+  //     lines: 100,
+  //     statements: 100
+  //   }
+  // },
   // 模块使用的文件扩展名数组
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   // 设置识别哪些文件是测试文件
