@@ -1,5 +1,12 @@
+// 参考文档： https://www.jianshu.com/p/51523a1c6fe1?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
 {
   "MD012": {
     "maximum": 1
+  },
+  "MD013": {
+    "line_length": 130
+  },
+  "MD033": {
+    "allowed_elements": ["p", "a", "img"]
   }
 }

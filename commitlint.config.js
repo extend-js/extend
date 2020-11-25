@@ -11,8 +11,8 @@
  */
 
 'use strict';
-const message = process.env['HUSKY_GIT_PARAMS'];
-const fs = require('fs');
+// const message = process.env['HUSKY_GIT_PARAMS'];
+// const fs = require('fs');
 
 // 支持的 type
 const types = [
@@ -32,38 +32,38 @@ const types = [
 ];
 
 // 支持的 scope
-const scopes = ['init', 'validator', 'scripts', 'test'];
+// const scopes = ['init', 'validator', 'scripts', 'test'];
 
-function parseMessage(message) {
-  const PATTERN = /^(\w+)(?:\(([^)]+)\))?\\: (.+)$/;
-  const match = PATTERN.exec(message);
-  if (!match) {
-    return null;
-  }
-  return {
-    type: match[1] || null,
-    scope: match[2] || null
-  };
-}
+// function parseMessage(message) {
+//   const PATTERN = /^(\w+)(?:\(([^)]+)\))?\\: (.+)$/;
+//   const match = PATTERN.exec(message);
+//   if (!match) {
+//     return null;
+//   }
+//   return {
+//     type: match[1] || null,
+//     scope: match[2] || null
+//   };
+// }
 
-function getScopesRule() {
-  const messages = fs.readFileSync(message, { encoding: 'utf-8' });
-  const parsed = parseMessage(messages.split('\n')[0]);
-  if (!parsed) {
-    return [2, 'always', scopes];
-  }
-  const { scope, type } = parsed;
-  if (scope && !scopes.includes(scope) && type !== 'release' && !/module:.+/.test(scope)) {
-    return [2, 'always', scopes];
-  } else {
-    return [2, 'always', []];
-  }
-}
+// function getScopesRule() {
+//   const messages = fs.readFileSync(message, { encoding: 'utf-8' });
+//   const parsed = parseMessage(messages.split('\n')[0]);
+//   if (!parsed) {
+//     return [2, 'always', scopes];
+//   }
+//   const { scope, type } = parsed;
+//   if (scope && !scopes.includes(scope) && type !== 'release' && !/module:.+/.test(scope)) {
+//     return [2, 'always', scopes];
+//   } else {
+//     return [2, 'always', []];
+//   }
+// }
 
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
-    'type-enum': [2, 'always', types], // 类型规则
-    'scope-enum': getScopesRule // 作用域规则
+    'type-enum': [2, 'always', types] // 类型规则
+    // 'scope-enum': getScopesRule // 作用域规则
   }
 };

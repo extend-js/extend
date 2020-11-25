@@ -14,11 +14,11 @@ module.exports = {
     { value: 'wip', name: 'wip: 正在进行中的' }
   ],
   // 指定特定项目的范围
-  scopes: [
-    { name: 'init' }, // 初始化
-    { name: 'validator' }, // 验证器
-    { name: 'scripts' } // 脚本
-  ],
+  // scopes: [
+  //   { name: 'init' }, // 初始化
+  //   { name: 'validator' }, // 验证器
+  //   { name: 'scripts' } // 脚本
+  // ],
   // allowTicketNumber: false,
   // isTicketNumberRequired: false,
   // ticketNumberRegExp: '\\d{1,5}',
@@ -33,13 +33,13 @@ module.exports = {
   // },
   // 覆盖消息
   messages: {
-    type: "选择要提交的更改类型:",
-    scope: '\n表示此更改的范围(可选):',
-    customScope: '表示此更改的范围:', // allowCustomScopes 为 true 时启用
-    subject: '写一个简短的，即时的变更描述:\n',
-    body: '提供更改的详细说明(可选)。使用 "|" 换行:\n',
-    breaking: '列出所有更改(可选):\n',
-    footer: '列出此更改关闭的问题(可选). 例如: #31, #34:\n',
+    type: "选择更改的类型:",
+    scope: '表示此次更改的范围(可选):',
+    customScope: '表示此次更改的范围:', // allowCustomScopes 为 true 时启用
+    subject: '写一个简短的更改描述:',
+    body: '详细的更改说明(可选)。使用 "|" 表示换行:',
+    breaking: '列出所有更改(可选):',
+    footer: '列出此次更改关闭的问题(可选). 例如: #31, #34:',
     confirmCommit: '是否确实要继续上面的提交?',
   },
   allowCustomScopes: true, // 将选项自定义选项添加到范围选择，以便您仍然可以在需要时键入范围
