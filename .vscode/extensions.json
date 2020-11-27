@@ -10,6 +10,7 @@
     "goessner.mdmath", // markdown 预览
     "davidanson.vscode-markdownlint", // markdown 快捷键
     "donjayamanne.githistory", // git历史提交
-    "eamodio.gitlens"
+    "alan.stylus", // stylus 插件
+    "eamodio.gitlens",
   ]
 }
