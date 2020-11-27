@@ -7,6 +7,6 @@
     "line_length": 130
   },
   "MD033": {
-    "allowed_elements": ["p", "a", "img"]
+    "allowed_elements": ["p", "a", "img", "div", "Bit", "h2"]
   }
 }

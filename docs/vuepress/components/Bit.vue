@@ -1,7 +1,7 @@
 <template>
   <p class="bit-sponsor">
     <a href="https://bit.dev/?utm_source=vue&utm_medium=vue&utm_campaign=vue&utm_term=vue&utm_content=vue" target="_blank">
-      <span>This project is sponsored by</span>
+      <span>本项目由以下机构赞助</span>
       <img alt="bit" src="https://raw.githubusercontent.com/vuejs/vuejs.org/master/themes/vue/source/images/bit.png" />
     </a>
   </p>
