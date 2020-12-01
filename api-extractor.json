@@ -32,7 +32,7 @@
     },
     "tsdocMessageReporting": {
       "default": {
-        "logLevel": "none"
+        "logLevel": "warning"
       },
       "tsdoc-undefined-tag": {
         "logLevel": "none"
