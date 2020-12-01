@@ -4,7 +4,7 @@
     "maximum": 1
   },
   "MD013": {
-    "line_length": 130
+    "line_length": "strict"
   },
   "MD033": {
     "allowed_elements": ["p", "a", "img", "div", "Bit", "h2"]

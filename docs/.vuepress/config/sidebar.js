@@ -3,7 +3,7 @@ module.exports = {
     {
       title: '指南',
       collapsable: false,
-      children: ['/guide/introduction', '/guide/chapter', '/guide/install', '/guide/repo', '/guide/pull']
+      children: ['/guide/introduction', '/guide/install', '/guide/commitConvention','/guide/repo', '/guide/pull']
     }
   ],
   '/basic': [

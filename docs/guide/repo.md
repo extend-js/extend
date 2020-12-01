@@ -1,52 +1,32 @@
-# 贡献指南
-
-您好！我很高兴迎您为此扩展库做贡献。在提交您的文稿之前，请确保花一点时间并通读以下准则：
-
-- [行为准则](https://www.contributor-covenant.org/version/1/0/0)
-- [拉取请求准则](#拉取请求准则)
-- [开发设置](#开发设置)
-- [项目结构](#项目结构)
-- [测试](#测试)
-
-## 拉取请求准则
-
-- 从基础分支签出一个主题分支，例如: `master`，然后合并回该分支。
-
-- 如果添加新功能：
-  - 添加随附的测试用例。
-  - 提供令人信服的理由来添加此功能。理想情况下，您应该先打开一个建议问题，然后再进行处理。
-
-- 如果要修复错误：
-  - 如果要解决特殊问题，请在PR标题中添加 `(fix #xxxx[,#xxxx])` （#xxxx 是 issue ID）以获得更好的发布日志，例如 `update entities encoding/decoding (fix #3899)`
-  - 提供PR中错误的详细说明。首选现场演示。
-  - 如果适用，添加适当的测试范围。您可以通过运行来检查代码添加的范围 `yarn test --coverage`。
-
-- 在 PR 上工作时可以有多个小提交 GitHub 可以在合并之前自动压缩它们。
-
-- 确保测试通过！
-
-- 提交消息必须遵循[提交消息约定](https://github.com/conventional-changelog/commitlint/tree/master/commitlint/config-conventional)（基于[Angular 约定](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)），以便可以自动生成更改日志。提交消息会在提交之前自动验证（通过 [yorkie](https://github.com/yyx990803/yorkie) 调用 [Git Hooks](https://git-scm.com/docs/githooks)）。
-
-- 只要安装了dev依赖项，提交时会自动检查代码样式（通过 [yorkie](https://github.com/yyx990803/yorkie) 调用 [Git Hooks](https://git-scm.com/docs/githooks)）。
+# 如何使用该仓库
 
 ## 开发设置
 
 你需要 [Node.js 10+](http://nodejs.org), 和 [Yarn 1.x](https://yarnpkg.com/en/docs/install)
 
-克隆仓库后, 运行:
+克隆项目并切换到相应的开发分支
 
 ```bash
-yarn # 安装项目的依赖项
+git clone https://github.com/extend-js/extend.git
 ```
 
-所用工具的高级概述:
+安装依赖
+
+```bash
+yarn
+```
+
+所用工具的概述:
 
 - [TypeScript](https://www.typescriptlang.org/) 作为开发语言
+
 - [Rollup](https://rollupjs.org) 用于打包
+
 - [Jest](https://jestjs.io/) 用于单元测试
+
 - [Prettier](https://prettier.io/) 用于代码格式化
 
-## 配置
+## 构建配置
 
 默认情况下, 软件包可以通过 `package.json` 中的 `buildOptions` 字段作为打包配置选项：
 
@@ -96,10 +76,10 @@ yarn # 安装项目的依赖项
 
 ### `yarn bootstrap`
 
-该 `bootstrap` 脚本将生成包模板:
+创建库包的基本模板:
 
 ```bash
-yarn bootstrap [target]
+yarn bootstrap <target>
 ```
 
 - `target` 软件包名称；
@@ -110,17 +90,17 @@ yarn bootstrap [target]
 
 ### `yarn build`
 
-该 `build` 脚本将生成构建包:
+```bash
+yarn build [targets]
+```
+
+构建特定格式的包
 
 ```bash
-# 构建包
-yarn build [targets]
-
-# 构建特定格式的包
 yarn build [targets] -f esm-browser,cjs
 ```
 
-- `targets` 要构建的软件包名称，支持模糊匹配；
+- `targets` 要构建的软件包名称，支持模糊匹配，默认所有；
 
 - `-f(--formats)` 构建特定格式软件包, 多种格式指定为以逗号分隔的列表;
   - **`global`**
@@ -144,7 +124,7 @@ yarn build [targets] -f esm-browser,cjs
 
 ### `yarn dev`
 
-该 `dev` 脚本将监视文件更改。当您要在HTML页面中加载内部版本以进行快速调试时, 这很有用:
+监视文件更改。当您要在HTML页面中加载内部版本以进行快速调试时, 这很有用:
 
 ```bash
 yarn dev <target>
@@ -158,7 +138,7 @@ yarn dev <target>
 
 ### `yarn release`
 
-该 `release` 脚本将自动发布 packages 下的可用包:
+自动发布 packages 下的所有包:
 
 ```bash
 yarn release
@@ -174,22 +154,101 @@ yarn release
 
 - `--skipBuild` 跳过打包;
 
-### `yarn test`
+### 执行测试
 
-该 `test` 脚本仅调用 `jest` 二进制文件，因此可以使用所有的 [Jest CLI 选项](https://jestjs.io/docs/en/cli)。一些例子
+可以使用 [Jest CLI 选项](https://jestjs.io/docs/en/cli)。
 
 ```bash
-# 运行所有测试
-$ yarn test
+# 运行本地测试
+yarn test
 
 # 在监视模式下运行测试
-$ yarn test --watch
+yarn test --watch
 
 # 在特定文件中运行测试
-$ yarn test fileName
+yarn test fileName
 
 # 运行特定文件测试在一个特定的文件
-$ yarn test fileName -t 'test name'
+yarn test fileName -t 'test name'
+```
+
+会在 `coverage` 目录下生成测试覆盖率报告
+
+```bash
+yarn test:coverage
+
+# 提交代码覆盖率报告
+yarn codecov
+```
+
+### 格式检测
+
+检测目录结构
+
+```bash
+yarn ls-lint
+```
+
+检测 ESLint
+
+```bash
+yarn lint
+```
+
+### 修复代码
+
+运行所有匹配 `fix:*` 的命令
+
+```bash
+yarn fix
+```
+
+基于 `ESLint` 修复 `.ts` 和 `.js` 文件
+
+```bash
+yarn fix:lint
+```
+
+基于 `prettier` 修复 `.json` 文件
+
+```bash
+yarn fix:json
+```
+
+基于 `prettier` 修复 `.ts` 和 `.js` 文件
+
+```bash
+yarn prettier
+```
+
+### 文档操作
+
+使用 `vuepress` 生成文档静态站
+
+```bash
+yarn docs:dev
+```
+
+会在`.vuepress/dist`目录下生成静态资源包
+
+```bash
+yarn docs:build
+```
+
+### 提交 Git
+
+通过 `cz-customizable` 适配器定制项目的提交说明：
+
+```bash
+yarn commit
+```
+
+### 生成日志
+
+会在项目根目录下生成 `CHANGELOG.md` 日志文件
+
+```bash
+yarn changelog
 ```
 
 ## 项目结构

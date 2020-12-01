@@ -1,8 +1,8 @@
 ---
 home: true
-heroImage: /hero.png
-heroText: Hero 标题
-tagline: Hero 副标题
+heroImage: /blogo.png
+# heroText: @roshin/extend
+# tagline: 一个轻量级 JS/TS 扩展工具库
 actionText: 快速上手 →
 actionLink: /guide/
 # features:
@@ -15,10 +15,6 @@ actionLink: /guide/
 footer: MIT Licensed | Copyright © 2020-present roshin
 ---
 
-<div style="text-align: center">
-  <Bit/>
-</div>
-
 <div class="features">
   <div class="feature">
     <h2>借鉴、收集</h2>
@@ -29,7 +25,7 @@ footer: MIT Licensed | Copyright © 2020-present roshin
     <p>省去了很多 js 自带的或者不常用的方法，并且改进和拓展了很多方法的使用方式。</p>
   </div>
   <div class="feature">
-    <h2>模块</h2>
-    <p>可以根据不同使用场景，选择适合场景的模块包安装。</p>
+    <h2>便捷、优雅</h2>
+    <p>根据不同使用场景，选择适合场景的模块包安装。</p>
   </div>
 </div>
