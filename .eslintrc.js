@@ -75,8 +75,8 @@ module.exports = {
     ],
     eqeqeq: 'error', // 强制全等
     // indent: ['error', 2], // 强制缩进2字符
-
-    /* ----- 其他风格 ----- */
+    'no-var': 2, // 不要使用 var 声明变量
+    'prefer-const': 2, // 如果一个变量从不重新赋值，使用 const 声明
     'no-global-assign': ['error', { exceptions: ['console'] }],
 
     /* ----- typescript ----- */

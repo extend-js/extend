@@ -21,7 +21,7 @@ const semver = require('semver'); // 语义版本控制程序
 const minimist = require('minimist'); // 轻量级的命令行参数解析引擎
 const { prompt } = require('enquirer'); // 创建交互式 cli 提示
 
-const { targets, resolveRoot, resolveTarget } = require('./utils');
+const { targets, resolveRoot, resolveTarget, pkgDirName } = require('./utils');
 
 const mainPkg = require(resolveRoot('./package.json')); // 主 package.json 文件
 const currentVersion = mainPkg.version; // 当前版本号
@@ -186,10 +186,7 @@ function updateDeps(pkg, depType, _version) {
   const deps = pkg[depType];
   if (!deps) return;
   Object.keys(deps).forEach((dep) => {
-    if (
-      dep === mainPkg.name ||
-      (dep.startsWith(`${mainPkg.name}-`) && targets.includes(dep.replace(new RegExp(`^${mainPkg.name}-`), '')))
-    ) {
+    if (dep === mainPkg.name || (dep.startsWith(`${mainPkg.name}-`) && targets.includes(pkgDirName(dep)))) {
       console.log(chalk.yellow(`${pkg.name} -> ${depType} -> ${dep}@${_version}`));
       deps[dep] = _version;
     }

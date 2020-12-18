@@ -8,7 +8,7 @@ module.exports = [
     items: [
       {
         text: '检测器',
-        link: '/basic/insertion'
+        link: '/api/modules/_extend_validator_d_'
       },
       {
         text: '排序和顺序统计量',

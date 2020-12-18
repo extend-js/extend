@@ -88,11 +88,21 @@ const fuzzyMatchTarget = (partialTargets, includeAllMatching) => {
 };
 
 /**
- * 格式化包名
+ * 格式化包名(去除 '@roshin/')
  * @param { string } _name 包名
  * @returns { string } 格式化后的包名
  */
 const formatPkgName = (_name) => _name.replace(/(.*\/)/, '');
+
+/**
+ * 包文件夹名(去除 '@roshin/extend-')
+ * @param { string } _name 包名
+ * @returns { string } 格式化后的包名
+ */
+const pkgDirName = (_name) => {
+  const mainPkg = require(resolveRoot('package.json'));
+  return _name.replace(new RegExp(`^${mainPkg.name}-`), '');
+};
 
 /**
  * 生成包名
@@ -112,6 +122,7 @@ module.exports = {
   isDirectory,
   camelCase,
   fuzzyMatchTarget,
+  pkgDirName,
   formatPkgName,
   generatePkgName
 };

@@ -18,7 +18,7 @@ const execa = require('execa'); // 子进程管理工具
 const chalk = require('chalk'); // node 终端样式库
 const { gzipSync } = require('zlib'); // 通用的压缩库
 const { compress } = require('brotli'); // 通用目的的无损压缩算法
-const { targets: allTargets, fuzzyMatchTarget, resolveRoot, resolveTarget } = require('./utils');
+const { targets: allTargets, fuzzyMatchTarget, resolveRoot, resolveTarget, formatPkgName } = require('./utils');
 
 const configFile = path.resolve(__dirname, './rollup.config.js'); // 默认 rollup 配置文件路径
 
@@ -74,9 +74,13 @@ async function build(target) {
   if (isRelease && pkg.private) return;
   // 如果构建特定格式，请不要删除
   if (!formats) {
+    const pkgName = formatPkgName(pkg.name); // 拿到完整包名
     fse.removeSync(resolveTarget(target, './dist'));
-    fse.removeSync(resolveRoot('./dist'));
-    fse.removeSync(resolveRoot('./temp'));
+    fse.removeSync(resolveRoot('./dist', `${pkgName}.d.ts`));
+    fse.removeSync(resolveRoot('./temp', `${pkgName}.api.json`));
+    // fse.removeSync(resolveRoot('./temp', `${pkgName}.api.md`));
+    // fse.removeSync(resolveRoot('./dist'));
+    // fse.removeSync(resolveRoot('./temp'));
   }
 
   const env = (pkg.buildOptions && pkg.buildOptions.env) || (devOnly ? 'development' : 'production');

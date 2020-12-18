@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  // 编译选项,可以被忽略，这时编译器会使用默认值
+  "compilerOptions": {
+    "outDir": "makeDoc", // 重定向输出目录
+    "lib": ["ESNext", "DOM"], // 指定默认注入的库的列表
+    "types": ["typescript", "node"], // 要包含的类型声明文件名列表
+    "removeComments": true, // 删除所有注释，除了以 /!*开头的版权信息。
+    "declaration": false, // 生成相应的 .d.ts文件。
+    "paths": {}// 模块名到基于 baseUrl 的路径映射的列表(就是别名)
+  },
+  "include": ["makeDoc-dts/*"],
+  "exclude": []
+}
