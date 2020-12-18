@@ -31,7 +31,7 @@ export const resolveTarget = (...args: string[]): string => path.resolve(targets
  * @param { string } _dir 路径
  * @returns { boolean } true | false
  */
-export const isDirectory = (_dir: string): string => fse.statSync(_dir).isDirectory();
+export const isDirectory = (_dir: string): boolean => fse.statSync(_dir).isDirectory();
 
 /**
  * 驼峰命名

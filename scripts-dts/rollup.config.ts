@@ -56,7 +56,7 @@ const outputConfigs = {
 
 // 包构建类型
 const defaultFormats: string[] = ['esm-bundler', 'cjs']; // 默认构建类型
-const inlineFormats: string[] = process.env.FORMATS && process.env.FORMATS.split(','); // 指定构建类型
+const inlineFormats: string[] | '' | undefined = process.env.FORMATS && process.env.FORMATS.split(','); // 指定构建类型
 const packageFormats: string[] = inlineFormats || packageOptions.formats || defaultFormats; // 根据优先级拿到构建类型
 
 // 创建包的配置集

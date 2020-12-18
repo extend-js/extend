@@ -29,6 +29,7 @@ dist
 scripts-temp
 coverage
 temp
+scripts-js
 
 # IDE / Editor
 .idea

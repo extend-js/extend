@@ -172,12 +172,12 @@ function checkAllSizes(_targets: string[]): void {
  */
 function checkFileSize(_filePath: string): void {
   if (!fse.existsSync(_filePath)) return;
-  const file = fse.readFileSync(_filePath, 'utf-8');
-  const minSize = (file.length / 1024).toFixed(2) + 'kb';
-  const gzipped = gzipSync(file);
-  const gzippedSize = (gzipped.length / 1024).toFixed(2) + 'kb';
-  const compressed = compress(file);
-  const compressedSize = (compressed.length / 1024).toFixed(2) + 'kb';
+  const file: Buffer = fse.readFileSync(_filePath);
+  const minSize: string = (file.length / 1024).toFixed(2) + 'kb';
+  const gzipped: Buffer = gzipSync(file);
+  const gzippedSize: string = (gzipped.length / 1024).toFixed(2) + 'kb';
+  const compressed: Uint8Array = compress(file);
+  const compressedSize: string = (compressed.length / 1024).toFixed(2) + 'kb';
   console.log(
     `${chalk.gray(chalk.bold(path.basename(_filePath)))} min:${minSize} / gzip:${gzippedSize} / brotli:${compressedSize}`
   );

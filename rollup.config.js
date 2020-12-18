@@ -14,19 +14,19 @@ const isDirectory = (_dir) => fse.statSync(_dir).isDirectory();
 
 function getFiles(_path) {
   let arr = [];
-  const pathJoin = (v) => path.join(_path, v);
-  const readdirFiles = fse.readdirSync(_path);
+  const pathJoin = (v) => path.join(_path || '', v);
+  const readdirFiles = fse.readdirSync(resloveEntry(_path));
   readdirFiles.forEach((filepath) => {
-    if (isDirectory(pathJoin(filepath))) {
+    if (isDirectory(resloveEntry(pathJoin(filepath)))) {
       arr = arr.concat(getFiles(pathJoin(filepath)));
       return;
     }
     arr.push(pathJoin(filepath));
   });
-  return arr.map((v) => v.replace('scripts-dts\\', ''));
+  return arr;
 }
 
-const files = getFiles('./scripts-dts');
+const files = getFiles();
 
 fse.removeSync(resloveOut());
 
