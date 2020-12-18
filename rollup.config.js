@@ -7,8 +7,8 @@ import ts from 'rollup-plugin-typescript2'; // 编译 typescript
 import { eslint } from 'rollup-plugin-eslint'; // eslint 插件
 
 const configure = [];
-const resloveEntry = (p) => path.resolve('./makeDoc-dts', p || '');
-const resloveOut = (p) => path.resolve('./makeDoc', p || '');
+const resloveEntry = (p) => path.resolve('./scripts-dts', p || '');
+const resloveOut = (p) => path.resolve('./scripts-js', p || '');
 
 const isDirectory = (_dir) => fse.statSync(_dir).isDirectory();
 
@@ -23,11 +23,10 @@ function getFiles(_path) {
     }
     arr.push(pathJoin(filepath));
   });
-  return arr.map((v) => v.replace('makeDoc-dts\\', ''));
+  return arr.map((v) => v.replace('scripts-dts\\', ''));
 }
 
-const files = getFiles('./makeDoc-dts');
-console.log(files);
+const files = getFiles('./scripts-dts');
 
 fse.removeSync(resloveOut());
 
@@ -53,7 +52,7 @@ files.forEach((filepath) => {
       ts({
         check: true,
         typescript: typescript, // 随插件安装的 typescript 模块
-        tsconfig: path.resolve('./tsconfig.doc.json'), // tsconfig.json的路径。
+        tsconfig: path.resolve('./tsconfig.script.json'), // tsconfig.json的路径。
         tsconfigOverride: {
           compilerOptions: {
             sourceMap: false,

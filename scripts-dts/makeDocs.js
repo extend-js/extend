@@ -7,13 +7,13 @@
 //  *  -a || --all => 匹配所有符合规则的目标，否则只匹配第一次被匹配的的目标
 //  */
 
-// import path from 'path';
-// import fse from 'fs-extra'; // fs 扩展工具包
-// import minimist from 'minimist'; // 轻量级的命令行参数解析引擎
-// import chalk from 'chalk'; // node 终端样式库
-// import { prompt } from 'enquirer'; // 创建交互式 cli 提示
+// const path = require('path');
+// const fse = require('fs-extra'); // fs 扩展工具包
+// const minimist = require('minimist'); // 轻量级的命令行参数解析引擎
+// const chalk = require('chalk'); // node 终端样式库
+// const { prompt } = require('enquirer'); // 创建交互式 cli 提示
 
-// import { targets as allTargets, fuzzyMatchTarget, resolveRoot, formatPkgName, generatePkgName } from './utils';
+// const { targets: allTargets, fuzzyMatchTarget, resolveRoot, formatPkgName, generatePkgName } = require('./utils');
 
 // const args = minimist(process.argv.slice(2)); // 命令行参数解析规则
 
