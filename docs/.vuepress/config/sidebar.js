@@ -3,17 +3,14 @@ module.exports = {
     {
       title: '指南',
       collapsable: false,
-      children: ['/guide/introduction', '/guide/install', '/guide/commitConvention','/guide/repo', '/guide/pull']
+      children: ['/guide/introduction', '/guide/install', '/guide/commitConvention', '/guide/repo', '/guide/pull']
     }
   ],
   '/api': [
     {
       title: '算法基础',
       collapsable: false,
-      children: [
-        '/api/modules/_extend_validator_d_'
-      ]
-      
+      children: ['/api/_extend_validator_d_']
     }
   ],
   '/basic': [

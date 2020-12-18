@@ -1,7 +1,7 @@
 const { resolveRoot } = require('./utils');
 const packageJson = require(resolveRoot('./package.json'));
-const sidebar = require("./config/sidebar.js");
-const nav = require("./config/nav.js");
+const sidebar = require('./config/sidebar.js');
+const nav = require('./config/nav.js');
 
 module.exports = {
   title: packageJson.name, // 网站的标题
@@ -16,11 +16,11 @@ module.exports = {
   themeConfig: {
     nav,
     sidebar
-  },
+  }
   // 插件
   // plugins: [
   //   ['vuepress-plugin-typedoc', tsdoc]
   // ],
   // 打包配置
-  chainWebpack: (config) => {}
+  // chainWebpack: (config) => {}
 };

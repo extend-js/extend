@@ -10,7 +10,7 @@ title: "Module: extend-internal.d"
 # Module: "extend-internal.d"
 
 ## Index
-
+————————————————————————
 ### Variables
 
 * [MAX\_SAFE\_INTEGER](_extend_internal_d_.md#max_safe_integer)
@@ -37,7 +37,7 @@ title: "Module: extend-internal.d"
 ### Functions
 
 * [baseIsNative](_extend_internal_d_.md#baseisnative)
-
+————————————————————————
 ## Variables
 
 ### MAX\_SAFE\_INTEGER

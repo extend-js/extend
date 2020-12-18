@@ -12,35 +12,35 @@
 
 <script>
 const COLLAPSE_TEXT = {
-  ON: "收缩",
-  OFF: "展开",
+  ON: '收缩',
+  OFF: '展开'
 };
 
 export default {
-  name: "Collapse",
+  name: 'Collapse',
   data() {
     return {
       collapse: true,
-      action: COLLAPSE_TEXT.OFF,
+      action: COLLAPSE_TEXT.OFF
     };
   },
 
   props: {
     title: String,
-    desc: String,
+    desc: String
   },
 
   methods: {
     handlerCollapse() {
       this.collapse = !this.collapse;
       this.action = this.collapse ? COLLAPSE_TEXT.OFF : COLLAPSE_TEXT.ON;
-    },
+    }
   },
 
   mounted() {
     const $collapse = this.$el.nextSibling && this.$el.nextSibling.nextSibling;
     $collapse && this.$refs.content.appendChild($collapse);
-  },
+  }
 };
 </script>
 

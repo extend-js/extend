@@ -7,8 +7,12 @@ module.exports = [
     text: '文档',
     items: [
       {
+        text: '内部使用',
+        link: '/api/_extend_internal_d_'
+      },
+      {
         text: '检测器',
-        link: '/api/modules/_extend_validator_d_'
+        link: '/api/_extend_validator_d_'
       },
       {
         text: '排序和顺序统计量',

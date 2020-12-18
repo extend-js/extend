@@ -16,7 +16,6 @@ const resolveRoot = (...args) => path.resolve(rootDir, ...args);
  */
 const resolveTarget = (...args) => path.resolve(targetsDir, ...args);
 
-
 module.exports = {
   resolveRoot,
   resolveTarget

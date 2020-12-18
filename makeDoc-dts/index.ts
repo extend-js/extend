@@ -1,15 +1,15 @@
 import * as path from 'path';
 
-import { Application /* , NavigationItem */, ProjectReflection } from 'typedoc';
+import { Application /* , NavigationItem */, ProjectReflection, TSConfigReader } from 'typedoc';
 import { FrontMatterComponent } from 'typedoc-plugin-markdown/dist/components/front-matter.component';
 import pkg from '../package.json';
 
-const rootDir: string = path.resolve(__dirname, '../'); // 项目目录
-const resolveRoot = (...args: string[]): string => path.resolve(rootDir, ...args);
-// const targetsDir: string = path.resolve(__dirname, '../packages'); // 存放包的文件夹
-// const resolveTarget = (...args: string[]): string => path.resolve(targetsDir, ...args);
+// const rootDir: string = path.resolve(__dirname, '../'); // 项目目录
+// const resolveRoot = (...args: string[]): string => path.resolve(rootDir, ...args);
+const targetsDir: string = path.resolve(__dirname, '../packages'); // 存放包的文件夹
+const resolveTarget = (...args: string[]): string => path.resolve(targetsDir, ...args);
 
-const inputFiles: string[] = [resolveRoot('./dist')];
+const inputFiles: string[] = [resolveTarget()];
 const outDir: string = 'doc111';
 
 const app = new Application();
@@ -17,10 +17,13 @@ const app = new Application();
 makeDoc();
 
 function makeDoc() {
+  app.options.addReader(new TSConfigReader()); // 如果你想载入 tsconfig.json 文件
+  // app.options.addReader(new TypeDoc.TypeDocReader()); // 如果你想载入 typedoc.json 文件
+
   app.bootstrap({
     name: pkg.name, // 设置将在模板标题中使用的项目的名称
-    includes: resolveRoot('./dist'), // 包含文件
-    exclude: [], // 排除的文件
+    includes: resolveTarget(), // 包含文件
+    exclude: ['**/*.test.ts', '**/__test__', '**/dist', '**/index.ts'], // 排除的文件
     media: '', // 包含媒体
     mode: 'modules', // 指定用于编译项目的输出模式 file | modules
     readme: 'none', // 应在索引页面上显示的自述文件的路径, 通过 none 以禁用索引页面并在 globals 页面上启动文档
@@ -44,5 +47,6 @@ function makeDoc() {
 
   if (!project) process.exit(1);
 
-  app.generateDocs(project, outDir);
+  // app.generateDocs(project, outDir);
+  app.generateJson(project, outDir + '222');
 }
