@@ -7,8 +7,8 @@ import ts from 'rollup-plugin-typescript2'; // 编译 typescript
 import { eslint } from 'rollup-plugin-eslint'; // eslint 插件
 
 const configure = [];
-const resloveEntry = (p) => path.resolve('./scripts-dts', p || '');
-const resloveOut = (p) => path.resolve('./scripts-js', p || '');
+const resloveEntry = (p) => path.resolve('./makeDoc-dts', p || '');
+const resloveOut = (p) => path.resolve('./makeDoc', p || '');
 
 const isDirectory = (_dir) => fse.statSync(_dir).isDirectory();
 
