@@ -1,0 +1,1490 @@
+{
+	"id": 0,
+	"name": "@roshin/extend-internal",
+	"kind": 0,
+	"flags": {},
+	"children": [
+		{
+			"id": 1,
+			"name": "\"packages/internal/index\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "D:/npm-packages/extends/packages/internal/index.js",
+			"sources": [
+				{
+					"fileName": "packages/internal/index.js",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 29,
+			"name": "\"packages/internal/src/baseGetTag\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "D:/npm-packages/extends/packages/internal/src/baseGetTag.ts",
+			"children": [
+				{
+					"id": 30,
+					"name": "nullTag",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/baseGetTag.ts",
+							"line": 3,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"defaultValue": "\"Null\""
+				},
+				{
+					"id": 31,
+					"name": "undefinedTag",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/baseGetTag.ts",
+							"line": 4,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"defaultValue": "\"Undefined\""
+				},
+				{
+					"id": 32,
+					"name": "baseGetTag",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "获取参数的数据的类型",
+						"returns": "数据类型名称 Null | Undefined | Number | Object | ...",
+						"tags": [
+							{
+								"tag": "example",
+								"text": "\n baseGetTag(null) // => 'Null'\n baseGetTag(void 0) // => 'Undefined'\n baseGetTag(NaN) // => 'Number'\n\n class MyObject {}\n baseGetTag(new MyObject) // => 'MyObject'\n\n class ValidatorClass {\n   get [Symbol.toStringTag]() {\n     return 'test';\n   }\n }\n baseGetTag(new ValidatorClass) // => 'test'\n\n const obj = {}\n Object.defineProperty(obj, Symbol.toStringTag, { value: 'customObj' });\n baseGetTag(obj) // => 'customObj'\n\n const obj2 = {}\n obj2[Symbol.toStringTag] = 'test'\n baseGetTag(obj2) // => 'Object'\n"
+							}
+						]
+					},
+					"signatures": [
+						{
+							"id": 33,
+							"name": "baseGetTag",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "获取参数的数据的类型",
+								"returns": "数据类型名称 Null | Undefined | Number | Object | ...",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n baseGetTag(null) // => 'Null'\n baseGetTag(void 0) // => 'Undefined'\n baseGetTag(NaN) // => 'Number'\n\n class MyObject {}\n baseGetTag(new MyObject) // => 'MyObject'\n\n class ValidatorClass {\n   get [Symbol.toStringTag]() {\n     return 'test';\n   }\n }\n baseGetTag(new ValidatorClass) // => 'test'\n\n const obj = {}\n Object.defineProperty(obj, Symbol.toStringTag, { value: 'customObj' });\n baseGetTag(obj) // => 'customObj'\n\n const obj2 = {}\n obj2[Symbol.toStringTag] = 'test'\n baseGetTag(obj2) // => 'Object'\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 34,
+									"name": "arg",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"shortText": "需要获取类型的参数"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/internal/src/baseGetTag.ts",
+							"line": 33,
+							"character": 16
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						30,
+						31
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						32
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/internal/src/baseGetTag.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 48,
+			"name": "\"packages/internal/src/baseIsNative\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "D:/npm-packages/extends/packages/internal/src/baseIsNative.ts",
+			"children": [
+				{
+					"id": 50,
+					"name": "reIsHostCtor",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/baseIsNative.ts",
+							"line": 9,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "RegExp"
+					},
+					"defaultValue": "/^\\[object .+?Constructor\\]$/"
+				},
+				{
+					"id": 51,
+					"name": "reIsNative",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/baseIsNative.ts",
+							"line": 11,
+							"character": 16
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "RegExp"
+					},
+					"defaultValue": "RegExp(\r\n  '^' +\r\n    funcToString\r\n      .call(hasOwnProperty)\r\n      .replace(reRegExpChar, '\\\\$&')\r\n      .replace(/hasOwnProperty|(function).*?(?=\\\\\\()| for .+?(?=\\\\\\])/g, '$1.*?') +\r\n    '$'\r\n)"
+				},
+				{
+					"id": 49,
+					"name": "reRegExpChar",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/baseIsNative.ts",
+							"line": 7,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "RegExp"
+					},
+					"defaultValue": "/[\\\\^$.*+?()[\\]{}|]/g"
+				},
+				{
+					"id": 52,
+					"name": "baseIsNative",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 53,
+							"name": "baseIsNative",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "isNative 的基本实现没有错误的填充检查",
+								"returns": "是否是内置函数",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n baseIsNative(Array.prototype.push); // => true\n baseIsNative(_); // => false\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 54,
+									"name": "value",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "要检测的值"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/internal/src/baseIsNative.ts",
+							"line": 28,
+							"character": 21
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						50,
+						51,
+						49
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						52
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/internal/src/baseIsNative.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 11,
+			"name": "\"packages/internal/src/constant\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "D:/npm-packages/extends/packages/internal/src/constant.ts",
+			"children": [
+				{
+					"id": 13,
+					"name": "MAX_SAFE_INTEGER",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "Number 最大值",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "Number.MAX_SAFE_INTEGER"
+							},
+							{
+								"tag": "example",
+								"text": "\n MAX_SAFE_INTEGER // => 9007199254740991\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/constant.ts",
+							"line": 15,
+							"character": 29
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"defaultValue": "Number.MAX_SAFE_INTEGER || 9007199254740991"
+				},
+				{
+					"id": 14,
+					"name": "MIN_SAFE_INTEGER",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "Number 最小值",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "Number.MIN_SAFE_INTEGER"
+							},
+							{
+								"tag": "example",
+								"text": "\n MIN_SAFE_INTEGER // => -9007199254740991\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/constant.ts",
+							"line": 23,
+							"character": 29
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"defaultValue": "Number.MIN_SAFE_INTEGER || -9007199254740991"
+				},
+				{
+					"id": 12,
+					"name": "coreJsData",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "用于检测扩展的 core-js 填充",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "coreJsData\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/constant.ts",
+							"line": 7,
+							"character": 23
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					},
+					"defaultValue": "root['__core-js_shared__']"
+				},
+				{
+					"id": 24,
+					"name": "funcProto",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "Function 原型链",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "Function.prototype\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/constant.ts",
+							"line": 64,
+							"character": 22
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Function"
+					},
+					"defaultValue": "Function.prototype"
+				},
+				{
+					"id": 25,
+					"name": "funcToString",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "Function 原型链",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "Function.prototype\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/constant.ts",
+							"line": 70,
+							"character": 25
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 26,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 27,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "packages/internal/src/constant.ts",
+									"line": 70,
+									"character": 26
+								}
+							]
+						}
+					},
+					"defaultValue": "funcProto.toString"
+				},
+				{
+					"id": 23,
+					"name": "getPrototypeOf",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "返回对象的原型",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "Object.getPrototypeOf"
+							},
+							{
+								"tag": "example",
+								"text": "\n nativeGetPrototypeOf(obj) === Object.prototype // => true\n nativeGetPrototypeOf([]) === Array.prototype // => true\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/constant.ts",
+							"line": 58,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "getPrototypeOf"
+					},
+					"defaultValue": "Object.getPrototypeOf"
+				},
+				{
+					"id": 16,
+					"name": "hasOwnProperty",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "基于 Object 原型链上的 hasOwnProperty 方法，检测属性值是否存在",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "Object.prototype.hasOwnProperty"
+							},
+							{
+								"tag": "example",
+								"text": "\n const obj = { a: 1, b: 2 }\n objectHasOwnProperty.call(obj, 'a') // true\n objectHasOwnProperty.call(obj, 'toString') // false\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/constant.ts",
+							"line": 39,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 17,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 18,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 19,
+											"name": "v",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "number"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "packages/internal/src/constant.ts",
+									"line": 39,
+									"character": 28
+								}
+							]
+						}
+					},
+					"defaultValue": "objectProto.hasOwnProperty"
+				},
+				{
+					"id": 15,
+					"name": "objectProto",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "Object 原型链",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "Object.prototype\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/constant.ts",
+							"line": 29,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Object"
+					},
+					"defaultValue": "Object.prototype"
+				},
+				{
+					"id": 20,
+					"name": "objectToString",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "基于 Object 原型链上的 toString 方法，获取对象的类型",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "Object.prototype.toString"
+							},
+							{
+								"tag": "example",
+								"text": "\n objectToString.call({}) // [object Object]\n objectToString.call([]) // [object Array]\n objectToString.call(function () {}) // [object Function]\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/constant.ts",
+							"line": 49,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 21,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 22,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "packages/internal/src/constant.ts",
+									"line": 49,
+									"character": 28
+								}
+							]
+						}
+					},
+					"defaultValue": "objectProto.toString"
+				},
+				{
+					"id": 28,
+					"name": "symbolToStringTag",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "定义对象的自定义类型标签，通过 Object.prototype.toString.call 获取",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "Symbol.toStringTag\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/constant.ts",
+							"line": 76,
+							"character": 30
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "symbol"
+							},
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							}
+						]
+					},
+					"defaultValue": "root.Symbol ? root.Symbol.toStringTag : undefined"
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						13,
+						14,
+						12,
+						24,
+						25,
+						23,
+						16,
+						15,
+						20,
+						28
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/internal/src/constant.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "\"packages/internal/src/global\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "D:/npm-packages/extends/packages/internal/src/global.ts",
+			"children": [
+				{
+					"id": 6,
+					"name": "freeExports",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "exports 对象检测",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "{ any } freeSelf"
+							},
+							{
+								"tag": "description",
+								"text": "Node.js 原生支持 CommonJS 模块加载机制，在全局环境上会暴露 module 对象和 exports 对象\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/global.ts",
+							"line": 38,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					},
+					"defaultValue": "typeof exports === 'object' && exports !== null && !exports['nodeType'] && exports"
+				},
+				{
+					"id": 3,
+					"name": "freeGlobal",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "在 node 环境中捕获 global 变量",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "{ (NodeJS.Global & typeof globalThis) | false } freeGlobal\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/global.ts",
+							"line": 5,
+							"character": 23
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intersection",
+								"types": [
+									{
+										"type": "reference",
+										"name": "Global"
+									},
+									{
+										"type": "query",
+										"queryType": {
+											"type": "reference",
+											"name": "globalThis"
+										}
+									}
+								]
+							},
+							{
+								"type": "intrinsic",
+								"name": "false"
+							}
+						]
+					},
+					"defaultValue": "typeof global === 'object' && global !== null && global.Object === Object && global"
+				},
+				{
+					"id": 4,
+					"name": "freeGlobalThis",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "获取 globalThis 变量",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "{ typeof globalThis | false } freeGlobalThis\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/global.ts",
+							"line": 15,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"name": "globalThis"
+								}
+							},
+							{
+								"type": "intrinsic",
+								"name": "false"
+							}
+						]
+					},
+					"defaultValue": "typeof globalThis === 'object' && globalThis !== null && globalThis.Object === Object && globalThis"
+				},
+				{
+					"id": 7,
+					"name": "freeModule",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "module 对象检测",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "{ NodeModule | false } freeSelf"
+							},
+							{
+								"tag": "description",
+								"text": "先判断是否存在 exports 对象, 因为这两个在 Node.js 中肯定是同时存在的\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/global.ts",
+							"line": 45,
+							"character": 23
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "reference",
+								"name": "NodeModule"
+							},
+							{
+								"type": "intrinsic",
+								"name": "false"
+							}
+						]
+					},
+					"defaultValue": "freeExports && typeof module === 'object' && module !== null && !module['nodeType'] && module"
+				},
+				{
+					"id": 9,
+					"name": "freeProcess",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "从 Node.js 中检测可用变量 process",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "{ NodeJS.Process | false } freeProcess\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/global.ts",
+							"line": 59,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "reference",
+								"name": "Process"
+							},
+							{
+								"type": "intrinsic",
+								"name": "false"
+							}
+						]
+					},
+					"defaultValue": "moduleExports && freeGlobal && freeGlobal.process"
+				},
+				{
+					"id": 5,
+					"name": "freeSelf",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "获取 self 变量",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "{ (Window & typeof globalThis) | false } freeSelf\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/global.ts",
+							"line": 26,
+							"character": 21
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intersection",
+								"types": [
+									{
+										"type": "reference",
+										"name": "Window"
+									},
+									{
+										"type": "query",
+										"queryType": {
+											"type": "reference",
+											"name": "globalThis"
+										}
+									}
+								]
+							},
+							{
+								"type": "intrinsic",
+								"name": "false"
+							}
+						]
+					},
+					"defaultValue": "typeof self === 'object' && self !== null && self.Object === Object && self"
+				},
+				{
+					"id": 8,
+					"name": "moduleExports",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "检测当前环境是否支持 CommonJS 模块加载机制",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "{ boolean } moduleExports"
+							},
+							{
+								"tag": "description",
+								"text": "CommonJS 规定，exports 对象必须为 module.exports 的引用。\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/global.ts",
+							"line": 53,
+							"character": 26
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"defaultValue": "freeModule && freeModule.exports === freeExports"
+				},
+				{
+					"id": 10,
+					"name": "root",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "获取顶层全局对象",
+						"tags": [
+							{
+								"tag": "constant",
+								"text": "{ any } root\n"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/global.ts",
+							"line": 65,
+							"character": 17
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					},
+					"defaultValue": "freeGlobalThis || freeGlobal || freeSelf || Function('return this')()"
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						6,
+						3,
+						4,
+						7,
+						9,
+						5,
+						8,
+						10
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/internal/src/global.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 44,
+			"name": "\"packages/internal/src/isMaskable\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "D:/npm-packages/extends/packages/internal/src/isMaskable.ts",
+			"children": [
+				{
+					"id": 45,
+					"name": "isMaskable",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "检测参数的源码是否能够被屏蔽",
+						"returns": "如果参数能够被屏蔽, 返回true, 否则返回false\n"
+					},
+					"signatures": [
+						{
+							"id": 46,
+							"name": "isMaskable",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "检测参数的源码是否能够被屏蔽",
+								"returns": "如果参数能够被屏蔽, 返回true, 否则返回false\n"
+							},
+							"parameters": [
+								{
+									"id": 47,
+									"name": "value",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"shortText": "要检测的参数"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/internal/src/isMaskable.ts",
+							"line": 9,
+							"character": 16
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						45
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/internal/src/isMaskable.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 35,
+			"name": "\"packages/internal/src/isMasked\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "D:/npm-packages/extends/packages/internal/src/isMasked.ts",
+			"children": [
+				{
+					"id": 36,
+					"name": "maskSrcKey",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "用于检测是否是伪装成内置方法"
+					},
+					"sources": [
+						{
+							"fileName": "packages/internal/src/isMasked.ts",
+							"line": 6,
+							"character": 16
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"defaultValue": "(function () {\r\n  const uid = /[^.]+$/.exec((coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO) || '');\r\n  return uid ? 'Symbol(src)_1.' + uid : '';\r\n})()"
+				},
+				{
+					"id": 37,
+					"name": "isMasked",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "检测参数的源码是否被屏蔽",
+						"returns": "如果参数被屏蔽, 返回true, 否则返回false\n"
+					},
+					"signatures": [
+						{
+							"id": 38,
+							"name": "isMasked",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "检测参数的源码是否被屏蔽",
+								"returns": "如果参数被屏蔽, 返回true, 否则返回false\n"
+							},
+							"parameters": [
+								{
+									"id": 39,
+									"name": "value",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"shortText": "要检测的参数"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/internal/src/isMasked.ts",
+							"line": 16,
+							"character": 14
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						36
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						37
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/internal/src/isMasked.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 40,
+			"name": "\"packages/internal/src/toSource\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "D:/npm-packages/extends/packages/internal/src/toSource.ts",
+			"children": [
+				{
+					"id": 41,
+					"name": "toSource",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "将函数转换为其源代码",
+						"returns": "返回源代码",
+						"tags": [
+							{
+								"tag": "example",
+								"text": "\n toSource(() => { console.log(1) }) // => \"() => { console.log(1) }\"\n toSource(console.log) // => \"function log() { [native code] }\"\n"
+							}
+						]
+					},
+					"signatures": [
+						{
+							"id": 42,
+							"name": "toSource",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "将函数转换为其源代码",
+								"returns": "返回源代码",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n toSource(() => { console.log(1) }) // => \"() => { console.log(1) }\"\n toSource(console.log) // => \"function log() { [native code] }\"\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 43,
+									"name": "value",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"shortText": "要处理的函数"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/internal/src/toSource.ts",
+							"line": 11,
+							"character": 14
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						41
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/internal/src/toSource.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				1,
+				29,
+				48,
+				11,
+				2,
+				44,
+				35,
+				40
+			]
+		}
+	]
+}

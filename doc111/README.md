@@ -147,13 +147,13 @@ title: "@roshin/extend"
 
 • `Const` **MAX\_SAFE\_INTEGER**: number = Number.MAX\_SAFE\_INTEGER \|\| 9007199254740991
 
-*Defined in [packages/internal/src/constant.ts:15](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/constant.ts#L15)*
+*Defined in [packages/internal/src/constant.ts:15](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/constant.ts#L15)*
 
 Number 最大值
 
 **`constant`** Number.MAX_SAFE_INTEGER
 
-**`example`** 
+**`example`**
  MAX_SAFE_INTEGER // => 9007199254740991
 
 ___
@@ -162,13 +162,13 @@ ___
 
 • `Const` **MIN\_SAFE\_INTEGER**: number = Number.MIN\_SAFE\_INTEGER \|\| -9007199254740991
 
-*Defined in [packages/internal/src/constant.ts:23](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/constant.ts#L23)*
+*Defined in [packages/internal/src/constant.ts:23](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/constant.ts#L23)*
 
 Number 最小值
 
 **`constant`** Number.MIN_SAFE_INTEGER
 
-**`example`** 
+**`example`**
  MIN_SAFE_INTEGER // => -9007199254740991
 
 ___
@@ -177,7 +177,7 @@ ___
 
 • `Let` **\_\_BROWSER\_\_**: boolean
 
-*Defined in [packages/global.d.ts:16](https://github.com/extend-js/extend/blob/16506ca/packages/global.d.ts#L16)*
+*Defined in [packages/global.d.ts:16](https://github.com/extend-js/extend/blob/29ac612/packages/global.d.ts#L16)*
 
 浏览器版本（global / esm builds）
 
@@ -187,7 +187,7 @@ ___
 
 • `Let` **\_\_COMMIT\_\_**: string
 
-*Defined in [packages/global.d.ts:41](https://github.com/extend-js/extend/blob/16506ca/packages/global.d.ts#L41)*
+*Defined in [packages/global.d.ts:41](https://github.com/extend-js/extend/blob/29ac612/packages/global.d.ts#L41)*
 
 git提交哈希值
 
@@ -197,7 +197,7 @@ ___
 
 • `Let` **\_\_DEV\_\_**: boolean
 
-*Defined in [packages/global.d.ts:6](https://github.com/extend-js/extend/blob/16506ca/packages/global.d.ts#L6)*
+*Defined in [packages/global.d.ts:6](https://github.com/extend-js/extend/blob/29ac612/packages/global.d.ts#L6)*
 
 环境变量
 
@@ -207,7 +207,7 @@ ___
 
 • `Let` **\_\_ESM\_BROWSER\_\_**: boolean
 
-*Defined in [packages/global.d.ts:31](https://github.com/extend-js/extend/blob/16506ca/packages/global.d.ts#L31)*
+*Defined in [packages/global.d.ts:31](https://github.com/extend-js/extend/blob/29ac612/packages/global.d.ts#L31)*
 
 esm 浏览器端版本
 
@@ -217,7 +217,7 @@ ___
 
 • `Let` **\_\_ESM\_BUNDLER\_\_**: boolean
 
-*Defined in [packages/global.d.ts:26](https://github.com/extend-js/extend/blob/16506ca/packages/global.d.ts#L26)*
+*Defined in [packages/global.d.ts:26](https://github.com/extend-js/extend/blob/29ac612/packages/global.d.ts#L26)*
 
 esm 版本
 
@@ -227,7 +227,7 @@ ___
 
 • `Let` **\_\_GLOBAL\_\_**: boolean
 
-*Defined in [packages/global.d.ts:21](https://github.com/extend-js/extend/blob/16506ca/packages/global.d.ts#L21)*
+*Defined in [packages/global.d.ts:21](https://github.com/extend-js/extend/blob/29ac612/packages/global.d.ts#L21)*
 
 global 版本
 
@@ -237,7 +237,7 @@ ___
 
 • `Let` **\_\_NODE\_JS\_\_**: boolean
 
-*Defined in [packages/global.d.ts:36](https://github.com/extend-js/extend/blob/16506ca/packages/global.d.ts#L36)*
+*Defined in [packages/global.d.ts:36](https://github.com/extend-js/extend/blob/29ac612/packages/global.d.ts#L36)*
 
 commonjs 版本
 
@@ -247,7 +247,7 @@ ___
 
 • `Let` **\_\_TEST\_\_**: boolean
 
-*Defined in [packages/global.d.ts:11](https://github.com/extend-js/extend/blob/16506ca/packages/global.d.ts#L11)*
+*Defined in [packages/global.d.ts:11](https://github.com/extend-js/extend/blob/29ac612/packages/global.d.ts#L11)*
 
 测试环境
 
@@ -257,7 +257,7 @@ ___
 
 • `Let` **\_\_VERSION\_\_**: string
 
-*Defined in [packages/global.d.ts:46](https://github.com/extend-js/extend/blob/16506ca/packages/global.d.ts#L46)*
+*Defined in [packages/global.d.ts:46](https://github.com/extend-js/extend/blob/29ac612/packages/global.d.ts#L46)*
 
 版本号
 
@@ -267,7 +267,7 @@ ___
 
 • `Const` **coreJsData**: any = root['\_\_core-js\_shared\_\_']
 
-*Defined in [packages/internal/src/constant.ts:7](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/constant.ts#L7)*
+*Defined in [packages/internal/src/constant.ts:7](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/constant.ts#L7)*
 
 用于检测扩展的 core-js 填充
 
@@ -279,7 +279,7 @@ ___
 
 • `Const` **dataViewCtorString**: undefined \| string = typeof DataView === undefined ? undefined : \`${DataView}\`
 
-*Defined in [packages/validator/src/getTag.ts:12](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/getTag.ts#L12)*
+*Defined in [packages/validator/src/getTag.ts:12](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/getTag.ts#L12)*
 
 ___
 
@@ -287,7 +287,7 @@ ___
 
 • `Const` **dataViewTag**: \"DataView\" = "DataView"
 
-*Defined in [packages/validator/src/getTag.ts:4](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/getTag.ts#L4)*
+*Defined in [packages/validator/src/getTag.ts:4](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/getTag.ts#L4)*
 
 ___
 
@@ -295,7 +295,7 @@ ___
 
 • `Const` **freeExports**: any = typeof exports === 'object' && exports !== null && !exports['nodeType'] && exports
 
-*Defined in [packages/internal/src/global.ts:38](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/global.ts#L38)*
+*Defined in [packages/internal/src/global.ts:38](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/global.ts#L38)*
 
 exports 对象检测
 
@@ -309,7 +309,7 @@ ___
 
 • `Const` **freeGlobal**: Global & *typeof* globalThis \| false = typeof global === 'object' && global !== null && global.Object === Object && global
 
-*Defined in [packages/internal/src/global.ts:5](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/global.ts#L5)*
+*Defined in [packages/internal/src/global.ts:5](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/global.ts#L5)*
 
 在 node 环境中捕获 global 变量
 
@@ -321,7 +321,7 @@ ___
 
 • `Const` **freeGlobalThis**: *typeof* globalThis \| false = typeof globalThis === 'object' && globalThis !== null && globalThis.Object === Object && globalThis
 
-*Defined in [packages/internal/src/global.ts:15](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/global.ts#L15)*
+*Defined in [packages/internal/src/global.ts:15](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/global.ts#L15)*
 
 获取 globalThis 变量
 
@@ -333,7 +333,7 @@ ___
 
 • `Const` **freeModule**: NodeModule \| false = freeExports && typeof module === 'object' && module !== null && !module['nodeType'] && module
 
-*Defined in [packages/internal/src/global.ts:45](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/global.ts#L45)*
+*Defined in [packages/internal/src/global.ts:45](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/global.ts#L45)*
 
 module 对象检测
 
@@ -347,7 +347,7 @@ ___
 
 • `Const` **freeProcess**: Process \| false = moduleExports && freeGlobal && freeGlobal.process
 
-*Defined in [packages/internal/src/global.ts:59](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/global.ts#L59)*
+*Defined in [packages/internal/src/global.ts:59](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/global.ts#L59)*
 
 从 Node.js 中检测可用变量 process
 
@@ -359,7 +359,7 @@ ___
 
 • `Const` **freeSelf**: Window & *typeof* globalThis \| false = typeof self === 'object' && self !== null && self.Object === Object && self
 
-*Defined in [packages/internal/src/global.ts:26](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/global.ts#L26)*
+*Defined in [packages/internal/src/global.ts:26](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/global.ts#L26)*
 
 获取 self 变量
 
@@ -371,7 +371,7 @@ ___
 
 • `Const` **funcProto**: Function = Function.prototype
 
-*Defined in [packages/internal/src/constant.ts:64](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/constant.ts#L64)*
+*Defined in [packages/internal/src/constant.ts:64](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/constant.ts#L64)*
 
 Function 原型链
 
@@ -383,7 +383,7 @@ ___
 
 • `Const` **funcToString**: () => string = funcProto.toString
 
-*Defined in [packages/internal/src/constant.ts:70](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/constant.ts#L70)*
+*Defined in [packages/internal/src/constant.ts:70](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/constant.ts#L70)*
 
 Function 原型链
 
@@ -395,13 +395,13 @@ ___
 
 • `Const` **getPrototypeOf**: getPrototypeOf = Object.getPrototypeOf
 
-*Defined in [packages/internal/src/constant.ts:58](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/constant.ts#L58)*
+*Defined in [packages/internal/src/constant.ts:58](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/constant.ts#L58)*
 
 返回对象的原型
 
 **`constant`** Object.getPrototypeOf
 
-**`example`** 
+**`example`**
  nativeGetPrototypeOf(obj) === Object.prototype // => true
  nativeGetPrototypeOf([]) === Array.prototype // => true
 
@@ -411,7 +411,7 @@ ___
 
 • `Let` **getTag**: [baseGetTag](README.md#basegettag) = baseGetTag
 
-*Defined in [packages/validator/src/getTag.ts:18](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/getTag.ts#L18)*
+*Defined in [packages/validator/src/getTag.ts:18](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/getTag.ts#L18)*
 
 ___
 
@@ -419,13 +419,13 @@ ___
 
 • `Const` **hasOwnProperty**: (v: string \| number \| symbol) => boolean = objectProto.hasOwnProperty
 
-*Defined in [packages/internal/src/constant.ts:39](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/constant.ts#L39)*
+*Defined in [packages/internal/src/constant.ts:39](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/constant.ts#L39)*
 
 基于 Object 原型链上的 hasOwnProperty 方法，检测属性值是否存在
 
 **`constant`** Object.prototype.hasOwnProperty
 
-**`example`** 
+**`example`**
  const obj = { a: 1, b: 2 }
  objectHasOwnProperty.call(obj, 'a') // true
  objectHasOwnProperty.call(obj, 'toString') // false
@@ -436,7 +436,7 @@ ___
 
 • `Const` **mapCtorString**: undefined \| string = typeof Map === undefined ? undefined : \`${Map}\`
 
-*Defined in [packages/validator/src/getTag.ts:13](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/getTag.ts#L13)*
+*Defined in [packages/validator/src/getTag.ts:13](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/getTag.ts#L13)*
 
 ___
 
@@ -444,15 +444,15 @@ ___
 
 • `Const` **mapTag**: \"Map\" = "Map"
 
-*Defined in [packages/validator/src/getTag.ts:5](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/getTag.ts#L5)*
+*Defined in [packages/validator/src/getTag.ts:5](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/getTag.ts#L5)*
 
 ___
 
 ### maskSrcKey
 
-• `Const` **maskSrcKey**: string = (function () { const uid = /[^.]+$/.exec((coreJsData && coreJsData.keys && coreJsData.keys.IE\_PROTO) \|\| ''); return uid ? 'Symbol(src)\_1.' + uid : '';})()
+• `Const` **maskSrcKey**: string = (function () { const uid = /[^.]+$/.exec((coreJsData && coreJsData.keys && coreJsData.keys.IE\_PROTO) \|\| ''); return uid ? 'Symbol(src)\_1.' + uid : ''; })()
 
-*Defined in [packages/internal/src/isMasked.ts:6](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/isMasked.ts#L6)*
+*Defined in [packages/internal/src/isMasked.ts:6](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/isMasked.ts#L6)*
 
 用于检测是否是伪装成内置方法
 
@@ -462,7 +462,7 @@ ___
 
 • `Const` **moduleExports**: boolean = freeModule && freeModule.exports === freeExports
 
-*Defined in [packages/internal/src/global.ts:53](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/global.ts#L53)*
+*Defined in [packages/internal/src/global.ts:53](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/global.ts#L53)*
 
 检测当前环境是否支持 CommonJS 模块加载机制
 
@@ -476,7 +476,7 @@ ___
 
 • `Const` **nullTag**: string = "Null"
 
-*Defined in [packages/internal/src/baseGetTag.ts:3](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/baseGetTag.ts#L3)*
+*Defined in [packages/internal/src/baseGetTag.ts:3](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/baseGetTag.ts#L3)*
 
 ___
 
@@ -484,7 +484,7 @@ ___
 
 • `Const` **objectProto**: Object = Object.prototype
 
-*Defined in [packages/internal/src/constant.ts:29](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/constant.ts#L29)*
+*Defined in [packages/internal/src/constant.ts:29](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/constant.ts#L29)*
 
 Object 原型链
 
@@ -496,7 +496,7 @@ ___
 
 • `Const` **objectTag**: \"Object\" = "Object"
 
-*Defined in [packages/validator/src/getTag.ts:6](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/getTag.ts#L6)*
+*Defined in [packages/validator/src/getTag.ts:6](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/getTag.ts#L6)*
 
 ___
 
@@ -504,13 +504,13 @@ ___
 
 • `Const` **objectToString**: () => string = objectProto.toString
 
-*Defined in [packages/internal/src/constant.ts:49](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/constant.ts#L49)*
+*Defined in [packages/internal/src/constant.ts:49](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/constant.ts#L49)*
 
 基于 Object 原型链上的 toString 方法，获取对象的类型
 
 **`constant`** Object.prototype.toString
 
-**`example`** 
+**`example`**
  objectToString.call({}) // [object Object]
  objectToString.call([]) // [object Array]
  objectToString.call(function () {}) // [object Function]
@@ -521,7 +521,7 @@ ___
 
 • `Const` **promiseCtorString**: undefined \| string = typeof Promise === undefined ? undefined : \`${Promise}\`
 
-*Defined in [packages/validator/src/getTag.ts:14](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/getTag.ts#L14)*
+*Defined in [packages/validator/src/getTag.ts:14](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/getTag.ts#L14)*
 
 ___
 
@@ -529,7 +529,7 @@ ___
 
 • `Const` **promiseTag**: \"Promise\" = "Promise"
 
-*Defined in [packages/validator/src/getTag.ts:7](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/getTag.ts#L7)*
+*Defined in [packages/validator/src/getTag.ts:7](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/getTag.ts#L7)*
 
 ___
 
@@ -537,15 +537,15 @@ ___
 
 • `Const` **reIsHostCtor**: RegExp = /^\[object .+?Constructor\]$/
 
-*Defined in [packages/internal/src/baseIsNative.ts:9](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/baseIsNative.ts#L9)*
+*Defined in [packages/internal/src/baseIsNative.ts:9](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/baseIsNative.ts#L9)*
 
 ___
 
 ### reIsNative
 
-• `Const` **reIsNative**: RegExp = RegExp( '^' + funcToString .call(hasOwnProperty) .replace(reRegExpChar, '\\$&') .replace(/hasOwnProperty\|(function).*?(?=\\\()\| for .+?(?=\\\])/g, '$1.*?') + '$')
+• `Const` **reIsNative**: RegExp = RegExp( '^' + funcToString .call(hasOwnProperty) .replace(reRegExpChar, '\\$&') .replace(/hasOwnProperty\|(function).*?(?=\\\()\| for .+?(?=\\\])/g, '$1.*?') + '$' )
 
-*Defined in [packages/internal/src/baseIsNative.ts:11](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/baseIsNative.ts#L11)*
+*Defined in [packages/internal/src/baseIsNative.ts:11](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/baseIsNative.ts#L11)*
 
 ___
 
@@ -553,7 +553,7 @@ ___
 
 • `Const` **reRegExpChar**: RegExp = /[\\^$.*+?()[\]{}\|]/g
 
-*Defined in [packages/internal/src/baseIsNative.ts:7](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/baseIsNative.ts#L7)*
+*Defined in [packages/internal/src/baseIsNative.ts:7](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/baseIsNative.ts#L7)*
 
 ___
 
@@ -561,7 +561,7 @@ ___
 
 • `Const` **root**: any = freeGlobalThis \|\| freeGlobal \|\| freeSelf \|\| Function('return this')()
 
-*Defined in [packages/internal/src/global.ts:65](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/global.ts#L65)*
+*Defined in [packages/internal/src/global.ts:65](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/global.ts#L65)*
 
 获取顶层全局对象
 
@@ -573,7 +573,7 @@ ___
 
 • `Const` **setCtorString**: undefined \| string = typeof Set === undefined ? undefined : \`${Set}\`
 
-*Defined in [packages/validator/src/getTag.ts:15](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/getTag.ts#L15)*
+*Defined in [packages/validator/src/getTag.ts:15](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/getTag.ts#L15)*
 
 ___
 
@@ -581,7 +581,7 @@ ___
 
 • `Const` **setTag**: \"Set\" = "Set"
 
-*Defined in [packages/validator/src/getTag.ts:8](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/getTag.ts#L8)*
+*Defined in [packages/validator/src/getTag.ts:8](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/getTag.ts#L8)*
 
 ___
 
@@ -589,7 +589,7 @@ ___
 
 • `Const` **symbolToStringTag**: symbol \| undefined = root.Symbol ? root.Symbol.toStringTag : undefined
 
-*Defined in [packages/internal/src/constant.ts:76](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/constant.ts#L76)*
+*Defined in [packages/internal/src/constant.ts:76](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/constant.ts#L76)*
 
 定义对象的自定义类型标签，通过 Object.prototype.toString.call 获取
 
@@ -601,7 +601,7 @@ ___
 
 • `Const` **undefinedTag**: string = "Undefined"
 
-*Defined in [packages/internal/src/baseGetTag.ts:4](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/baseGetTag.ts#L4)*
+*Defined in [packages/internal/src/baseGetTag.ts:4](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/baseGetTag.ts#L4)*
 
 ___
 
@@ -609,7 +609,7 @@ ___
 
 • `Const` **weakMapCtorString**: undefined \| string = typeof WeakMap === undefined ? undefined : \`${WeakMap}\`
 
-*Defined in [packages/validator/src/getTag.ts:16](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/getTag.ts#L16)*
+*Defined in [packages/validator/src/getTag.ts:16](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/getTag.ts#L16)*
 
 ___
 
@@ -617,7 +617,7 @@ ___
 
 • `Const` **weakMapTag**: \"WeakMap\" = "WeakMap"
 
-*Defined in [packages/validator/src/getTag.ts:9](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/getTag.ts#L9)*
+*Defined in [packages/validator/src/getTag.ts:9](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/getTag.ts#L9)*
 
 ## Functions
 
@@ -625,11 +625,11 @@ ___
 
 ▸ `Const`**baseGetTag**(`arg`: any): string
 
-*Defined in [packages/internal/src/baseGetTag.ts:33](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/baseGetTag.ts#L33)*
+*Defined in [packages/internal/src/baseGetTag.ts:33](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/baseGetTag.ts#L33)*
 
 获取参数的数据的类型
 
-**`example`** 
+**`example`**
  baseGetTag(null) // => 'Null'
  baseGetTag(void 0) // => 'Undefined'
  baseGetTag(NaN) // => 'Number'
@@ -652,7 +652,7 @@ ___
  obj2[Symbol.toStringTag] = 'test'
  baseGetTag(obj2) // => 'Object'
 
-#### Parameters:
+#### Parameters
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -668,15 +668,15 @@ ___
 
 ▸ **baseIsNative**(`value`: any): boolean
 
-*Defined in [packages/internal/src/baseIsNative.ts:28](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/baseIsNative.ts#L28)*
+*Defined in [packages/internal/src/baseIsNative.ts:28](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/baseIsNative.ts#L28)*
 
 isNative 的基本实现没有错误的填充检查
 
-**`example`** 
+**`example`**
  baseIsNative(Array.prototype.push); // => true
  baseIsNative(_); // => false
 
-#### Parameters:
+#### Parameters
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -692,11 +692,11 @@ ___
 
 ▸ `Const`**isFunction**\<T>(`value`: any): value is T
 
-*Defined in [packages/validator/src/isFunction.ts:17](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/isFunction.ts#L17)*
+*Defined in [packages/validator/src/isFunction.ts:17](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/isFunction.ts#L17)*
 
 检测参数是否为函数类型
 
-**`example`** 
+**`example`**
  isFunction(class Any{}) // => true
  isFunction(() => {}) // => true
  isFunction(async () => {}) // => true
@@ -705,13 +705,13 @@ ___
  isFunction(/abc/) // => false
  isFunction(null) // => false
 
-#### Type parameters:
+#### Type parameters
 
 Name | Default |
 ------ | ------ |
 `T` | Function |
 
-#### Parameters:
+#### Parameters
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -727,11 +727,11 @@ ___
 
 ▸ `Const`**isMaskable**(`value`: any): boolean
 
-*Defined in [packages/internal/src/isMaskable.ts:9](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/isMaskable.ts#L9)*
+*Defined in [packages/internal/src/isMaskable.ts:9](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/isMaskable.ts#L9)*
 
 检测参数的源码是否能够被屏蔽
 
-#### Parameters:
+#### Parameters
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -747,11 +747,11 @@ ___
 
 ▸ `Const`**isMasked**(`value`: any): boolean
 
-*Defined in [packages/internal/src/isMasked.ts:16](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/isMasked.ts#L16)*
+*Defined in [packages/internal/src/isMasked.ts:16](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/isMasked.ts#L16)*
 
 检测参数的源码是否被屏蔽
 
-#### Parameters:
+#### Parameters
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -767,20 +767,20 @@ ___
 
 ▸ `Const`**isNative**(`value`: any): boolean
 
-*Defined in [packages/validator/src/isNative.ts:16](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/isNative.ts#L16)*
+*Defined in [packages/validator/src/isNative.ts:16](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/isNative.ts#L16)*
 
 检测参数是否是内置函数
 注意：
-	这个方法在 core-js 包的环境下探测内置函数不可靠，因为 core-js 绕过了这类检测方法。
-	尽管有多个请求，但是 core-js 维护者很清楚地声明：任何试图修复探测方法都会被阻止。
-	因此，我们别无选择只能抛出错误。
+ 这个方法在 core-js 包的环境下探测内置函数不可靠，因为 core-js 绕过了这类检测方法。
+ 尽管有多个请求，但是 core-js 维护者很清楚地声明：任何试图修复探测方法都会被阻止。
+ 因此，我们别无选择只能抛出错误。
  不幸的是，这样还是会影响那些依赖于 core-js 的包，例如 babel-polyfil
 
-**`example`** 
-	isNative(Array.prototype.push) // => true
-	isNative(_) // => false
+**`example`**
+ isNative(Array.prototype.push) // => true
+ isNative(_) // => false
 
-#### Parameters:
+#### Parameters
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -796,16 +796,16 @@ ___
 
 ▸ `Const`**isNil**(`value`: any): value is null \| undefined
 
-*Defined in [packages/validator/src/isNil.ts:10](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/isNil.ts#L10)*
+*Defined in [packages/validator/src/isNil.ts:10](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/isNil.ts#L10)*
 
 测试参数是否为 null | undefined
 
-**`example`** 
+**`example`**
  isNil(null) // => true
  isNil(void 0) // => true
  isNil(NaN) // => false
 
-#### Parameters:
+#### Parameters
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -821,11 +821,11 @@ ___
 
 ▸ `Const`**isNumber**(`value`: any): value is number
 
-*Defined in [packages/validator/src/isNumber.ts:16](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/isNumber.ts#L16)*
+*Defined in [packages/validator/src/isNumber.ts:16](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/isNumber.ts#L16)*
 
 检测参数是否为数字
 
-**`example`** 
+**`example`**
  isNumber(3); // => true
  isNumber(Number.MIN_VALUE); // => true
  isNumber(Infinity); // => true
@@ -833,7 +833,7 @@ ___
  isNumber(new Number(2)); // => true
  isNumber('3'); // => false
 
-#### Parameters:
+#### Parameters
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -849,23 +849,23 @@ ___
 
 ▸ `Const`**isObject**\<T>(`value`: any): value is T
 
-*Defined in [packages/validator/src/isObject.ts:11](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/isObject.ts#L11)*
+*Defined in [packages/validator/src/isObject.ts:11](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/isObject.ts#L11)*
 
 检测参数是否属于 `Object` (例如：arrays, functions, objects, regexes, `new Number(0)`, `new String('')`)
 
-**`example`** 
-	isObject({}) // => true
-	isObject([1, 2, 3]) // => true
-	isObject(function fn() {}) // => true
-	isObject(null) // => false
+**`example`**
+ isObject({}) // => true
+ isObject([1, 2, 3]) // => true
+ isObject(function fn() {}) // => true
+ isObject(null) // => false
 
-#### Type parameters:
+#### Type parameters
 
 Name | Default |
 ------ | ------ |
 `T` | object |
 
-#### Parameters:
+#### Parameters
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -881,17 +881,17 @@ ___
 
 ▸ `Const`**isObjectHost**(`value`: any): boolean
 
-*Defined in [packages/validator/src/isObjectHost.ts:11](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/isObjectHost.ts#L11)*
+*Defined in [packages/validator/src/isObjectHost.ts:11](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/isObjectHost.ts#L11)*
 
 检测参数是否是 IE < 9 中的宿主对象(window/document...)
 
-**`example`** 
+**`example`**
  isHostObject(window) // => ie < 9: true, other: false
  isHostObject(document) // => ie < 9: true, other: false
  isHostObject({}) // => ie < 9: false, other: false
  isHostObject(Object) // => ie < 9: false, other: false
 
-#### Parameters:
+#### Parameters
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -907,24 +907,24 @@ ___
 
 ▸ `Const`**isObjectLike**\<T>(`value`: any): value is T
 
-*Defined in [packages/validator/src/isObjectLike.ts:12](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/isObjectLike.ts#L12)*
+*Defined in [packages/validator/src/isObjectLike.ts:12](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/isObjectLike.ts#L12)*
 
 检测参数是否为类对象(所有 不为 null 且 typeof 后的结果是 "object" 的对象)
 
-**`example`** 
+**`example`**
  isObjectLike({}) // => true
  isObjectLike([1, 2, 3]) // => true
  isObjectLike(Function) // => false
  isObjectLike(undefined) // => false
  isObjectLike(null) // => false
 
-#### Type parameters:
+#### Type parameters
 
 Name | Default |
 ------ | ------ |
 `T` | object |
 
-#### Parameters:
+#### Parameters
 
 Name | Type |
 ------ | ------ |
@@ -940,18 +940,18 @@ ___
 
 ▸ `Const`**isObjectPlain**(`value`: any): value is object
 
-*Defined in [packages/validator/src/isObjectPlain.ts:17](https://github.com/extend-js/extend/blob/16506ca/packages/validator/src/isObjectPlain.ts#L17)*
+*Defined in [packages/validator/src/isObjectPlain.ts:17](https://github.com/extend-js/extend/blob/29ac612/packages/validator/src/isObjectPlain.ts#L17)*
 
 检测参数是否为普通对象
 
-**`example`** 
+**`example`**
  class Foo{ a = 1 }
  isPlainObject(new Foo); // => false
  isPlainObject([1, 2, 3]); // => false
  isPlainObject({ 'x': 0, 'y': 0 }); // => true
  isPlainObject(Object.create(null)); // => true
 
-#### Parameters:
+#### Parameters
 
 Name | Type | Description |
 ------ | ------ | ------ |
@@ -967,15 +967,15 @@ ___
 
 ▸ `Const`**toSource**(`value`: any): string
 
-*Defined in [packages/internal/src/toSource.ts:11](https://github.com/extend-js/extend/blob/16506ca/packages/internal/src/toSource.ts#L11)*
+*Defined in [packages/internal/src/toSource.ts:11](https://github.com/extend-js/extend/blob/29ac612/packages/internal/src/toSource.ts#L11)*
 
 将函数转换为其源代码
 
-**`example`** 
+**`example`**
  toSource(() => { console.log(1) }) // => "() => { console.log(1) }"
  toSource(console.log) // => "function log() { [native code] }"
 
-#### Parameters:
+#### Parameters
 
 Name | Type | Description |
 ------ | ------ | ------ |

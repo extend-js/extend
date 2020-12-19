@@ -959,7 +959,7 @@
 				"type": "intrinsic",
 				"name": "string"
 			},
-			"defaultValue": "(function () {\n  const uid = /[^.]+$/.exec((coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO) || '');\n  return uid ? 'Symbol(src)_1.' + uid : '';\n})()"
+			"defaultValue": "(function () {\r\n  const uid = /[^.]+$/.exec((coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO) || '');\r\n  return uid ? 'Symbol(src)_1.' + uid : '';\r\n})()"
 		},
 		{
 			"id": 15,
@@ -1190,7 +1190,7 @@
 			"defaultValue": "\"Promise\""
 		},
 		{
-			"id": 91,
+			"id": 90,
 			"name": "reIsHostCtor",
 			"kind": 32,
 			"kindString": "Variable",
@@ -1212,7 +1212,7 @@
 			"defaultValue": "/^\\[object .+?Constructor\\]$/"
 		},
 		{
-			"id": 92,
+			"id": 91,
 			"name": "reIsNative",
 			"kind": 32,
 			"kindString": "Variable",
@@ -1231,10 +1231,10 @@
 				"type": "reference",
 				"name": "RegExp"
 			},
-			"defaultValue": "RegExp(\n  '^' +\n    funcToString\n      .call(hasOwnProperty)\n      .replace(reRegExpChar, '\\\\$&')\n      .replace(/hasOwnProperty|(function).*?(?=\\\\\\()| for .+?(?=\\\\\\])/g, '$1.*?') +\n    '$'\n)"
+			"defaultValue": "RegExp(\r\n  '^' +\r\n    funcToString\r\n      .call(hasOwnProperty)\r\n      .replace(reRegExpChar, '\\\\$&')\r\n      .replace(/hasOwnProperty|(function).*?(?=\\\\\\()| for .+?(?=\\\\\\])/g, '$1.*?') +\r\n    '$'\r\n)"
 		},
 		{
-			"id": 90,
+			"id": 89,
 			"name": "reRegExpChar",
 			"kind": 32,
 			"kindString": "Variable",
@@ -1525,7 +1525,7 @@
 			]
 		},
 		{
-			"id": 93,
+			"id": 92,
 			"name": "baseIsNative",
 			"kind": 64,
 			"kindString": "Function",
@@ -1534,7 +1534,7 @@
 			},
 			"signatures": [
 				{
-					"id": 94,
+					"id": 93,
 					"name": "baseIsNative",
 					"kind": 4096,
 					"kindString": "Call signature",
@@ -1553,7 +1553,7 @@
 					},
 					"parameters": [
 						{
-							"id": 95,
+							"id": 94,
 							"name": "value",
 							"kind": 32768,
 							"kindString": "Parameter",
@@ -1584,7 +1584,7 @@
 			]
 		},
 		{
-			"id": 80,
+			"id": 79,
 			"name": "isFunction",
 			"kind": 64,
 			"kindString": "Function",
@@ -1604,7 +1604,7 @@
 			},
 			"signatures": [
 				{
-					"id": 81,
+					"id": 80,
 					"name": "isFunction",
 					"kind": 4096,
 					"kindString": "Call signature",
@@ -1623,7 +1623,7 @@
 					},
 					"typeParameter": [
 						{
-							"id": 82,
+							"id": 81,
 							"name": "T",
 							"kind": 131072,
 							"kindString": "Type parameter",
@@ -1634,7 +1634,7 @@
 					],
 					"parameters": [
 						{
-							"id": 83,
+							"id": 82,
 							"name": "value",
 							"kind": 32768,
 							"kindString": "Parameter",
@@ -1790,7 +1790,7 @@
 			]
 		},
 		{
-			"id": 84,
+			"id": 83,
 			"name": "isNative",
 			"kind": 64,
 			"kindString": "Function",
@@ -1810,7 +1810,7 @@
 			},
 			"signatures": [
 				{
-					"id": 85,
+					"id": 84,
 					"name": "isNative",
 					"kind": 4096,
 					"kindString": "Call signature",
@@ -1829,7 +1829,7 @@
 					},
 					"parameters": [
 						{
-							"id": 86,
+							"id": 85,
 							"name": "value",
 							"kind": 32768,
 							"kindString": "Parameter",
@@ -1911,36 +1911,27 @@
 							},
 							"type": {
 								"type": "intrinsic",
-								"name": "string"
-							}
-						},
-						{
-							"id": 65,
-							"name": "b",
-							"kind": 32768,
-							"kindString": "Parameter",
-							"flags": {
-								"isExported": true,
-								"isOptional": true
-							},
-							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "intrinsic",
-										"name": "undefined"
-									},
-									{
-										"type": "intrinsic",
-										"name": "string"
-									}
-								]
+								"name": "any"
 							}
 						}
 					],
 					"type": {
-						"type": "intrinsic",
-						"name": "boolean"
+						"type": "predicate",
+						"name": "value",
+						"asserts": false,
+						"targetType": {
+							"type": "union",
+							"types": [
+								{
+									"type": "intrinsic",
+									"name": "null"
+								},
+								{
+									"type": "intrinsic",
+									"name": "undefined"
+								}
+							]
+						}
 					}
 				}
 			],
@@ -1953,7 +1944,7 @@
 			]
 		},
 		{
-			"id": 87,
+			"id": 86,
 			"name": "isNumber",
 			"kind": 64,
 			"kindString": "Function",
@@ -1973,7 +1964,7 @@
 			},
 			"signatures": [
 				{
-					"id": 88,
+					"id": 87,
 					"name": "isNumber",
 					"kind": 4096,
 					"kindString": "Call signature",
@@ -1992,7 +1983,7 @@
 					},
 					"parameters": [
 						{
-							"id": 89,
+							"id": 88,
 							"name": "value",
 							"kind": 32768,
 							"kindString": "Parameter",
@@ -2028,7 +2019,7 @@
 			]
 		},
 		{
-			"id": 66,
+			"id": 65,
 			"name": "isObject",
 			"kind": 64,
 			"kindString": "Function",
@@ -2048,7 +2039,7 @@
 			},
 			"signatures": [
 				{
-					"id": 67,
+					"id": 66,
 					"name": "isObject",
 					"kind": 4096,
 					"kindString": "Call signature",
@@ -2067,7 +2058,7 @@
 					},
 					"typeParameter": [
 						{
-							"id": 68,
+							"id": 67,
 							"name": "T",
 							"kind": 131072,
 							"kindString": "Type parameter",
@@ -2078,7 +2069,7 @@
 					],
 					"parameters": [
 						{
-							"id": 69,
+							"id": 68,
 							"name": "value",
 							"kind": 32768,
 							"kindString": "Parameter",
@@ -2118,7 +2109,7 @@
 			]
 		},
 		{
-			"id": 74,
+			"id": 73,
 			"name": "isObjectHost",
 			"kind": 64,
 			"kindString": "Function",
@@ -2138,7 +2129,7 @@
 			},
 			"signatures": [
 				{
-					"id": 75,
+					"id": 74,
 					"name": "isObjectHost",
 					"kind": 4096,
 					"kindString": "Call signature",
@@ -2157,7 +2148,7 @@
 					},
 					"parameters": [
 						{
-							"id": 76,
+							"id": 75,
 							"name": "value",
 							"kind": 32768,
 							"kindString": "Parameter",
@@ -2188,7 +2179,7 @@
 			]
 		},
 		{
-			"id": 70,
+			"id": 69,
 			"name": "isObjectLike",
 			"kind": 64,
 			"kindString": "Function",
@@ -2208,7 +2199,7 @@
 			},
 			"signatures": [
 				{
-					"id": 71,
+					"id": 70,
 					"name": "isObjectLike",
 					"kind": 4096,
 					"kindString": "Call signature",
@@ -2227,7 +2218,7 @@
 					},
 					"typeParameter": [
 						{
-							"id": 72,
+							"id": 71,
 							"name": "T",
 							"kind": 131072,
 							"kindString": "Type parameter",
@@ -2238,7 +2229,7 @@
 					],
 					"parameters": [
 						{
-							"id": 73,
+							"id": 72,
 							"name": "value",
 							"kind": 32768,
 							"kindString": "Parameter",
@@ -2275,7 +2266,7 @@
 			]
 		},
 		{
-			"id": 77,
+			"id": 76,
 			"name": "isObjectPlain",
 			"kind": 64,
 			"kindString": "Function",
@@ -2295,7 +2286,7 @@
 			},
 			"signatures": [
 				{
-					"id": 78,
+					"id": 77,
 					"name": "isObjectPlain",
 					"kind": 4096,
 					"kindString": "Call signature",
@@ -2314,7 +2305,7 @@
 					},
 					"parameters": [
 						{
-							"id": 79,
+							"id": 78,
 							"name": "value",
 							"kind": 32768,
 							"kindString": "Parameter",
@@ -2460,9 +2451,9 @@
 				26,
 				58,
 				53,
-				91,
-				92,
 				90,
+				91,
+				89,
 				17,
 				59,
 				54,
@@ -2477,17 +2468,17 @@
 			"kind": 64,
 			"children": [
 				37,
-				93,
-				80,
+				92,
+				79,
 				47,
 				41,
-				84,
+				83,
 				62,
-				87,
-				66,
-				74,
-				70,
-				77,
+				86,
+				65,
+				73,
+				69,
+				76,
 				44
 			]
 		}

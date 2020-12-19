@@ -47,6 +47,6 @@ function makeDoc() {
 
   if (!project) process.exit(1);
 
-  // app.generateDocs(project, outDir);
-  app.generateJson(project, outDir + '222.json');
+  app.generateDocs(project, outDir);
+  // app.generateJson(project, outDir + '222.json');
 }

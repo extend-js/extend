@@ -39,5 +39,5 @@ function makeDoc() {
     const project = app.convert(app.expandInputFiles(inputFiles));
     if (!project)
         process.exit(1);
-    app.generateJson(project, outDir + '222.json');
+    app.generateDocs(project, outDir);
 }
