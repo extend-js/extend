@@ -7,8 +7,8 @@ import ts from 'rollup-plugin-typescript2'; // 编译 typescript
 import { eslint } from 'rollup-plugin-eslint'; // eslint 插件
 
 const configure = [];
-const resloveEntry = (p) => path.resolve('./makeDoc-dts', p || '');
-const resloveOut = (p) => path.resolve('./makeDoc', p || '');
+const resloveEntry = (p) => path.resolve('./scripts-dts', p || '');
+const resloveOut = (p) => path.resolve('./scripts-js', p || '');
 
 const isDirectory = (_dir) => fse.statSync(_dir).isDirectory();
 
@@ -32,7 +32,8 @@ fse.removeSync(resloveOut());
 
 files.forEach((filepath) => {
   if (filepath.endsWith('.d.ts')) return;
-  if (!filepath.endsWith('.ts')) return fse.copySync(resloveEntry(filepath), resloveOut(filepath));
+  // if (!filepath.endsWith('.ts')) return fse.copySync(resloveEntry(filepath), resloveOut(filepath));
+  if (!filepath.endsWith('.ts')) return;
   const file_name = filepath.replace(/\.ts$/, '');
   configure.push({
     input: resloveEntry(`${filepath}`),

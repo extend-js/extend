@@ -89,6 +89,7 @@ module.exports = {
     '@typescript-eslint/no-inferrable-types': 'off', // 不允许对初始化为数字，字符串或布尔值的变量或参数进行显式类型声明
     // '@typescript-eslint/no-implied-eval': 'off', // 允许 eval 相关的方法
     '@typescript-eslint/restrict-template-expressions': 'off', // 强制模板文字表达式为字符串类型
+    '@typescript-eslint/ban-ts-comment': 'off', // 禁止 @ts-<directive> 指令
     // 强制未绑定方法以其预期范围调用
     '@typescript-eslint/unbound-method': [
       'off',
