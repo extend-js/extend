@@ -6,7 +6,7 @@
     "reportFolder": "<projectFolder>/temp/"
   },
   "docModel": {
-    "enabled": true
+    "enabled": false
   },
   "dtsRollup": {
     "enabled": true
@@ -32,7 +32,7 @@
     },
     "tsdocMessageReporting": {
       "default": {
-        "logLevel": "warning"
+        "logLevel": "none"
       },
       "tsdoc-undefined-tag": {
         "logLevel": "none"

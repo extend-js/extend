@@ -141,5 +141,6 @@
     "*.scss": "scss",
     "*.pss": "postcss",
     "*.js": "javascript"
-  }
+  },
+  "js/ts.implicitProjectConfig.experimentalDecorators": true
 }

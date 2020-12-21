@@ -9,6 +9,7 @@ import { eslint } from 'rollup-plugin-eslint'; // eslint 插件
 const configure = [];
 const resloveEntry = (p) => path.resolve('./scripts-dts', p || '');
 const resloveOut = (p) => path.resolve('./scripts-js', p || '');
+const isDoc = true;
 
 const isDirectory = (_dir) => fse.statSync(_dir).isDirectory();
 
@@ -21,14 +22,17 @@ function getFiles(_path) {
       arr = arr.concat(getFiles(pathJoin(filepath)));
       return;
     }
-    arr.push(pathJoin(filepath));
+    if (!isDoc) return arr.push(pathJoin(filepath));
+    if (_path && _path.startsWith('makeDoc')) {
+      arr.push(pathJoin(filepath));
+    }
   });
   return arr;
 }
 
 const files = getFiles();
 
-fse.removeSync(resloveOut());
+// fse.removeSync(resloveOut());
 
 files.forEach((filepath) => {
   if (filepath.endsWith('.d.ts')) return;
