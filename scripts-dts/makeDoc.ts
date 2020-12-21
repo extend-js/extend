@@ -56,7 +56,7 @@ function makeDocJson(_target: string): any {
     includes: resolveTarget(_target), // 包含文件
     exclude: ['**/*.test.ts', '**/__test__', '**/dist', '**/index.ts'], // 排除的文件
     media: '', // 包含媒体
-    mode: 'modules', // 指定用于编译项目的输出模式 file | modules
+    mode: 'file', // 指定用于编译项目的输出模式 file | modules
     readme: 'none', // 应在索引页面上显示的自述文件的路径, 通过 none 以禁用索引页面并在 globals 页面上启动文档
     // theme: 'markdown'
     // theme: path.resolve(__dirname, 'theme'), // 指定应使用的主题的路径

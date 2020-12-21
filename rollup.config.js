@@ -32,7 +32,7 @@ function getFiles(_path) {
 
 const files = getFiles();
 
-// fse.removeSync(resloveOut());
+if (!isDoc) fse.removeSync(resloveOut());
 
 files.forEach((filepath) => {
   if (filepath.endsWith('.d.ts')) return;

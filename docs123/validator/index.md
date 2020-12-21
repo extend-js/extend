@@ -1,44 +1,9 @@
 ---
-    123
-id: "extend-validator"
-title: "@roshin/extend-validator"
----
-
----
-    123
-id: "extend-validator"
+id: "index"
 title: "@roshin/extend-validator"
 ---
 
 # @roshin/extend-validator
-
-## Index
-
-### Variables
-
-* [dataViewCtorString](extend-validator.md#dataviewctorstring)
-* [dataViewTag](extend-validator.md#dataviewtag)
-* [getTag](extend-validator.md#gettag)
-* [mapCtorString](extend-validator.md#mapctorstring)
-* [mapTag](extend-validator.md#maptag)
-* [objectTag](extend-validator.md#objecttag)
-* [promiseCtorString](extend-validator.md#promisectorstring)
-* [promiseTag](extend-validator.md#promisetag)
-* [setCtorString](extend-validator.md#setctorstring)
-* [setTag](extend-validator.md#settag)
-* [weakMapCtorString](extend-validator.md#weakmapctorstring)
-* [weakMapTag](extend-validator.md#weakmaptag)
-
-### Functions
-
-* [isFunction](extend-validator.md#isfunction)
-* [isNative](extend-validator.md#isnative)
-* [isNil](extend-validator.md#isnil)
-* [isNumber](extend-validator.md#isnumber)
-* [isObject](extend-validator.md#isobject)
-* [isObjectHost](extend-validator.md#isobjecthost)
-* [isObjectLike](extend-validator.md#isobjectlike)
-* [isObjectPlain](extend-validator.md#isobjectplain)
 
 ## Variables
 
@@ -46,7 +11,7 @@ title: "@roshin/extend-validator"
 
 • `Const` **dataViewCtorString**: undefined \| string = typeof DataView === undefined ? undefined : \`${DataView}\`
 
-*Defined in [packages/validator/src/getTag.ts:12](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/getTag.ts#L12)*
+*Defined in [packages/validator/src/getTag.ts:12](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/getTag.ts#L12)*
 
 ___
 
@@ -54,7 +19,7 @@ ___
 
 • `Const` **dataViewTag**: \"DataView\" = "DataView"
 
-*Defined in [packages/validator/src/getTag.ts:4](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/getTag.ts#L4)*
+*Defined in [packages/validator/src/getTag.ts:4](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/getTag.ts#L4)*
 
 ___
 
@@ -62,7 +27,7 @@ ___
 
 • `Let` **getTag**: baseGetTag = baseGetTag
 
-*Defined in [packages/validator/src/getTag.ts:18](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/getTag.ts#L18)*
+*Defined in [packages/validator/src/getTag.ts:18](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/getTag.ts#L18)*
 
 ___
 
@@ -70,7 +35,7 @@ ___
 
 • `Const` **mapCtorString**: undefined \| string = typeof Map === undefined ? undefined : \`${Map}\`
 
-*Defined in [packages/validator/src/getTag.ts:13](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/getTag.ts#L13)*
+*Defined in [packages/validator/src/getTag.ts:13](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/getTag.ts#L13)*
 
 ___
 
@@ -78,7 +43,7 @@ ___
 
 • `Const` **mapTag**: \"Map\" = "Map"
 
-*Defined in [packages/validator/src/getTag.ts:5](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/getTag.ts#L5)*
+*Defined in [packages/validator/src/getTag.ts:5](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/getTag.ts#L5)*
 
 ___
 
@@ -86,7 +51,7 @@ ___
 
 • `Const` **objectTag**: \"Object\" = "Object"
 
-*Defined in [packages/validator/src/getTag.ts:6](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/getTag.ts#L6)*
+*Defined in [packages/validator/src/getTag.ts:6](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/getTag.ts#L6)*
 
 ___
 
@@ -94,7 +59,7 @@ ___
 
 • `Const` **promiseCtorString**: undefined \| string = typeof Promise === undefined ? undefined : \`${Promise}\`
 
-*Defined in [packages/validator/src/getTag.ts:14](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/getTag.ts#L14)*
+*Defined in [packages/validator/src/getTag.ts:14](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/getTag.ts#L14)*
 
 ___
 
@@ -102,7 +67,7 @@ ___
 
 • `Const` **promiseTag**: \"Promise\" = "Promise"
 
-*Defined in [packages/validator/src/getTag.ts:7](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/getTag.ts#L7)*
+*Defined in [packages/validator/src/getTag.ts:7](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/getTag.ts#L7)*
 
 ___
 
@@ -110,7 +75,7 @@ ___
 
 • `Const` **setCtorString**: undefined \| string = typeof Set === undefined ? undefined : \`${Set}\`
 
-*Defined in [packages/validator/src/getTag.ts:15](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/getTag.ts#L15)*
+*Defined in [packages/validator/src/getTag.ts:15](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/getTag.ts#L15)*
 
 ___
 
@@ -118,7 +83,7 @@ ___
 
 • `Const` **setTag**: \"Set\" = "Set"
 
-*Defined in [packages/validator/src/getTag.ts:8](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/getTag.ts#L8)*
+*Defined in [packages/validator/src/getTag.ts:8](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/getTag.ts#L8)*
 
 ___
 
@@ -126,7 +91,7 @@ ___
 
 • `Const` **weakMapCtorString**: undefined \| string = typeof WeakMap === undefined ? undefined : \`${WeakMap}\`
 
-*Defined in [packages/validator/src/getTag.ts:16](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/getTag.ts#L16)*
+*Defined in [packages/validator/src/getTag.ts:16](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/getTag.ts#L16)*
 
 ___
 
@@ -134,7 +99,7 @@ ___
 
 • `Const` **weakMapTag**: \"WeakMap\" = "WeakMap"
 
-*Defined in [packages/validator/src/getTag.ts:9](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/getTag.ts#L9)*
+*Defined in [packages/validator/src/getTag.ts:9](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/getTag.ts#L9)*
 
 ## Functions
 
@@ -142,7 +107,7 @@ ___
 
 ▸ `Const`**isFunction**\<T>(`value`: any): value is T
 
-*Defined in [packages/validator/src/isFunction.ts:17](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/isFunction.ts#L17)*
+*Defined in [packages/validator/src/isFunction.ts:17](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/isFunction.ts#L17)*
 
 检测参数是否为函数类型
 
@@ -177,7 +142,7 @@ ___
 
 ▸ `Const`**isNative**(`value`: any): boolean
 
-*Defined in [packages/validator/src/isNative.ts:16](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/isNative.ts#L16)*
+*Defined in [packages/validator/src/isNative.ts:16](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/isNative.ts#L16)*
 
 检测参数是否是内置函数
 注意：
@@ -206,7 +171,7 @@ ___
 
 ▸ `Const`**isNil**(`value`: any): value is null \| undefined
 
-*Defined in [packages/validator/src/isNil.ts:10](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/isNil.ts#L10)*
+*Defined in [packages/validator/src/isNil.ts:10](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/isNil.ts#L10)*
 
 测试参数是否为 null | undefined
 
@@ -231,7 +196,7 @@ ___
 
 ▸ `Const`**isNumber**(`value`: any): value is number
 
-*Defined in [packages/validator/src/isNumber.ts:16](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/isNumber.ts#L16)*
+*Defined in [packages/validator/src/isNumber.ts:16](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/isNumber.ts#L16)*
 
 检测参数是否为数字
 
@@ -259,7 +224,7 @@ ___
 
 ▸ `Const`**isObject**\<T>(`value`: any): value is T
 
-*Defined in [packages/validator/src/isObject.ts:11](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/isObject.ts#L11)*
+*Defined in [packages/validator/src/isObject.ts:11](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/isObject.ts#L11)*
 
 检测参数是否属于 `Object` (例如：arrays, functions, objects, regexes, `new Number(0)`, `new String('')`)
 
@@ -291,7 +256,7 @@ ___
 
 ▸ `Const`**isObjectHost**(`value`: any): boolean
 
-*Defined in [packages/validator/src/isObjectHost.ts:11](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/isObjectHost.ts#L11)*
+*Defined in [packages/validator/src/isObjectHost.ts:11](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/isObjectHost.ts#L11)*
 
 检测参数是否是 IE < 9 中的宿主对象(window/document...)
 
@@ -317,7 +282,7 @@ ___
 
 ▸ `Const`**isObjectLike**\<T>(`value`: any): value is T
 
-*Defined in [packages/validator/src/isObjectLike.ts:12](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/isObjectLike.ts#L12)*
+*Defined in [packages/validator/src/isObjectLike.ts:12](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/isObjectLike.ts#L12)*
 
 检测参数是否为类对象(所有 不为 null 且 typeof 后的结果是 "object" 的对象)
 
@@ -350,7 +315,7 @@ ___
 
 ▸ `Const`**isObjectPlain**(`value`: any): value is object
 
-*Defined in [packages/validator/src/isObjectPlain.ts:17](https://github.com/extend-js/extend/blob/8c7f712/packages/validator/src/isObjectPlain.ts#L17)*
+*Defined in [packages/validator/src/isObjectPlain.ts:17](https://github.com/extend-js/extend/blob/176fc7e/packages/validator/src/isObjectPlain.ts#L17)*
 
 检测参数是否为普通对象
 

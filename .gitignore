@@ -26,7 +26,6 @@ jspm_packages/
 *.tgz
 .next
 dist
-scripts-temp
 coverage
 temp
 scripts-js
