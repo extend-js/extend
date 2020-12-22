@@ -2,6 +2,7 @@ const { resolveRoot } = require('./utils');
 const packageJson = require(resolveRoot('./package.json'));
 const sidebar = require('./config/sidebar.js');
 const nav = require('./config/nav.js');
+// const tsdoc = require('./config/tsdoc.js');
 
 module.exports = {
   title: packageJson.name, // 网站的标题

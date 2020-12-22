@@ -65,7 +65,7 @@ export default class VuePressTheme extends MarkdownTheme {
   }
 
   get bodyFile(): string {
-    return `${this._fileName}.md` || 'body.md';
+    return 'body.md';
   }
 
   // get sidebarFile(): string {

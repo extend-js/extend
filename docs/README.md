@@ -4,7 +4,7 @@ heroImage: /blogo.png
 # heroText: @roshin/extend
 # tagline: 一个轻量级 JS/TS 扩展工具库
 actionText: 快速上手 →
-actionLink: /guide/
+actionLink: /guide/introduction
 # features:
 # - title: 借鉴、收集
 #   details: 借鉴 Lodash、Underscore 等工具库，收集日常高频使用的方法。

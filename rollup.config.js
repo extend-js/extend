@@ -36,8 +36,10 @@ if (!isDoc) fse.removeSync(resloveOut());
 
 files.forEach((filepath) => {
   if (filepath.endsWith('.d.ts')) return;
-  // if (!filepath.endsWith('.ts')) return fse.copySync(resloveEntry(filepath), resloveOut(filepath));
-  if (!filepath.endsWith('.ts')) return;
+  if (!filepath.endsWith('.ts')) {
+    if (!isDoc) return fse.copySync(resloveEntry(filepath), resloveOut(filepath));
+    return;
+  }
   const file_name = filepath.replace(/\.ts$/, '');
   configure.push({
     input: resloveEntry(`${filepath}`),

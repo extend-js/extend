@@ -25,7 +25,6 @@ const select: boolean = args.select || args.s; // 选择软件包
 const allMatching: boolean = args.all || args.a; // 匹配所有符合规则的目标，否则只匹配第一次被匹配的的目标
 
 fse.removeSync(resolveRoot(`docs123`));
-
 const app = new Application();
 
 run();
@@ -51,11 +50,11 @@ function makeDocJson(_target: string): any {
 
   app.bootstrap({
     name: generatePkgName(_target), // 设置将在模板标题中使用的项目的名称
-    // includes: resolveTarget(_target), // 包含文件
-    exclude: ['**/*.test.ts', '**/__test__', '**/dist', '**/index.ts'], // 排除的文件
+    includes: resolveTarget(_target), // 包含文件
+    exclude: ['**/*.test.ts', '**/*/__test__', '**/*/dist', '**/*/index.ts'], // 排除的文件
     media: '', // 包含媒体
-    mode: 'file', // 指定用于编译项目的输出模式 file | modules
-    readme: resolveTarget(_target, 'REEADME123.md'), // 应在索引页面上显示的自述文件的路径, 通过 none 以禁用索引页面并在 globals 页面上启动文档
+    mode: 'modules', // 指定用于编译项目的输出模式 file | modules
+    readme: 'none', // 应在索引页面上显示的自述文件的路径, 通过 none 以禁用索引页面并在 globals 页面上启动文档
     // theme: 'markdown'
     theme: path.resolve(__dirname, 'theme'), // 指定应使用的主题的路径
     plugin: ['typedoc-plugin-markdown'],
@@ -78,6 +77,8 @@ function makeDocJson(_target: string): any {
   if (!project) process.exit(1);
 
   app.generateDocs(project, resolveRoot(`docs123/${_target}`));
+  // app.generateJson(project, resolveRoot(`docsJson/${_target}.file.json`));
+  // app.generateJson(project, resolveRoot(`docsJson/${_target}.modules.json`));
   // return app.serializer.projectToObject(project);
 }
 

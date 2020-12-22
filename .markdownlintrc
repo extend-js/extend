@@ -6,6 +6,12 @@
   "MD013": {
     "line_length": "strict"
   },
+  "MD024": {
+    "siblings_only": true
+  },
+  "MD026": {
+    "punctuation": ""
+  },
   "MD033": {
     "allowed_elements": ["p", "a", "img", "div", "Bit", "h2"]
   }
