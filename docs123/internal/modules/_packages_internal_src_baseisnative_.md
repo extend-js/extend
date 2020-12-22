@@ -1,4 +1,4 @@
-# Module: "packages/internal/src/baseIsNative"
+Module &quot;packages/internal/src/baseIsNative&quot;
 
 ## Variables
 
@@ -6,15 +6,15 @@
 
 • `Const` **reIsHostCtor**: RegExp = /^\[object .+?Constructor\]$/
 
-*定义于 [packages/internal/src/baseIsNative.ts:9](https://github.com/extend-js/extend/blob/3b1925b/packages/internal/src/baseIsNative.ts#L9)*
+*Defined in [packages/internal/src/baseIsNative.ts:9](https://github.com/extend-js/extend/blob/d92be1e/packages/internal/src/baseIsNative.ts#L9)*
 
 ___
 
 ## reIsNative
 
-• `Const` **reIsNative**: RegExp = RegExp( '^' + funcToString .call(hasOwnProperty) .replace(reRegExpChar, '\\$&') .replace(/hasOwnProperty\|(function).*?(?=\\\()\| for .+?(?=\\\])/g, '$1.*?') + '$' )
+• `Const` **reIsNative**: RegExp = RegExp( '^' + funcToString .call(hasOwnProperty) .replace(reRegExpChar, '\\$&') .replace(/hasOwnProperty\|(function).*?(?=\\\()\| for .+?(?=\\\])/g, '$1.*?') + '$')
 
-*定义于 [packages/internal/src/baseIsNative.ts:11](https://github.com/extend-js/extend/blob/3b1925b/packages/internal/src/baseIsNative.ts#L11)*
+*Defined in [packages/internal/src/baseIsNative.ts:11](https://github.com/extend-js/extend/blob/d92be1e/packages/internal/src/baseIsNative.ts#L11)*
 
 ___
 
@@ -22,7 +22,9 @@ ___
 
 • `Const` **reRegExpChar**: RegExp = /[\\^$.*+?()[\]{}\|]/g
 
-*定义于 [packages/internal/src/baseIsNative.ts:7](https://github.com/extend-js/extend/blob/3b1925b/packages/internal/src/baseIsNative.ts#L7)*
+*Defined in [packages/internal/src/baseIsNative.ts:7](https://github.com/extend-js/extend/blob/d92be1e/packages/internal/src/baseIsNative.ts#L7)*
+
+___
 
 ## Functions
 
@@ -42,10 +44,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的值 |
 
-### 返回值:
+### 返回:
 
-boolean
+(CallSignature baseIsNative:boolean): 
 
 是否是内置函数
 
-*定义于 [packages/internal/src/baseIsNative.ts:28](https://github.com/extend-js/extend/blob/3b1925b/packages/internal/src/baseIsNative.ts#L28)*
+*Defined in [packages/internal/src/baseIsNative.ts:28](https://github.com/extend-js/extend/blob/d92be1e/packages/internal/src/baseIsNative.ts#L28)*
+
+___

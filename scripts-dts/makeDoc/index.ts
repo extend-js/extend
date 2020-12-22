@@ -54,14 +54,14 @@ function makeDocJson(_target: string): any {
     exclude: ['**/*.test.ts', '**/*/__test__', '**/*/dist', '**/*/index.ts'], // 排除的文件
     media: '', // 包含媒体
     mode: 'modules', // 指定用于编译项目的输出模式 file | modules
-    readme: 'none', // 应在索引页面上显示的自述文件的路径, 通过 none 以禁用索引页面并在 globals 页面上启动文档
+    readme: '', // 应在索引页面上显示的自述文件的路径, 通过 none 以禁用索引页面并在 globals 页面上启动文档
     // theme: 'markdown'
     theme: path.resolve(__dirname, 'theme'), // 指定应使用的主题的路径
     plugin: ['typedoc-plugin-markdown'],
     help: false, // 显示帮助信息
     version: false, // 显示 typedoc 版本
     hideGenerator: true, // 隐藏页底的全局链接
-    includeDeclarations: true, // 是否包含 .d.ts 文件，如果你的项目是javascript写的，可以使用声明文件的方式来支持TypeScript并生成文档
+    includeDeclarations: false, // 是否包含 .d.ts 文件，如果你的项目是javascript写的，可以使用声明文件的方式来支持TypeScript并生成文档
     excludeNotExported: false, // 防止记录未导出的符号
     excludeExternals: true, // 是否排除外部引入的模块
     excludePrivate: true, // 是否排除 private 修饰的相关字段方法

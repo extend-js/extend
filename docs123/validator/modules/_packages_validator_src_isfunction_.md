@@ -1,4 +1,4 @@
-# Module: "packages/validator/src/isFunction"
+Module &quot;packages/validator/src/isFunction&quot;
 
 ## Functions
 
@@ -29,10 +29,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-value is T
+(CallSignature isFunction<T\>:value is T): 
 
 如果参数是 Function，返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isFunction.ts:17](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isFunction.ts#L17)*
+*Defined in [packages/validator/src/isFunction.ts:17](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isFunction.ts#L17)*
+
+___

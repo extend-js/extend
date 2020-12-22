@@ -1,12 +1,10 @@
 {{{declarationTitle}}}
 
-{{> member.sources}}
-
 {{> comment}}
 
 {{#if typeParameters}}
 
-#### Type parameters:
+#### 类型参数:
 
 {{#with typeParameters}}
 
@@ -20,7 +18,7 @@
 
 {{#if type.declaration.children}}
 
-#### Type declaration:
+### 参数:
 
 {{#with type.declaration.children}}
 
@@ -34,7 +32,7 @@
 
 {{#ifCond kindString '==' 'Object literal'}}
 
-#### Properties:
+### 属性:
 
 {{#with children}}
 
@@ -43,3 +41,5 @@
 {{/with}}
 
 {{/ifCond }}
+
+{{> member.sources}}

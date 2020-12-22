@@ -1,4 +1,4 @@
-# Module: "packages/validator/src/isNative"
+Module &quot;packages/validator/src/isNative&quot;
 
 ## Functions
 
@@ -23,10 +23,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-boolean
+(CallSignature isNative:boolean): 
 
 如果参数是内置函数，返回 true,否则返回 false
 
-*定义于 [packages/validator/src/isNative.ts:16](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isNative.ts#L16)*
+*Defined in [packages/validator/src/isNative.ts:16](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isNative.ts#L16)*
+
+___

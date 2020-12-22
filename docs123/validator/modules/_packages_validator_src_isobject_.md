@@ -1,4 +1,4 @@
-# Module: "packages/validator/src/isObject"
+Module &quot;packages/validator/src/isObject&quot;
 
 ## Functions
 
@@ -26,10 +26,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-value is T
+(CallSignature isObject<T\>:value is T): 
 
 如果参数属于 `Object`，返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isObject.ts:11](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isObject.ts#L11)*
+*Defined in [packages/validator/src/isObject.ts:11](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isObject.ts#L11)*
+
+___

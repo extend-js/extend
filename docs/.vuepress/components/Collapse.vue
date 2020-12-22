@@ -5,7 +5,7 @@
       <div class="collapse-header-action" @click="handlerCollapse">{{ action }}</div>
     </section>
     <transition name="fade">
-      <section ref="content" class="collapse-content" v-show="!collapse"></section>
+      <section ref="content" class="collapse-content" v-show="!collapse">123</section>
     </transition>
   </section>
 </template>

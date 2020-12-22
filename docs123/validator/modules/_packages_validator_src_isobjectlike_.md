@@ -1,4 +1,4 @@
-# Module: "packages/validator/src/isObjectLike"
+Module &quot;packages/validator/src/isObjectLike&quot;
 
 ## Functions
 
@@ -27,10 +27,12 @@ Name | Type |
 ------ | ------ |
 `value` | any |
 
-### 返回值:
+### 返回:
 
-value is T
+(CallSignature isObjectLike<T\>:value is T): 
 
 如果参数是类对象，返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isObjectLike.ts:12](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isObjectLike.ts#L12)*
+*Defined in [packages/validator/src/isObjectLike.ts:12](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isObjectLike.ts#L12)*
+
+___

@@ -1,1 +1,1 @@
-# Module: "packages/internal/index"
+Module &quot;packages/internal/index&quot;

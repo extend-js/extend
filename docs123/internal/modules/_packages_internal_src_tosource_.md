@@ -1,4 +1,4 @@
-# Module: "packages/internal/src/toSource"
+Module &quot;packages/internal/src/toSource&quot;
 
 ## Functions
 
@@ -18,10 +18,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要处理的函数 |
 
-### 返回值:
+### 返回:
 
-string
+(CallSignature toSource:string): 
 
 返回源代码
 
-*定义于 [packages/internal/src/toSource.ts:11](https://github.com/extend-js/extend/blob/3b1925b/packages/internal/src/toSource.ts#L11)*
+*Defined in [packages/internal/src/toSource.ts:11](https://github.com/extend-js/extend/blob/d92be1e/packages/internal/src/toSource.ts#L11)*
+
+___

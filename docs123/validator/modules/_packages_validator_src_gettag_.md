@@ -1,4 +1,4 @@
-# Module: "packages/validator/src/getTag"
+Module &quot;packages/validator/src/getTag&quot;
 
 ## Functions
 
@@ -37,10 +37,12 @@ Name | Type |
 ------ | ------ |
 `value` | any |
 
-### 返回值:
+### 返回:
 
-string
+(CallSignature getTag:string): 
 
 数据类型名称 Null | Undefined | Number | Object | ...
 
-*定义于 [packages/validator/src/getTag.ts:30](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/getTag.ts#L30)*
+*Defined in [packages/validator/src/getTag.ts:30](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/getTag.ts#L30)*
+
+___

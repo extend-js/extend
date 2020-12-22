@@ -1,12 +1,10 @@
 {{{signatureTitle}}}
 
-{{> member.sources}}
-
 {{> comment}}
 
 {{#if typeParameters}}
 
-#### Type parameters:
+### 类型参数:
 
 {{#with typeParameters}}
 
@@ -18,7 +16,7 @@
 
 {{#if parameters}}
 
-#### Parameters:
+### 参数:
 
 {{#with parameters}}
 
@@ -43,3 +41,5 @@
 {{/if}}
 
 {{/if}}
+
+{{> member.sources}}

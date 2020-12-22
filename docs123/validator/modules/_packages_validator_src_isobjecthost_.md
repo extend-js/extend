@@ -1,4 +1,4 @@
-# Module: "packages/validator/src/isObjectHost"
+Module &quot;packages/validator/src/isObjectHost&quot;
 
 ## Functions
 
@@ -20,10 +20,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-boolean
+(CallSignature isObjectHost:boolean): 
 
 如果参数是宿主对象返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isObjectHost.ts:11](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isObjectHost.ts#L11)*
+*Defined in [packages/validator/src/isObjectHost.ts:11](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isObjectHost.ts#L11)*
+
+___

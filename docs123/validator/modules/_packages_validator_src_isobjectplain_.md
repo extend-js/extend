@@ -1,4 +1,4 @@
-# Module: "packages/validator/src/isObjectPlain"
+Module &quot;packages/validator/src/isObjectPlain&quot;
 
 ## Functions
 
@@ -21,10 +21,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-value is object
+(CallSignature isObjectPlain:value is object): 
 
 如果参数是普通对象，返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isObjectPlain.ts:17](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isObjectPlain.ts#L17)*
+*Defined in [packages/validator/src/isObjectPlain.ts:17](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isObjectPlain.ts#L17)*
+
+___

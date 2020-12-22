@@ -1,4 +1,4 @@
-# Module: "packages/validator/src/isNumber"
+Module &quot;packages/validator/src/isNumber&quot;
 
 ## Functions
 
@@ -22,10 +22,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-value is number
+(CallSignature isNumber:value is number): 
 
 如果参数是数字，返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isNumber.ts:16](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isNumber.ts#L16)*
+*Defined in [packages/validator/src/isNumber.ts:16](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isNumber.ts#L16)*
+
+___

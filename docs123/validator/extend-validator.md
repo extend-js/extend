@@ -38,13 +38,15 @@ Name | Type |
 ------ | ------ |
 `value` | any |
 
-### 返回值:
+### 返回:
 
-string
+(CallSignature getTag:string): 
 
 数据类型名称 Null | Undefined | Number | Object | ...
 
-*定义于 [packages/validator/src/getTag.ts:30](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/getTag.ts#L30)*
+*Defined in [packages/validator/src/getTag.ts:30](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/getTag.ts#L30)*
+
+___
 
 ## isFunction
 
@@ -73,13 +75,15 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-value is T
+(CallSignature isFunction<T\>:value is T): 
 
 如果参数是 Function，返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isFunction.ts:17](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isFunction.ts#L17)*
+*Defined in [packages/validator/src/isFunction.ts:17](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isFunction.ts#L17)*
+
+___
 
 ## isNative
 
@@ -102,13 +106,15 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-boolean
+(CallSignature isNative:boolean): 
 
 如果参数是内置函数，返回 true,否则返回 false
 
-*定义于 [packages/validator/src/isNative.ts:16](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isNative.ts#L16)*
+*Defined in [packages/validator/src/isNative.ts:16](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isNative.ts#L16)*
+
+___
 
 ## isNil
 
@@ -127,13 +133,15 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-value is null \| undefined
+(CallSignature isNil:value is null \| undefined): 
 
 如果参数是 null 或者 undefined 返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isNil.ts:10](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isNil.ts#L10)*
+*Defined in [packages/validator/src/isNil.ts:10](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isNil.ts#L10)*
+
+___
 
 ## isNumber
 
@@ -155,13 +163,15 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-value is number
+(CallSignature isNumber:value is number): 
 
 如果参数是数字，返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isNumber.ts:16](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isNumber.ts#L16)*
+*Defined in [packages/validator/src/isNumber.ts:16](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isNumber.ts#L16)*
+
+___
 
 ## isObject
 
@@ -187,13 +197,15 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-value is T
+(CallSignature isObject<T\>:value is T): 
 
 如果参数属于 `Object`，返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isObject.ts:11](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isObject.ts#L11)*
+*Defined in [packages/validator/src/isObject.ts:11](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isObject.ts#L11)*
+
+___
 
 ## isObjectHost
 
@@ -213,13 +225,15 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-boolean
+(CallSignature isObjectHost:boolean): 
 
 如果参数是宿主对象返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isObjectHost.ts:11](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isObjectHost.ts#L11)*
+*Defined in [packages/validator/src/isObjectHost.ts:11](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isObjectHost.ts#L11)*
+
+___
 
 ## isObjectLike
 
@@ -246,13 +260,15 @@ Name | Type |
 ------ | ------ |
 `value` | any |
 
-### 返回值:
+### 返回:
 
-value is T
+(CallSignature isObjectLike<T\>:value is T): 
 
 如果参数是类对象，返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isObjectLike.ts:12](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isObjectLike.ts#L12)*
+*Defined in [packages/validator/src/isObjectLike.ts:12](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isObjectLike.ts#L12)*
+
+___
 
 ## isObjectPlain
 
@@ -273,10 +289,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-value is object
+(CallSignature isObjectPlain:value is object): 
 
 如果参数是普通对象，返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isObjectPlain.ts:17](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isObjectPlain.ts#L17)*
+*Defined in [packages/validator/src/isObjectPlain.ts:17](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isObjectPlain.ts#L17)*
+
+___

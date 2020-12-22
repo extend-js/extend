@@ -1,3 +1,4 @@
+const path = require('path');
 const { resolveRoot } = require('./utils');
 const packageJson = require(resolveRoot('./package.json'));
 const sidebar = require('./config/sidebar.js');
@@ -17,11 +18,32 @@ module.exports = {
   themeConfig: {
     nav,
     sidebar
-  }
+  },
   // 插件
   // plugins: [
   //   ['vuepress-plugin-typedoc', tsdoc]
   // ],
   // 打包配置
-  // chainWebpack: (config) => {}
+  chainWebpack: (config) => {
+    config.resolve.alias
+      .set('@', path.resolve(__dirname))
+      .set('packages', resolveRoot('./packages'));
+
+    // config.module
+    //   .rule('eslint')
+    //   .pre()
+    //   .exclude.add([/node_modules/, /docs/])
+    //   .add(path.resolve(__dirname, '../../src'))
+    //   .end()
+    //   .test(/\.js$/)
+    //   .use('eslint-loader')
+    //   .loader('eslint-loader')
+    //   .options({
+    //     extensions: ['.js'],
+    //     cache: true,
+    //     emitWarning: true,
+    //     emitError: true,
+    //     formatter: require('eslint/lib/cli-engine/formatters/codeframe')
+    //   });
+  }
 };

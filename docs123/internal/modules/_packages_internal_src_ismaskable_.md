@@ -1,4 +1,4 @@
-# Module: "packages/internal/src/isMaskable"
+Module &quot;packages/internal/src/isMaskable&quot;
 
 ## Functions
 
@@ -14,10 +14,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-boolean
+(CallSignature isMaskable:boolean): 
 
 如果参数能够被屏蔽, 返回true, 否则返回false
 
-*定义于 [packages/internal/src/isMaskable.ts:9](https://github.com/extend-js/extend/blob/3b1925b/packages/internal/src/isMaskable.ts#L9)*
+*Defined in [packages/internal/src/isMaskable.ts:9](https://github.com/extend-js/extend/blob/d92be1e/packages/internal/src/isMaskable.ts#L9)*
+
+___

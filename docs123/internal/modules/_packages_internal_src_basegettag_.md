@@ -1,4 +1,4 @@
-# Module: "packages/internal/src/baseGetTag"
+Module &quot;packages/internal/src/baseGetTag&quot;
 
 ## Variables
 
@@ -6,7 +6,7 @@
 
 • `Const` **nullTag**: string = "Null"
 
-*定义于 [packages/internal/src/baseGetTag.ts:3](https://github.com/extend-js/extend/blob/3b1925b/packages/internal/src/baseGetTag.ts#L3)*
+*Defined in [packages/internal/src/baseGetTag.ts:3](https://github.com/extend-js/extend/blob/d92be1e/packages/internal/src/baseGetTag.ts#L3)*
 
 ___
 
@@ -14,7 +14,9 @@ ___
 
 • `Const` **undefinedTag**: string = "Undefined"
 
-*定义于 [packages/internal/src/baseGetTag.ts:4](https://github.com/extend-js/extend/blob/3b1925b/packages/internal/src/baseGetTag.ts#L4)*
+*Defined in [packages/internal/src/baseGetTag.ts:4](https://github.com/extend-js/extend/blob/d92be1e/packages/internal/src/baseGetTag.ts#L4)*
+
+___
 
 ## Functions
 
@@ -53,10 +55,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `arg` | any | 需要获取类型的参数 |
 
-### 返回值:
+### 返回:
 
-string
+(CallSignature baseGetTag:string): 
 
 数据类型名称 Null | Undefined | Number | Object | ...
 
-*定义于 [packages/internal/src/baseGetTag.ts:33](https://github.com/extend-js/extend/blob/3b1925b/packages/internal/src/baseGetTag.ts#L33)*
+*Defined in [packages/internal/src/baseGetTag.ts:33](https://github.com/extend-js/extend/blob/d92be1e/packages/internal/src/baseGetTag.ts#L33)*
+
+___

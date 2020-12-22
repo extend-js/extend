@@ -1,4 +1,4 @@
-# Module: "packages/validator/src/isNil"
+Module &quot;packages/validator/src/isNil&quot;
 
 ## Functions
 
@@ -19,10 +19,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-value is null \| undefined
+(CallSignature isNil:value is null \| undefined): 
 
 如果参数是 null 或者 undefined 返回 true，否则返回 false
 
-*定义于 [packages/validator/src/isNil.ts:10](https://github.com/extend-js/extend/blob/3b1925b/packages/validator/src/isNil.ts#L10)*
+*Defined in [packages/validator/src/isNil.ts:10](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isNil.ts#L10)*
+
+___
