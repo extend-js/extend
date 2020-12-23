@@ -39,6 +39,9 @@ module.exports = {
     smoothScroll: true, // 启用页面滚动效果
     repo: 'https://github.com/extend-js/extend', // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
     lastUpdated: "上次更新",
+    dateOptions: {
+      hour12: false
+    },
     docsDir: 'docs', // 假如文档不是放在仓库的根目录下：
     editLinks: true,
     editLinkText: '帮助我们改善此页面！',
@@ -56,13 +59,13 @@ module.exports = {
     [
       "vuepress-plugin-code-copy",
       {
-        selector: '<div class="pre">123123</div>',
-        align: 'bottom',
-        color: '#27b1ff',
-        backgroundTransition: true,
-        backgroundColor: '#0075b8',
-        successText: '复制成功',
-        staticIcon: true
+        // selector: '.language-js',
+        // align: 'bottom',
+        // color: '#27b1ff',
+        // backgroundTransition: true,
+        // backgroundColor: '#0075b8',
+        // successText: '复制成功',
+        // staticIcon: true
       }
     ],
     [
