@@ -8,16 +8,12 @@ module.exports = [
     items: [
       {
         text: '内部使用',
-        link: '/api/extend-internal'
+        link: '/api/internal/'
       },
       {
         text: '检测器',
-        link: '/api/extend-validator'
+        link: '/api/validator/'
       }
     ]
-  },
-  {
-    text: 'GitHub',
-    link: 'https://github.com/extend-js/extend'
   }
 ];

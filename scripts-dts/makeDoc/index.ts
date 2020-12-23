@@ -5,15 +5,14 @@
  *  targets => packages 下的软件包，多个使用逗号分隔，默认全部
  *  -s || --select => 选择软件包，将会列出 packages 下所有软件包列表
  *  -a || --all => 匹配所有符合规则的目标，否则只匹配第一次被匹配的的目标
+ *  -r || --release => 是否需要发布
  */
 
 import * as path from 'path';
 import fse from 'fs-extra'; // fs 扩展工具包
 import minimist from 'minimist'; // 轻量级的命令行参数解析引擎
-// import chalk from 'chalk'; // node 终端样式库
 import { prompt } from 'enquirer'; // 创建交互式 cli 提示
-import { Application /* , NavigationItem */, ProjectReflection, TSConfigReader } from 'typedoc';
-// import { FrontMatterComponent } from 'typedoc-plugin-markdown/dist/components/front-matter.component';
+import { Application, ProjectReflection, TSConfigReader } from 'typedoc';
 import { DocsaurusFrontMatterComponent } from './components/front-matter.component';
 
 import { targets as allTargets, fuzzyMatchTarget, generatePkgName, resolveTarget, pkgDirName, resolveRoot } from '../utils';
@@ -23,8 +22,9 @@ const args: minimist.ParsedArgs = minimist(process.argv.slice(2)); // 命令行�
 const targets: string[] = args._; // 目标项目
 const select: boolean = args.select || args.s; // 选择软件包
 const allMatching: boolean = args.all || args.a; // 匹配所有符合规则的目标，否则只匹配第一次被匹配的的目标
+const isRelease: boolean = args.release || args.r; // 是否需要发布
 
-fse.removeSync(resolveRoot(`docs123`));
+fse.removeSync(resolveRoot(`temp/docs`));
 const app = new Application();
 
 run();
@@ -70,16 +70,18 @@ function makeDocJson(_target: string): any {
   });
 
   app.renderer.addComponent('docusaurus-frontmatter', new DocsaurusFrontMatterComponent(app.renderer));
-  // app.renderer.addComponent('frontmatter', new FrontMatterComponent(app.renderer));
 
   const project: ProjectReflection | undefined = app.convert(app.expandInputFiles([resolveTarget(_target)]));
 
   if (!project) process.exit(1);
 
-  app.generateDocs(project, resolveRoot(`docs123/${_target}`));
+  app.generateDocs(project, resolveRoot(`temp/docs/${_target}`));
   // app.generateJson(project, resolveRoot(`docsJson/${_target}.file.json`));
   // app.generateJson(project, resolveRoot(`docsJson/${_target}.modules.json`));
   // return app.serializer.projectToObject(project);
+  if (isRelease) {
+    fse.copySync(resolveRoot(`temp/docs`), resolveRoot(`./docs/api`));
+  }
 }
 
 /**

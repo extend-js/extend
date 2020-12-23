@@ -13,37 +13,100 @@ module.exports = {
   host: '0.0.0.0', // 主机名
   port: 10320, // 指定端口号
   // head 内容
-  head: [['link', { rel: 'icon', href: `/logo.png` }]],
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
+    ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+  ],
+  markdown: {
+    lineNumbers: true,
+    anchor: {
+      permalinkBefore: false
+    }
+  },
+  theme: 'antdocs',
   // 为当前的主题提供一些配置
   themeConfig: {
+    backToTop: true,
+    search: true,
+    searchMaxSuggestions: 10,
+    smoothScroll: true, // 启用页面滚动效果
+    repo: 'https://github.com/extend-js/extend', // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
+    lastUpdated: "上次更新",
+    docsDir: 'docs', // 假如文档不是放在仓库的根目录下：
+    editLinks: true,
+    editLinkText: '帮助我们改善此页面！',
     nav,
     sidebar
   },
   // 插件
-  // plugins: [
-  //   ['vuepress-plugin-typedoc', tsdoc]
-  // ],
+  plugins: [
+    [
+      'sitemap',
+      {
+        hostname: 'https://pake.web.id'
+      }
+    ],
+    [
+      "vuepress-plugin-code-copy",
+      {
+        selector: '<div class="pre">123123</div>',
+        align: 'bottom',
+        color: '#27b1ff',
+        backgroundTransition: true,
+        backgroundColor: '#0075b8',
+        successText: '复制成功',
+        staticIcon: true
+      }
+    ],
+    [
+      'homebadge',
+      {
+        selector: '.badge', // 指定要注入徽标的父节点
+        repoLink: 'https://github.com/extend-js/extend',
+        badgeLink: 'https://img.shields.io/github/stars/extend-js/extend',
+        badgeGroup: [
+          'https://img.shields.io/github/license/extend-js/extend',
+          'https://img.shields.io/github/forks/extend-js/extend',
+          'https://img.shields.io/github/issues/extend-js/extend'
+        ]
+      }
+    ],
+    [
+      '@vuepress/pwa',
+      {
+        serviceWorker: true,
+        updatePopup: {
+          message: '发现新内容可用',
+          buttonText: '刷新'
+        }
+      }
+    ]
+  ],
   // 打包配置
   chainWebpack: (config) => {
-    config.resolve.alias
-      .set('@', path.resolve(__dirname))
-      .set('packages', resolveRoot('./packages'));
-
-    // config.module
-    //   .rule('eslint')
-    //   .pre()
-    //   .exclude.add([/node_modules/, /docs/])
-    //   .add(path.resolve(__dirname, '../../src'))
-    //   .end()
-    //   .test(/\.js$/)
-    //   .use('eslint-loader')
-    //   .loader('eslint-loader')
-    //   .options({
-    //     extensions: ['.js'],
-    //     cache: true,
-    //     emitWarning: true,
-    //     emitError: true,
-    //     formatter: require('eslint/lib/cli-engine/formatters/codeframe')
-    //   });
+    config.resolve.alias.set('@', path.resolve(__dirname)).set('packages', resolveRoot('./packages'));
+    config.module
+      .rule('eslint')
+      .pre()
+      .exclude.add([/node_modules/, /docs/])
+      .add(path.resolve(__dirname, '../../src'))
+      .end()
+      .test(/\.js$/)
+      .use('eslint-loader')
+      .loader('eslint-loader')
+      .options({
+        extensions: ['.js'],
+        cache: true,
+        emitWarning: true,
+        emitError: true,
+        formatter: require('eslint/lib/cli-engine/formatters/codeframe')
+      });
   }
 };

@@ -1,7 +1,9 @@
+import * as path from 'path';
 import { Renderer } from 'typedoc';
 import { FrontMatterComponent } from 'typedoc-plugin-markdown/dist/components/front-matter.component';
 import { Component } from 'typedoc/dist/lib/output/components';
 import { PageEvent } from 'typedoc/dist/lib/output/events';
+import { reflectionTitle } from 'typedoc-plugin-markdown/dist/resources/helpers/reflection-title';
 
 @Component({ name: 'docusaurus-frontmatter' })
 export class DocsaurusFrontMatterComponent extends FrontMatterComponent {
@@ -28,5 +30,29 @@ ${Object.entries(yamlItems)
   .join('\n')}
 ---`;
     return yaml;
+  }
+
+  getYamlItems(page: PageEvent): { id: string; title: string } {
+    return this.getDefaultValues(page);
+  }
+
+  getDefaultValues(page: PageEvent): { id: string; title: string } {
+    return {
+      id: this.getId(page),
+      title: this.getTitle(page)
+    };
+  }
+
+  getId(page: PageEvent): string {
+    return path.basename(page.url, path.extname(page.url));
+  }
+
+  getTitle(page: PageEvent): string {
+    if (page.url === 'globals.md') {
+      return 'API';
+    } else if (page.url === 'README.md') {
+      return '快速上手';
+    }
+    return reflectionTitle.call(page, false);
   }
 }

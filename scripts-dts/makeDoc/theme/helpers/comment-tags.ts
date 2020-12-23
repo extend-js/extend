@@ -1,13 +1,15 @@
 import { Comment } from 'typedoc/dist/lib/models';
 import MarkdownTheme from '../theme';
-import lable from './lable.json';
+import { resolveRoot, loadFile } from '../../../utils';
+const config = loadFile(resolveRoot('./docs.config'));
+const label = config.tags || {};
 
 export function commentTags(this: Comment, options: any): string {
   if (!this.tags) return '';
   const md: string[] = [];
   const example: string[] = [];
   this.tags.forEach((item) => {
-    const tagName = `### ${lable[item.tagName] || item.tagName}\n\n`;
+    const tagName = `<h3>${label[item.tagName] || item.tagName}</h3>\n\n`;
     const text = item.text ? MarkdownTheme.HANDLEBARS.helpers.comment.call(item.text) : '';
     if (item.tagName === 'example') {
       example.push(tagName);

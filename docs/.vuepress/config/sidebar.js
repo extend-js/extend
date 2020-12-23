@@ -6,11 +6,18 @@ module.exports = {
       children: ['/guide/introduction', '/guide/install', '/guide/commitConvention', '/guide/repo', '/guide/pull']
     }
   ],
-  '/api': [
+  '/api/internal': [
     {
-      title: '文档',
+      title: '内部使用',
       collapsable: false,
-      children: ['/api/extend-internal', '/api/extend-validator']
+      children: ['/api/internal/','/api/internal/globals']
+    }
+  ],
+  '/api/validator': [
+    {
+      title: '检测器',
+      collapsable: false,
+      children: ['/api/validator/', '/api/validator/globals']
     }
   ]
 };

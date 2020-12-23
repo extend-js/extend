@@ -15,6 +15,8 @@ actionLink: /guide/introduction
 footer: MIT Licensed | Copyright © 2020-present roshin
 ---
 
+<div class="badge"></div>
+
 <div class="features">
   <div class="feature">
     <h2>借鉴、收集</h2>

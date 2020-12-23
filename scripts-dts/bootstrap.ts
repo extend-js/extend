@@ -43,6 +43,7 @@ targets.forEach((target: string) => {
     // 默认 package.json 配置
     const json = {
       name: pkgName, // 模块名
+      docsName: '检测器', // 文档显示到名称
       version: currentVersion, // 版本号
       description: name, // 描述
       main: 'index.js', // 主入口文件(commonjs 模块代码)
