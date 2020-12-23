@@ -8,11 +8,13 @@ import { getPrototypeOf } from 'extends-internal';
  * @param { any } value 要检测的参数
  * @returns { Boolean } 如果参数是普通对象，返回 true，否则返回 false
  * @example
- *  class Foo{ a = 1 }
- *  isPlainObject(new Foo); // => false
- *  isPlainObject([1, 2, 3]); // => false
- *  isPlainObject({ 'x': 0, 'y': 0 }); // => true
- *  isPlainObject(Object.create(null)); // => true
+ * ```js
+ * class Foo{ a = 1 }
+ * isPlainObject(new Foo); // => false
+ * isPlainObject([1, 2, 3]); // => false
+ * isPlainObject({ 'x': 0, 'y': 0 }); // => true
+ * isPlainObject(Object.create(null)); // => true
+ * ```
  */
 const isObjectPlain = (value: any): value is object => {
   // 如果不是一个对象

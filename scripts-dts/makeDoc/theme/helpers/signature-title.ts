@@ -5,7 +5,7 @@ import { Type } from 'typedoc/dist/lib/models/types';
 import { type } from './type';
 
 export function signatureTitle(this: SignatureReflection): string {
-  const md: string[] = [];
+  const md: string[] = ['> '];
 
   // md.push(`${memberSymbol.call(this)} `);
 
@@ -22,8 +22,7 @@ export function signatureTitle(this: SignatureReflection): string {
   }
 
   if (this.typeParameters) {
-    // eslint-disable-next-line prettier/prettier,no-useless-escape
-    md.push(`<${this.typeParameters.map((typeParameter) => typeParameter.name).join(', ')}\>`);
+    md.push(`<${this.typeParameters.map((typeParameter) => typeParameter.name).join(', ')}\\>`);
   }
 
   const params = this.parameters

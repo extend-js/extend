@@ -11,11 +11,11 @@ export function comment(this: Comment): string {
   if (this.text) {
     md.push(MarkdownTheme.HANDLEBARS.helpers.comment.call(this.text));
   }
-  if (this.tags) {
-    const tags = this.tags.map(
-      (tag) => `**\`${tag.tagName}\`**123 ${tag.text ? MarkdownTheme.HANDLEBARS.helpers.comment.call(tag.text) : ''}`
-    );
-    md.push(tags.join('\n\n'));
-  }
+  // if (this.tags) {
+  //   const tags = this.tags.map(
+  //     (tag) => `**\`${tag.tagName}\`** ${tag.text ? MarkdownTheme.HANDLEBARS.helpers.comment.call(tag.text) : ''}`
+  //   );
+  //   md.push(tags.join('\n\n'));
+  // }
   return md.join('\n\n');
 }

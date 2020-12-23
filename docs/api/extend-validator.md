@@ -5,11 +5,21 @@ title: "@roshin/extend-validator"
 
 ## getTag
 
-`Const`**getTag**(`value`: any): string
+> `Const`**getTag**(`value`: any): string
 
 获取参数的数据的类型
 
-**`example`**
+### 参数:
+
+名称 | 类型 |
+------ | ------ |
+`value` | any |
+
+### 返回:
+
+(string): 数据类型名称 Null | Undefined | Number | Object | ...
+
+### 示例
 
  getTag(null) // => 'Null'
  getTag(void 0) // => 'Undefined'
@@ -33,29 +43,34 @@ title: "@roshin/extend-validator"
  obj2[Symbol.toStringTag] = 'test'
  getTag(obj2) // => 'Object'
 
-### 参数:
-
-Name | Type |
------- | ------ |
-`value` | any |
-
-### 返回值:
-
-string
-
-数据类型名称 Null | Undefined | Number | Object | ...
-
->Defined in [packages/validator/src/getTag.ts:30](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/getTag.ts#L30)
+*定义于 [packages/validator/src/getTag.ts:30](https://github.com/extend-js/extend/blob/365d73b/packages/validator/src/getTag.ts#L30)*
 
 ___
 
 ## isFunction
 
-`Const`**isFunction**<T\>(`value`: any): value is T
+> `Const`**isFunction**<T\>(`value`: any): value is T
 
 检测参数是否为函数类型
 
-**`example`**123
+### 类型参数:
+
+名称 | 默认 |
+------ | ------ |
+`T` | Function |
+
+### 参数:
+
+名称 | 类型 | 描述 |
+------ | ------ | ------ |
+`value` | any | 要检测的参数 |
+
+### 返回:
+
+(value is T): 如果参数是 Function，返回 true，否则返回 false
+
+### 示例
+
  isFunction(class Any{}) // => true
  isFunction(() => {}) // => true
  isFunction(async () => {}) // => true
@@ -64,31 +79,13 @@ ___
  isFunction(/abc/) // => false
  isFunction(null) // => false
 
-### 类型参数:
-
-Name | Default |
------- | ------ |
-`T` | Function |
-
-### 参数:
-
-Name | Type | Description |
------- | ------ | ------ |
-`value` | any | 要检测的参数 |
-
-### 返回值:
-
-value is T
-
-如果参数是 Function，返回 true，否则返回 false
-
-*Defined in [packages/validator/src/isFunction.ts:17](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isFunction.ts#L17)*
+*定义于 [packages/validator/src/isFunction.ts:17](https://github.com/extend-js/extend/blob/365d73b/packages/validator/src/isFunction.ts#L17)*
 
 ___
 
 ## isNative
 
-`Const`**isNative**(`value`: any): boolean
+> `Const`**isNative**(`value`: any): boolean
 
 检测参数是否是内置函数
 注意：
@@ -97,60 +94,69 @@ ___
  因此，我们别无选择只能抛出错误。
  不幸的是，这样还是会影响那些依赖于 core-js 的包，例如 babel-polyfil
 
-**`example`**123
- isNative(Array.prototype.push) // => true
- isNative(_) // => false
-
 ### 参数:
 
-Name | Type | Description |
+名称 | 类型 | 描述 |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-boolean
+(boolean): 如果参数是内置函数，返回 true,否则返回 false
 
-如果参数是内置函数，返回 true,否则返回 false
+### 示例
 
-*Defined in [packages/validator/src/isNative.ts:16](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isNative.ts#L16)*
+ isNative(Array.prototype.push) // => true
+ isNative(_) // => false
+
+*定义于 [packages/validator/src/isNative.ts:16](https://github.com/extend-js/extend/blob/365d73b/packages/validator/src/isNative.ts#L16)*
 
 ___
 
 ## isNil
 
-`Const`**isNil**(`value`: any): value is null \| undefined
+> `Const`**isNil**(`value`: any): value is null \| undefined
 
 测试参数是否为 null | undefined
 
-**`example`**123
+### 参数:
+
+名称 | 类型 | 描述 |
+------ | ------ | ------ |
+`value` | any | 要检测的参数 |
+
+### 返回:
+
+(value is null \| undefined): 如果参数是 null 或者 undefined 返回 true，否则返回 false
+
+### 示例
+
  isNil(null) // => true
  isNil(void 0) // => true
  isNil(NaN) // => false
 
-### 参数:
-
-Name | Type | Description |
------- | ------ | ------ |
-`value` | any | 要检测的参数 |
-
-### 返回值:
-
-value is null \| undefined
-
-如果参数是 null 或者 undefined 返回 true，否则返回 false
-
-*Defined in [packages/validator/src/isNil.ts:10](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isNil.ts#L10)*
+*定义于 [packages/validator/src/isNil.ts:10](https://github.com/extend-js/extend/blob/365d73b/packages/validator/src/isNil.ts#L10)*
 
 ___
 
 ## isNumber
 
-`Const`**isNumber**(`value`: any): value is number
+> `Const`**isNumber**(`value`: any): value is number
 
 检测参数是否为数字
 
-**`example`**123
+### 参数:
+
+名称 | 类型 | 描述 |
+------ | ------ | ------ |
+`value` | any | 要检测的参数 |
+
+### 返回:
+
+(value is number): 如果参数是数字，返回 true，否则返回 false
+
+### 示例
+
  isNumber(3); // => true
  isNumber(Number.MIN_VALUE); // => true
  isNumber(Infinity); // => true
@@ -158,144 +164,130 @@ ___
  isNumber(new Number(2)); // => true
  isNumber('3'); // => false
 
-### 参数:
-
-Name | Type | Description |
------- | ------ | ------ |
-`value` | any | 要检测的参数 |
-
-### 返回值:
-
-value is number
-
-如果参数是数字，返回 true，否则返回 false
-
-*Defined in [packages/validator/src/isNumber.ts:16](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isNumber.ts#L16)*
+*定义于 [packages/validator/src/isNumber.ts:16](https://github.com/extend-js/extend/blob/365d73b/packages/validator/src/isNumber.ts#L16)*
 
 ___
 
 ## isObject
 
-`Const`**isObject**<T\>(`value`: any): value is T
+> `Const`**isObject**<T\>(`value`: any): value is T
 
 检测参数是否属于 `Object` (例如：arrays, functions, objects, regexes, `new Number(0)`, `new String('')`)
 
-**`example`**123
- isObject({}) // => true
- isObject([1, 2, 3]) // => true
- isObject(function fn() {}) // => true
- isObject(null) // => false
-
 ### 类型参数:
 
-Name | Default |
+名称 | 默认 |
 ------ | ------ |
 `T` | object |
 
 ### 参数:
 
-Name | Type | Description |
+名称 | 类型 | 描述 |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-value is T
+(value is T): 如果参数属于 `Object`，返回 true，否则返回 false
 
-如果参数属于 `Object`，返回 true，否则返回 false
+### 示例
 
-*Defined in [packages/validator/src/isObject.ts:11](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isObject.ts#L11)*
+ isObject({}) // => true
+ isObject([1, 2, 3]) // => true
+ isObject(function fn() {}) // => true
+ isObject(null) // => false
+
+*定义于 [packages/validator/src/isObject.ts:11](https://github.com/extend-js/extend/blob/365d73b/packages/validator/src/isObject.ts#L11)*
 
 ___
 
 ## isObjectHost
 
-`Const`**isObjectHost**(`value`: any): boolean
+> `Const`**isObjectHost**(`value`: any): boolean
 
 检测参数是否是 IE < 9 中的宿主对象(window/document...)
 
-**`example`**123
+### 参数:
+
+名称 | 类型 | 描述 |
+------ | ------ | ------ |
+`value` | any | 要检测的参数 |
+
+### 返回:
+
+(boolean): 如果参数是宿主对象返回 true，否则返回 false
+
+### 示例
+
  isHostObject(window) // => ie < 9: true, other: false
  isHostObject(document) // => ie < 9: true, other: false
  isHostObject({}) // => ie < 9: false, other: false
  isHostObject(Object) // => ie < 9: false, other: false
 
-### 参数:
-
-Name | Type | Description |
------- | ------ | ------ |
-`value` | any | 要检测的参数 |
-
-### 返回值:
-
-boolean
-
-如果参数是宿主对象返回 true，否则返回 false
-
-*Defined in [packages/validator/src/isObjectHost.ts:11](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isObjectHost.ts#L11)*
+*定义于 [packages/validator/src/isObjectHost.ts:11](https://github.com/extend-js/extend/blob/365d73b/packages/validator/src/isObjectHost.ts#L11)*
 
 ___
 
 ## isObjectLike
 
-`Const`**isObjectLike**<T\>(`value`: any): value is T
+> `Const`**isObjectLike**<T\>(`value`: any): value is T
 
 检测参数是否为类对象(所有 不为 null 且 typeof 后的结果是 "object" 的对象)
 
-**`example`**123
+### 类型参数:
+
+名称 | 默认 |
+------ | ------ |
+`T` | object |
+
+### 参数:
+
+名称 | 类型 |
+------ | ------ |
+`value` | any |
+
+### 返回:
+
+(value is T): 如果参数是类对象，返回 true，否则返回 false
+
+### 示例
+
  isObjectLike({}) // => true
  isObjectLike([1, 2, 3]) // => true
  isObjectLike(Function) // => false
  isObjectLike(undefined) // => false
  isObjectLike(null) // => false
 
-### 类型参数:
-
-Name | Default |
------- | ------ |
-`T` | object |
-
-### 参数:
-
-Name | Type |
------- | ------ |
-`value` | any |
-
-### 返回值:
-
-value is T
-
-如果参数是类对象，返回 true，否则返回 false
-
-*Defined in [packages/validator/src/isObjectLike.ts:12](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isObjectLike.ts#L12)*
+*定义于 [packages/validator/src/isObjectLike.ts:12](https://github.com/extend-js/extend/blob/365d73b/packages/validator/src/isObjectLike.ts#L12)*
 
 ___
 
 ## isObjectPlain
 
-`Const`**isObjectPlain**(`value`: any): value is object
+> `Const`**isObjectPlain**(`value`: any): value is object
 
 检测参数是否为普通对象
 
-**`example`**123
- class Foo{ a = 1 }
- isPlainObject(new Foo); // => false
- isPlainObject([1, 2, 3]); // => false
- isPlainObject({ 'x': 0, 'y': 0 }); // => true
- isPlainObject(Object.create(null)); // => true
-
 ### 参数:
 
-Name | Type | Description |
+名称 | 类型 | 描述 |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-### 返回值:
+### 返回:
 
-value is object
+(value is object): 如果参数是普通对象，返回 true，否则返回 false
 
-如果参数是普通对象，返回 true，否则返回 false
+### 示例
 
-*Defined in [packages/validator/src/isObjectPlain.ts:17](https://github.com/extend-js/extend/blob/d92be1e/packages/validator/src/isObjectPlain.ts#L17)*
+```js
+class Foo{ a = 1 }
+isPlainObject(new Foo); // => false
+isPlainObject([1, 2, 3]); // => false
+isPlainObject({ 'x': 0, 'y': 0 }); // => true
+isPlainObject(Object.create(null)); // => true
+```
+
+*定义于 [packages/validator/src/isObjectPlain.ts:19](https://github.com/extend-js/extend/blob/365d73b/packages/validator/src/isObjectPlain.ts#L19)*
 
 ___

@@ -20,7 +20,7 @@ import {
 } from 'typedoc/dist/lib/models/types';
 
 import MarkdownTheme from '../theme';
-import { escape } from './escape';
+import { escape } from 'typedoc-plugin-markdown/dist/resources/helpers/escape';
 
 export function type(
   this:
@@ -181,8 +181,7 @@ function getArrayType(model: ArrayType) {
 }
 
 function getUnionType(model: UnionType) {
-  // eslint-disable-next-line prettier/prettier,no-useless-escape
-  return model.types.map((unionType) => type.call(unionType)).join(' \| ');
+  return model.types.map((unionType) => type.call(unionType)).join(' \\| ');
 }
 
 function getIntersectionType(model: IntersectionType) {

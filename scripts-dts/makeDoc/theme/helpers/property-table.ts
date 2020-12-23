@@ -3,8 +3,8 @@ import { ReflectionKind } from 'typedoc/dist/lib/models';
 import { Type } from 'typedoc/dist/lib/models/types';
 
 import { comment } from './comment';
-import { escape } from './escape';
-import { stripLineBreaks } from './strip-line-breaks';
+import { escape } from 'typedoc-plugin-markdown/dist/resources/helpers/escape';
+import { stripLineBreaks } from 'typedoc-plugin-markdown/dist/resources/helpers/strip-line-breaks';
 import { type } from './type';
 
 export function propertyTable(this: DeclarationReflection[], kind?: ReflectionKind): string {
@@ -13,12 +13,12 @@ export function propertyTable(this: DeclarationReflection[], kind?: ReflectionKi
   );
   const hasComments = !commentsMap.every((value) => !value);
   const hasValues = kind === ReflectionKind.ObjectLiteral;
-  const headers = ['Name', 'Type'];
+  const headers = ['名称', '类型'];
   if (hasValues) {
-    headers.push('Value');
+    headers.push('默认值');
   }
   if (hasComments) {
-    headers.push('Description');
+    headers.push('描述');
   }
 
   const rows = this.map((property) => {

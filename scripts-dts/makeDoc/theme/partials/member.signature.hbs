@@ -26,20 +26,16 @@
 
 {{/if}}
 
+{{> comment.tags.other}}
+
 {{#if type}}
 
-{{#with type}}{{{returns}}}{{/with}}
+### 返回:
 
-{{#if comment.returns}}
-
-{{#with comment.returns}}
-
-{{{text}}}
-
-{{/with}}
+{{{returns}}}
 
 {{/if}}
 
-{{/if}}
+{{> comment.tags.example}}
 
 {{> member.sources}}

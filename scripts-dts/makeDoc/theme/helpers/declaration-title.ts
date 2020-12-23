@@ -1,18 +1,17 @@
 import { DeclarationReflection, ParameterReflection, ReflectionKind } from 'typedoc';
 import { ReflectionType } from 'typedoc/dist/lib/models';
 
-import { escape } from './escape';
-import { memberSymbol } from './member-symbol';
-import { stripComments } from './strip-comments';
-import { stripLineBreaks } from './strip-line-breaks';
+import { escape } from 'typedoc-plugin-markdown/dist/resources/helpers/escape';
+import { stripComments } from 'typedoc-plugin-markdown/dist/resources/helpers/strip-comments';
+import { stripLineBreaks } from 'typedoc-plugin-markdown/dist/resources/helpers/strip-line-breaks';
 import { type } from './type';
 
 export function declarationTitle(this: ParameterReflection | DeclarationReflection): string {
-  const md = [memberSymbol.call(this) + ' '];
+  const md: string[] = ['> '];
   if (this.flags && !this.flags.isRest) {
     md.push(this.flags.map((flag) => `\`${flag}\``).join(' '));
   }
-  md.push(`${this.flags.isRest ? '... ' : ' '}**${escape(this.name)}**`);
+  md.push(`${this.flags.isRest ? '... ' : ''}**${escape(this.name)}**`);
   if (this instanceof DeclarationReflection && this.typeParameters) {
     md.push(`<${this.typeParameters.map((typeParameter) => typeParameter.name).join(', ')}\\>`);
   }
