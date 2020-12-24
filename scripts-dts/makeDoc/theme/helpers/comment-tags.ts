@@ -8,8 +8,8 @@ export function commentTags(this: Comment, options: any): string {
   if (!this.tags) return '';
   const md: string[] = [];
   const example: string[] = [];
-  this.tags.forEach((item) => {
-    const tagName = `<h3>${label[item.tagName] || item.tagName}</h3>\n\n`;
+  this.tags.forEach((item, i) => {
+    const tagName = `${i > 0 ? '\n\n' : ''}<h3>${label[item.tagName] || item.tagName}</h3>\n\n`;
     const text = item.text ? MarkdownTheme.HANDLEBARS.helpers.comment.call(item.text) : '';
     if (item.tagName === 'example') {
       example.push(tagName);

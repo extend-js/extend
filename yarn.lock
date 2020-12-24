@@ -14927,10 +14927,12 @@ vuepress-plugin-container@^2.0.2, vuepress-plugin-container@^2.1.5:
     "@vuepress/shared-utils" "^1.2.0"
     markdown-it-container "^2.0.0"
 
-vuepress-plugin-homebadge@^0.1.0:
-  version "0.1.0"
-  resolved "https://r.cnpmjs.org/vuepress-plugin-homebadge/download/vuepress-plugin-homebadge-0.1.0.tgz#940022dfe0f0c4da28f139afba34595a8d62e0d5"
-  integrity sha1-lAAi3+DwxNoo8TmvujRZWo1i4NU=
+vuepress-plugin-nprogress@^1.1.8:
+  version "1.1.8"
+  resolved "https://r.cnpmjs.org/vuepress-plugin-nprogress/download/vuepress-plugin-nprogress-1.1.8.tgz#92ee0002f0edd519542e0048481cb01f16e89e3c"
+  integrity sha1-ku4AAvDt1RlULgBISBywHxbonjw=
+  dependencies:
+    nprogress "^0.2.0"
 
 vuepress-plugin-sitemap@^2.3.1:
   version "2.3.1"

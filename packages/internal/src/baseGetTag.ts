@@ -5,30 +5,34 @@ const undefinedTag: string = 'Undefined';
 
 /**
  * 获取参数的数据的类型
- * @param { any } arg 需要获取类型的参数
+ * @since 0.0.1
+ * @author roshin
+ * @param { * } arg 需要获取类型的参数
  * @returns { string } 数据类型名称 Null | Undefined | Number | Object | ...
  * @example
- *  baseGetTag(null) // => 'Null'
- *  baseGetTag(void 0) // => 'Undefined'
- *  baseGetTag(NaN) // => 'Number'
+ * ``` js
+ * baseGetTag(null) // => 'Null'
+ * baseGetTag(void 0) // => 'Undefined'
+ * baseGetTag(NaN) // => 'Number'
  *
- *  class MyObject {}
- *  baseGetTag(new MyObject) // => 'MyObject'
+ * class MyObject {}
+ * baseGetTag(new MyObject) // => 'MyObject'
  *
- *  class ValidatorClass {
- *    get [Symbol.toStringTag]() {
- *      return 'test';
- *    }
- *  }
- *  baseGetTag(new ValidatorClass) // => 'test'
+ * class ValidatorClass {
+ *   get [Symbol.toStringTag]() {
+ *     return 'test';
+ *   }
+ * }
+ * baseGetTag(new ValidatorClass) // => 'test'
  *
- *  const obj = {}
- *  Object.defineProperty(obj, Symbol.toStringTag, { value: 'customObj' });
- *  baseGetTag(obj) // => 'customObj'
+ * const obj = {}
+ * Object.defineProperty(obj, Symbol.toStringTag, { value: 'customObj' });
+ * baseGetTag(obj) // => 'customObj'
  *
- *  const obj2 = {}
- *  obj2[Symbol.toStringTag] = 'test'
- *  baseGetTag(obj2) // => 'Object'
+ * const obj2 = {}
+ * obj2[Symbol.toStringTag] = 'test'
+ * baseGetTag(obj2) // => 'Object'
+ * ```
  */
 const baseGetTag = (arg: any): string => {
   // 处理浏览器兼容性, 在 es5 之前，并没有对 null 和 undefined 进行处理，返回的都是 [object Object]

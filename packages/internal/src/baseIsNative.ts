@@ -19,11 +19,15 @@ const reIsNative = RegExp(
 
 /**
  * isNative 的基本实现没有错误的填充检查
+ * @since 0.0.1
+ * @author roshin
  * @param { any } value 要检测的值
  * @returns { boolean } 是否是内置函数
  * @example
- *  baseIsNative(Array.prototype.push); // => true
- *  baseIsNative(_); // => false
+ * ``` js
+ * baseIsNative(Array.prototype.push); // => true
+ * baseIsNative(_); // => false
+ * ```
  */
 function baseIsNative(value: any): boolean {
   if (!isObject(value) || isMasked(value)) return false;

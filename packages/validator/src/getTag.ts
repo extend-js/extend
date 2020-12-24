@@ -2,30 +2,34 @@
 
 /**
  * 获取参数的数据的类型
- * @param { any } arg 需要获取类型的参数
+ * @since 0.0.1
+ * @author roshin
+ * @param { * } value 需要获取类型的参数
  * @returns { string } 数据类型名称 Null | Undefined | Number | Object | ...
  * @example
- *  getTag(null) // => 'Null'
- *  getTag(void 0) // => 'Undefined'
- *  getTag(NaN) // => 'Number'
+ * ``` js
+ * getTag(null) // => 'Null'
+ * getTag(void 0) // => 'Undefined'
+ * getTag(NaN) // => 'Number'
  *
- *  class MyObject {}
- *  getTag(new MyObject) // => 'MyObject'
+ * class MyObject {}
+ * getTag(new MyObject) // => 'MyObject'
  *
- *  class ValidatorClass {
- *    get [Symbol.toStringTag]() {
- *      return 'test';
- *    }
- *  }
- *  getTag(new ValidatorClass) // => 'test'
+ * class ValidatorClass {
+ *   get [Symbol.toStringTag]() {
+ *     return 'test';
+ *   }
+ * }
+ * getTag(new ValidatorClass) // => 'test'
  *
- *  const obj = {}
- *  Object.defineProperty(obj, Symbol.toStringTag, { value: 'customObj' });
- *  getTag(obj) // => 'customObj'
+ * const obj = {}
+ * Object.defineProperty(obj, Symbol.toStringTag, { value: 'customObj' });
+ * getTag(obj) // => 'customObj'
  *
- *  const obj2 = {}
- *  obj2[Symbol.toStringTag] = 'test'
- *  getTag(obj2) // => 'Object'
+ * const obj2 = {}
+ * obj2[Symbol.toStringTag] = 'test'
+ * getTag(obj2) // => 'Object'
+ * ```
  */
 const getTag = (value: any): string => {
   // DataView、Map、Promise、Set、WeakMap 的标签名

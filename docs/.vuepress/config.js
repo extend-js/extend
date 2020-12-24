@@ -27,7 +27,9 @@ module.exports = {
   markdown: {
     lineNumbers: true,
     anchor: {
-      permalinkBefore: false
+      permalink: true,
+      permalinkBefore: false,
+      permalinkSymbol: '#'
     }
   },
   theme: 'antdocs',
@@ -38,7 +40,7 @@ module.exports = {
     searchMaxSuggestions: 10,
     smoothScroll: true, // 启用页面滚动效果
     repo: 'https://github.com/extend-js/extend', // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
-    lastUpdated: "上次更新",
+    lastUpdated: '上次更新',
     dateOptions: {
       hour12: false
     },
@@ -50,35 +52,23 @@ module.exports = {
   },
   // 插件
   plugins: [
+    'vuepress-plugin-nprogress',
     [
       'sitemap',
       {
-        hostname: 'https://pake.web.id'
+        // hostname: 'https://pake.web.id'
       }
     ],
     [
-      "vuepress-plugin-code-copy",
+      'vuepress-plugin-code-copy',
       {
         // selector: '.language-js',
-        // align: 'bottom',
-        // color: '#27b1ff',
-        // backgroundTransition: true,
-        // backgroundColor: '#0075b8',
-        // successText: '复制成功',
-        // staticIcon: true
-      }
-    ],
-    [
-      'homebadge',
-      {
-        selector: '.badge', // 指定要注入徽标的父节点
-        repoLink: 'https://github.com/extend-js/extend',
-        badgeLink: 'https://img.shields.io/github/stars/extend-js/extend',
-        badgeGroup: [
-          'https://img.shields.io/github/license/extend-js/extend',
-          'https://img.shields.io/github/forks/extend-js/extend',
-          'https://img.shields.io/github/issues/extend-js/extend'
-        ]
+        align: 'bottom',
+        color: '#27b1ff',
+        backgroundTransition: true,
+        backgroundColor: '#0075b8',
+        successText: '复制成功',
+        staticIcon: false
       }
     ],
     [

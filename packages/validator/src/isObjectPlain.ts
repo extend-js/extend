@@ -5,10 +5,12 @@ import { getPrototypeOf } from 'extends-internal';
 
 /**
  * 检测参数是否为普通对象
- * @param { any } value 要检测的参数
- * @returns { Boolean } 如果参数是普通对象，返回 true，否则返回 false
+ * @since 0.0.1
+ * @author roshin
+ * @param { * } value 要检测的参数
+ * @returns { boolean } 如果参数是普通对象，返回 true，否则返回 false
  * @example
- * ```js
+ * ``` js
  * class Foo{ a = 1 }
  * isPlainObject(new Foo); // => false
  * isPlainObject([1, 2, 3]); // => false

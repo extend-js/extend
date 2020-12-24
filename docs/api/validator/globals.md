@@ -11,9 +11,17 @@ title: "API"
 
 <h3>参数:</h3>
 
-名称 | 类型 |
------- | ------ |
-`value` | any |
+名称 | 类型 | 描述 |
+------ | ------ | ------ |
+`value` | any | 需要获取类型的参数 |
+
+<h3>添加版本</h3>
+
+0.0.1
+
+<h3>作者</h3>
+
+roshin
 
 <h3>返回:</h3>
 
@@ -21,29 +29,31 @@ title: "API"
 
 <h3>示例</h3>
 
- getTag(null) // => 'Null'
- getTag(void 0) // => 'Undefined'
- getTag(NaN) // => 'Number'
+``` js
+getTag(null) // => 'Null'
+getTag(void 0) // => 'Undefined'
+getTag(NaN) // => 'Number'
 
- class MyObject {}
- getTag(new MyObject) // => 'MyObject'
+class MyObject {}
+getTag(new MyObject) // => 'MyObject'
 
- class ValidatorClass {
-   get [Symbol.toStringTag]() {
-     return 'test';
-   }
- }
- getTag(new ValidatorClass) // => 'test'
+class ValidatorClass {
+  get [Symbol.toStringTag]() {
+    return 'test';
+  }
+}
+getTag(new ValidatorClass) // => 'test'
 
- const obj = {}
- Object.defineProperty(obj, Symbol.toStringTag, { value: 'customObj' });
- getTag(obj) // => 'customObj'
+const obj = {}
+Object.defineProperty(obj, Symbol.toStringTag, { value: 'customObj' });
+getTag(obj) // => 'customObj'
 
- const obj2 = {}
- obj2[Symbol.toStringTag] = 'test'
- getTag(obj2) // => 'Object'
+const obj2 = {}
+obj2[Symbol.toStringTag] = 'test'
+getTag(obj2) // => 'Object'
+```
 
-> 定义于 [packages/validator/src/getTag.ts:30](https://github.com/extend-js/extend/blob/4306f22/packages/validator/src/getTag.ts#L30)
+> 定义于 [packages/validator/src/getTag.ts:34](https://github.com/extend-js/extend/blob/d1b6cc2/packages/validator/src/getTag.ts#L34)
 
 ___
 
@@ -65,21 +75,31 @@ ___
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
+<h3>添加版本</h3>
+
+0.0.1
+
+<h3>作者</h3>
+
+roshin
+
 <h3>返回:</h3>
 
 `(value is T)`: 如果参数是 Function，返回 true，否则返回 false
 
 <h3>示例</h3>
 
- isFunction(class Any{}) // => true
- isFunction(() => {}) // => true
- isFunction(async () => {}) // => true
- isFunction(function * Any() {}) // => true
- isFunction(Math.round) // => true
- isFunction(/abc/) // => false
- isFunction(null) // => false
+``` js
+isFunction(class Any{}) // => true
+isFunction(() => {}) // => true
+isFunction(async () => {}) // => true
+isFunction(function * Any() {}) // => true
+isFunction(Math.round) // => true
+isFunction(/abc/) // => false
+isFunction(null) // => false
+```
 
-> 定义于 [packages/validator/src/isFunction.ts:17](https://github.com/extend-js/extend/blob/4306f22/packages/validator/src/isFunction.ts#L17)
+> 定义于 [packages/validator/src/isFunction.ts:21](https://github.com/extend-js/extend/blob/d1b6cc2/packages/validator/src/isFunction.ts#L21)
 
 ___
 
@@ -88,11 +108,12 @@ ___
 > `Const`**isNative**(`value`: any): boolean
 
 检测参数是否是内置函数
-注意：
-	这个方法在 core-js 包的环境下探测内置函数不可靠，因为 core-js 绕过了这类检测方法。
-	尽管有多个请求，但是 core-js 维护者很清楚地声明：任何试图修复探测方法都会被阻止。
-	因此，我们别无选择只能抛出错误。
- 不幸的是，这样还是会影响那些依赖于 core-js 的包，例如 babel-polyfil
+::: warning 注意
+这个方法在 core-js 包的环境下探测内置函数不可靠，因为 core-js 绕过了这类检测方法。
+尽管有多个请求，但是 core-js 维护者很清楚地声明：任何试图修复探测方法都会被阻止。
+因此，我们别无选择只能抛出错误。
+不幸的是，这样还是会影响那些依赖于 core-js 的包，例如 babel-polyfil
+:::
 
 <h3>参数:</h3>
 
@@ -100,16 +121,30 @@ ___
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
+<h3>添加版本</h3>
+
+0.0.1
+
+<h3>作者</h3>
+
+roshin
+
+<h3>throws</h3>
+
+{ string } This method is not supported with core-js. Try https://github.com/es-shims.
+
 <h3>返回:</h3>
 
 `(boolean)`: 如果参数是内置函数，返回 true,否则返回 false
 
 <h3>示例</h3>
 
-	isNative(Array.prototype.push) // => true
-	isNative(_) // => false
+``` js
+isNative(Array.prototype.push) // => true
+isNative(_) // => false
+```
 
-> 定义于 [packages/validator/src/isNative.ts:16](https://github.com/extend-js/extend/blob/4306f22/packages/validator/src/isNative.ts#L16)
+> 定义于 [packages/validator/src/isNative.ts:22](https://github.com/extend-js/extend/blob/d1b6cc2/packages/validator/src/isNative.ts#L22)
 
 ___
 
@@ -125,17 +160,27 @@ ___
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
+<h3>添加版本</h3>
+
+0.0.1
+
+<h3>作者</h3>
+
+roshin
+
 <h3>返回:</h3>
 
 `(value is null \| undefined)`: 如果参数是 null 或者 undefined 返回 true，否则返回 false
 
 <h3>示例</h3>
 
- isNil(null) // => true
- isNil(void 0) // => true
- isNil(NaN) // => false
+``` js
+isNil(null) // => true
+isNil(void 0) // => true
+isNil(NaN) // => false
+```
 
-> 定义于 [packages/validator/src/isNil.ts:10](https://github.com/extend-js/extend/blob/4306f22/packages/validator/src/isNil.ts#L10)
+> 定义于 [packages/validator/src/isNil.ts:14](https://github.com/extend-js/extend/blob/d1b6cc2/packages/validator/src/isNil.ts#L14)
 
 ___
 
@@ -151,20 +196,30 @@ ___
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
+<h3>添加版本</h3>
+
+0.0.1
+
+<h3>作者</h3>
+
+roshin
+
 <h3>返回:</h3>
 
 `(value is number)`: 如果参数是数字，返回 true，否则返回 false
 
 <h3>示例</h3>
 
- isNumber(3); // => true
- isNumber(Number.MIN_VALUE); // => true
- isNumber(Infinity); // => true
- isNumber(NaN); // => true
- isNumber(new Number(2)); // => true
- isNumber('3'); // => false
+``` js
+isNumber(3); // => true
+isNumber(Number.MIN_VALUE); // => true
+isNumber(Infinity); // => true
+isNumber(NaN); // => true
+isNumber(new Number(2)); // => true
+isNumber('3'); // => false
+```
 
-> 定义于 [packages/validator/src/isNumber.ts:16](https://github.com/extend-js/extend/blob/4306f22/packages/validator/src/isNumber.ts#L16)
+> 定义于 [packages/validator/src/isNumber.ts:20](https://github.com/extend-js/extend/blob/d1b6cc2/packages/validator/src/isNumber.ts#L20)
 
 ___
 
@@ -186,18 +241,28 @@ ___
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
+<h3>添加版本</h3>
+
+0.0.1
+
+<h3>作者</h3>
+
+roshin
+
 <h3>返回:</h3>
 
 `(value is T)`: 如果参数属于 `Object`，返回 true，否则返回 false
 
 <h3>示例</h3>
 
-	isObject({}) // => true
-	isObject([1, 2, 3]) // => true
-	isObject(function fn() {}) // => true
-	isObject(null) // => false
+``` js
+isObject({}) // => true
+isObject([1, 2, 3]) // => true
+isObject(function fn() {}) // => true
+isObject(null) // => false
+```
 
-> 定义于 [packages/validator/src/isObject.ts:11](https://github.com/extend-js/extend/blob/4306f22/packages/validator/src/isObject.ts#L11)
+> 定义于 [packages/validator/src/isObject.ts:15](https://github.com/extend-js/extend/blob/d1b6cc2/packages/validator/src/isObject.ts#L15)
 
 ___
 
@@ -213,18 +278,28 @@ ___
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
+<h3>添加版本</h3>
+
+0.0.1
+
+<h3>作者</h3>
+
+roshin
+
 <h3>返回:</h3>
 
 `(boolean)`: 如果参数是宿主对象返回 true，否则返回 false
 
 <h3>示例</h3>
 
- isHostObject(window) // => ie < 9: true, other: false
- isHostObject(document) // => ie < 9: true, other: false
- isHostObject({}) // => ie < 9: false, other: false
- isHostObject(Object) // => ie < 9: false, other: false
+``` js
+isHostObject(window) // => ie < 9: true, other: false
+isHostObject(document) // => ie < 9: true, other: false
+isHostObject({}) // => ie < 9: false, other: false
+isHostObject(Object) // => ie < 9: false, other: false
+```
 
-> 定义于 [packages/validator/src/isObjectHost.ts:11](https://github.com/extend-js/extend/blob/4306f22/packages/validator/src/isObjectHost.ts#L11)
+> 定义于 [packages/validator/src/isObjectHost.ts:15](https://github.com/extend-js/extend/blob/d1b6cc2/packages/validator/src/isObjectHost.ts#L15)
 
 ___
 
@@ -246,19 +321,29 @@ ___
 ------ | ------ |
 `value` | any |
 
+<h3>添加版本</h3>
+
+0.0.1
+
+<h3>作者</h3>
+
+roshin
+
 <h3>返回:</h3>
 
 `(value is T)`: 如果参数是类对象，返回 true，否则返回 false
 
 <h3>示例</h3>
 
- isObjectLike({}) // => true
- isObjectLike([1, 2, 3]) // => true
- isObjectLike(Function) // => false
- isObjectLike(undefined) // => false
- isObjectLike(null) // => false
+``` js
+isObjectLike({}) // => true
+isObjectLike([1, 2, 3]) // => true
+isObjectLike(Function) // => false
+isObjectLike(undefined) // => false
+isObjectLike(null) // => false
+```
 
-> 定义于 [packages/validator/src/isObjectLike.ts:12](https://github.com/extend-js/extend/blob/4306f22/packages/validator/src/isObjectLike.ts#L12)
+> 定义于 [packages/validator/src/isObjectLike.ts:16](https://github.com/extend-js/extend/blob/d1b6cc2/packages/validator/src/isObjectLike.ts#L16)
 
 ___
 
@@ -274,13 +359,21 @@ ___
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
+<h3>添加版本</h3>
+
+0.0.1
+
+<h3>作者</h3>
+
+roshin
+
 <h3>返回:</h3>
 
 `(value is object)`: 如果参数是普通对象，返回 true，否则返回 false
 
 <h3>示例</h3>
 
-```js
+``` js
 class Foo{ a = 1 }
 isPlainObject(new Foo); // => false
 isPlainObject([1, 2, 3]); // => false
@@ -288,6 +381,6 @@ isPlainObject({ 'x': 0, 'y': 0 }); // => true
 isPlainObject(Object.create(null)); // => true
 ```
 
-> 定义于 [packages/validator/src/isObjectPlain.ts:19](https://github.com/extend-js/extend/blob/4306f22/packages/validator/src/isObjectPlain.ts#L19)
+> 定义于 [packages/validator/src/isObjectPlain.ts:21](https://github.com/extend-js/extend/blob/d1b6cc2/packages/validator/src/isObjectPlain.ts#L21)
 
 ___
