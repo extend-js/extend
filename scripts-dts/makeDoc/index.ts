@@ -76,8 +76,8 @@ function makeDocJson(_target: string): any {
   if (!project) process.exit(1);
 
   app.generateDocs(project, resolveRoot(`temp/docs/${_target}`));
-  // app.generateJson(project, resolveRoot(`docsJson/${_target}.file.json`));
-  // app.generateJson(project, resolveRoot(`docsJson/${_target}.modules.json`));
+  // app.generateJson(project, resolveRoot(`temp/docs/${_target}.file.json`));
+  // app.generateJson(project, resolveRoot(`temp/docs/${_target}.modules.json`));
   // return app.serializer.projectToObject(project);
   if (isRelease) {
     fse.copySync(resolveRoot(`temp/docs`), resolveRoot(`./docs/api`));

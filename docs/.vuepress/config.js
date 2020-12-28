@@ -25,7 +25,7 @@ module.exports = {
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
   markdown: {
-    lineNumbers: true,
+    lineNumbers: false,
     anchor: {
       permalink: true,
       permalinkBefore: false,

@@ -6,7 +6,6 @@ const undefinedTag: string = 'Undefined';
 /**
  * 获取参数的数据的类型
  * @since 0.0.1
- * @author roshin
  * @param { * } arg 需要获取类型的参数
  * @returns { string } 数据类型名称 Null | Undefined | Number | Object | ...
  * @example

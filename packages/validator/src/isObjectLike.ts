@@ -1,7 +1,6 @@
 /**
  * 检测参数是否为类对象(所有 不为 null 且 typeof 后的结果是 "object" 的对象)
  * @since 0.0.1
- * @author roshin
  * @param { * } arg 要检测的参数
  * @returns { boolean } 如果参数是类对象，返回 true，否则返回 false
  * @example

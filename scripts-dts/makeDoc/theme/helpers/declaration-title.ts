@@ -7,11 +7,11 @@ import { stripLineBreaks } from 'typedoc-plugin-markdown/dist/resources/helpers/
 import { type } from './type';
 
 export function declarationTitle(this: ParameterReflection | DeclarationReflection): string {
-  const md: string[] = ['> '];
+  const md: string[] = ['``` ts\n'];
   if (this.flags && !this.flags.isRest) {
-    md.push(this.flags.map((flag) => `\`${flag}\``).join(' '));
+    md.push(this.flags.map((flag) => `${flag.toLowerCase()} `).join(' '));
   }
-  md.push(`${this.flags.isRest ? '... ' : ''}**${escape(this.name)}**`);
+  md.push(`${this.flags.isRest ? '... ' : ''} ${escape(this.name)}`);
   if (this instanceof DeclarationReflection && this.typeParameters) {
     md.push(`<${this.typeParameters.map((typeParameter) => typeParameter.name).join(', ')}\\>`);
   }
@@ -21,7 +21,7 @@ export function declarationTitle(this: ParameterReflection | DeclarationReflecti
   if (this.defaultValue) {
     md.push(` = ${stripLineBreaks(escape(stripComments(this.defaultValue)))}`);
   }
-  return md.join('');
+  return md.join('') + '\n```';
 }
 
 function getType(reflection: ParameterReflection | DeclarationReflection) {

@@ -3,7 +3,6 @@ import { funcToString } from './constant';
 /**
  * 将函数转换为其源代码
  * @since 0.0.1
- * @author roshin
  * @param { * } value 要处理的函数
  * @returns { string } 返回源代码
  * @example

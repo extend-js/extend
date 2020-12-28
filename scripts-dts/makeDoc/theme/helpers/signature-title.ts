@@ -5,20 +5,20 @@ import { Type } from 'typedoc/dist/lib/models/types';
 import { type } from './type';
 
 export function signatureTitle(this: SignatureReflection): string {
-  const md: string[] = ['> '];
+  const md: string[] = ['``` ts\n'];
 
   // md.push(`${memberSymbol.call(this)} `);
 
   if (this.parent && this.parent.flags) {
-    md.push(this.parent.flags.map((flag) => `\`${flag}\``).join(' '));
+    md.push(this.parent.flags.map((flag) => `${flag.toLowerCase()} `).join(' '));
   }
 
   if (this.name === '__get' && this.parent) {
-    md.push(`get **${this.parent.name}**`);
+    md.push(`get ${this.parent.name}`);
   } else if (this.name === '__set' && this.parent) {
-    md.push(`set **${this.parent.name}**`);
+    md.push(`set ${this.parent.name}`);
   } else if (this.name !== '__call') {
-    md.push(`**${this.name}**`);
+    md.push(`${this.name}: `);
   }
 
   if (this.typeParameters) {
@@ -32,18 +32,18 @@ export function signatureTitle(this: SignatureReflection): string {
           if (param.flags.isRest) {
             paramsmd.push('...');
           }
-          paramsmd.push(`\`${param.name}`);
+          paramsmd.push(`${param.name}`);
           if (param.flags.isOptional || param.defaultValue) {
             paramsmd.push('?');
           }
-          paramsmd.push(`\`: ${type.call(param.type as Type)}`);
+          paramsmd.push(`: ${type.call(param.type as Type)}`);
           return paramsmd.join('');
         })
         .join(', ')
     : '';
   md.push(`(${params})`);
   if (this.type) {
-    md.push(`: ${type.call(this.type, true)}`);
+    md.push(` => ${type.call(this.type, true)}`);
   }
-  return md.join('') + '\n';
+  return md.join('') + '\n```\n';
 }

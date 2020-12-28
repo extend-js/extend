@@ -1,7 +1,6 @@
 /**
  * 检测参数是否是 IE < 9 中的宿主对象(window/document...)
  * @since 0.0.1
- * @author roshin
  * @param { * } value 要检测的参数
  * @returns { boolean } 如果参数是宿主对象返回 true，否则返回 false
  * @example

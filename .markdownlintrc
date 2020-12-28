@@ -13,6 +13,6 @@
     "punctuation": ""
   },
   "MD033": {
-    "allowed_elements": ["p", "a", "img", "div", "Bit", "h2"]
+    "allowed_elements": ["p", "a", "img", "div", "Bit", "h2", "h4", "Badge"]
   }
 }

@@ -4,8 +4,7 @@
  * 这里有个缺陷 global 是可以被冒充的 => var global = { Object: Object }
  * :::
  * @since 0.0.1
- * @author roshin
- * @constant { (NodeJS.Global & typeof globalThis) | false } freeGlobal
+ * @constant freeGlobal
  */
 export const freeGlobal: (NodeJS.Global & typeof globalThis) | false =
   typeof global === 'object' && global !== null && global.Object === Object && global;
@@ -17,8 +16,7 @@ export const freeGlobal: (NodeJS.Global & typeof globalThis) | false =
  * 可以确保代码在不同的环境下，都可以正常工作。
  * :::
  * @since 0.0.1
- * @author roshin
- * @constant { typeof globalThis | false } freeGlobalThis
+ * @constant freeGlobalThis
  */
 export const freeGlobalThis: typeof globalThis | false =
   typeof globalThis === 'object' && globalThis !== null && globalThis.Object === Object && globalThis;
@@ -30,8 +28,7 @@ export const freeGlobalThis: typeof globalThis | false =
  * 而在 worker 中，只有 self 这个顶层全局对象，是没有 window 对象的;
  * :::
  * @since 0.0.1
- * @author roshin
- * @constant { (Window & typeof globalThis) | false } freeSelf
+ * @constant freeSelf
  */
 export const freeSelf: (Window & typeof globalThis) | false =
   typeof self === 'object' && self !== null && self.Object === Object && self;
@@ -42,8 +39,7 @@ export const freeSelf: (Window & typeof globalThis) | false =
  * Node.js 原生支持 CommonJS 模块加载机制，在全局环境上会暴露 module 对象和 exports 对象
  * :::
  * @since 0.0.1
- * @author roshin
- * @constant { * } freeSelf
+ * @constant freeSelf
  */
 export const freeExports: any = typeof exports === 'object' && exports !== null && !exports['nodeType'] && exports;
 
@@ -53,8 +49,7 @@ export const freeExports: any = typeof exports === 'object' && exports !== null 
  * 先判断是否存在 exports 对象, 因为这两个在 Node.js 中肯定是同时存在的
  * :::
  * @since 0.0.1
- * @author roshin
- * @constant { NodeModule | false } freeSelf
+ * @constant freeSelf
  */
 export const freeModule: NodeModule | false =
   freeExports && typeof module === 'object' && module !== null && !module['nodeType'] && module;
@@ -65,16 +60,14 @@ export const freeModule: NodeModule | false =
  * CommonJS 规定，exports 对象必须为 module.exports 的引用。
  * :::
  * @since 0.0.1
- * @author roshin
- * @constant { boolean } moduleExports
+ * @constant moduleExports
  */
 export const moduleExports: boolean = freeModule && freeModule.exports === freeExports;
 
 /**
  * 从 Node.js 中检测可用变量 process
  * @since 0.0.1
- * @author roshin
- * @constant { NodeJS.Process | false } freeProcess
+ * @constant freeProcess
  */
 export const freeProcess: NodeJS.Process | false = moduleExports && freeGlobal && freeGlobal.process;
 
@@ -88,8 +81,7 @@ export const freeProcess: NodeJS.Process | false = moduleExports && freeGlobal &
  * 因此也可以使用 Function('return this')() 来获取顶层全局对象。
  * :::
  * @since 0.0.1
- * @author roshin
- * @constant { any } root
+ * @constant root
  */
 export const root: any =
   freeGlobalThis ||
