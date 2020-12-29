@@ -20,7 +20,7 @@ import {
 } from 'typedoc/dist/lib/models/types';
 
 import MarkdownTheme from '../theme';
-import { escape } from 'typedoc-plugin-markdown/dist/resources/helpers/escape';
+import { escape } from './escape';
 
 export function type(
   this:
@@ -146,7 +146,7 @@ function getLiteralType(model: DeclarationReflection) {
 
 export function getFunctionType(modelSignatures: SignatureReflection[]): string {
   const functions = modelSignatures.map((fn) => {
-    const typeParams = fn.typeParameters ? `<${fn.typeParameters.map((typeParameter) => typeParameter.name).join(', ')}\\>` : [];
+    const typeParams = fn.typeParameters ? `<${fn.typeParameters.map((typeParameter) => typeParameter.name).join(', ')}>` : [];
     const params = fn.parameters
       ? fn.parameters.map((param) => {
           return `${param.flags.isRest ? '...' : ''}${escape(param.name)}${param.flags.isOptional ? '?' : ''}: ${type.call(
@@ -168,7 +168,7 @@ function getReferenceType(model: ReferenceType) {
         ? [`[${escape(model.reflection.name)}](${MarkdownTheme.HANDLEBARS.helpers.relativeURL(model.reflection.url)})`]
         : [escape(model.name)];
     if (model.typeArguments && model.typeArguments.length > 0) {
-      reflection.push(`<${model.typeArguments.map((typeArgument) => `${type.call(typeArgument)}`).join(', ')}\\>`);
+      reflection.push(`<${model.typeArguments.map((typeArgument) => `${type.call(typeArgument)}`).join(', ')}>`);
     }
     return reflection.join('');
   }
@@ -181,7 +181,7 @@ function getArrayType(model: ArrayType) {
 }
 
 function getUnionType(model: UnionType) {
-  return model.types.map((unionType) => type.call(unionType)).join(' \\| ');
+  return model.types.map((unionType) => type.call(unionType)).join(' | ');
 }
 
 function getIntersectionType(model: IntersectionType) {

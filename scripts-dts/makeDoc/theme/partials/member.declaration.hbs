@@ -4,7 +4,7 @@
 
 {{#if typeParameters}}
 
-<h3>类型参数:</h3>
+<h4>类型参数:</h4>
 {{!-- ### 类型参数: --}}
 
 {{#with typeParameters}}
@@ -19,7 +19,7 @@
 
 {{#if type.declaration.children}}
 
-<h3>参数:</h3>
+<h4>参数:</h4>
 {{!-- ### 参数: --}}
 
 {{#with type.declaration.children}}
@@ -34,7 +34,7 @@
 
 {{#ifCond kindString '==' 'Object literal'}}
 
-<h3>属性:</h3>
+<h4>属性:</h4>
 {{!-- ### 属性: --}}
 
 {{#with children}}

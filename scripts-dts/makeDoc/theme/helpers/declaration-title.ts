@@ -1,7 +1,7 @@
 import { DeclarationReflection, ParameterReflection, ReflectionKind } from 'typedoc';
 import { ReflectionType } from 'typedoc/dist/lib/models';
 
-import { escape } from 'typedoc-plugin-markdown/dist/resources/helpers/escape';
+import { escape } from './escape';
 import { stripComments } from 'typedoc-plugin-markdown/dist/resources/helpers/strip-comments';
 import { stripLineBreaks } from 'typedoc-plugin-markdown/dist/resources/helpers/strip-line-breaks';
 import { type } from './type';
@@ -13,7 +13,7 @@ export function declarationTitle(this: ParameterReflection | DeclarationReflecti
   }
   md.push(`${this.flags.isRest ? '... ' : ''} ${escape(this.name)}`);
   if (this instanceof DeclarationReflection && this.typeParameters) {
-    md.push(`<${this.typeParameters.map((typeParameter) => typeParameter.name).join(', ')}\\>`);
+    md.push(`<${this.typeParameters.map((typeParameter) => typeParameter.name).join(', ')}>`);
   }
 
   md.push(`: ${this.parent && this.parent.kindOf(ReflectionKind.Enum) ? '' : getType(this)}`);

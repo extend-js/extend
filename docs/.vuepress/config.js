@@ -62,7 +62,7 @@ module.exports = {
     [
       'vuepress-plugin-code-copy',
       {
-        // selector: '.language-js',
+        selector: 'div[class*="language-"]',
         align: 'bottom',
         color: '#27b1ff',
         backgroundTransition: true,

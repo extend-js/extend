@@ -11,7 +11,7 @@ import { isMaskable, baseIsNative } from 'extends-internal';
  * @since 0.0.1
  * @param { * } value 要检测的参数
  * @returns { boolean } 如果参数是内置函数，返回 true,否则返回 false
- * @throws { string } This method is not supported with core-js. Try https://github.com/es-shims.
+ * @throws This method is not supported with core-js. Try https://github.com/es-shims.
  * @example
  * ``` js
  * isNative(Array.prototype.push) // => true

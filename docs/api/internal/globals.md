@@ -17,10 +17,6 @@ const baseGetTag: (arg: any) => string
 ------ | ------ | ------ |
 `arg` | any | 需要获取类型的参数 |
 
-<h4> 作者</h4>
-
-roshin
-
 <h4>返回:</h4>
 
 `(string)`: 数据类型名称 Null | Undefined | Number | Object | ...
@@ -51,7 +47,7 @@ obj2[Symbol.toStringTag] = 'test'
 baseGetTag(obj2) // => 'Object'
 ```
 
-> 定义于 [packages/internal/src/baseGetTag.ts:37](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/baseGetTag.ts#L37)
+> 定义于 [packages/internal/src/baseGetTag.ts:36](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/baseGetTag.ts#L36)
 
 ___
 
@@ -69,10 +65,6 @@ isNative 的基本实现没有错误的填充检查
 ------ | ------ | ------ |
 `value` | any | 要检测的值 |
 
-<h4> 作者</h4>
-
-roshin
-
 <h4>返回:</h4>
 
 `(boolean)`: 是否是内置函数
@@ -84,23 +76,19 @@ baseIsNative(Array.prototype.push); // => true
 baseIsNative(_); // => false
 ```
 
-> 定义于 [packages/internal/src/baseIsNative.ts:32](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/baseIsNative.ts#L32)
+> 定义于 [packages/internal/src/baseIsNative.ts:31](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/baseIsNative.ts#L31)
 
 ___
 
-## MAX\_SAFE\_INTEGER <Badge text="0.0.1"/>
+## MAX_SAFE_INTEGER <Badge text="0.0.1"/>
 
 ``` ts
-const  MAX\_SAFE\_INTEGER: number = Number.MAX\_SAFE\_INTEGER \|\| 9007199254740991
+const  MAX_SAFE_INTEGER: number = Number.MAX_SAFE_INTEGER || 9007199254740991
 ```
 
 Number 最大值
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 Number.MAX_SAFE_INTEGER
 
@@ -110,23 +98,19 @@ Number.MAX_SAFE_INTEGER
 MAX_SAFE_INTEGER // => 9007199254740991
 ```
 
-> 定义于 [packages/internal/src/constant.ts:21](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/constant.ts#L21)
+> 定义于 [packages/internal/src/constant.ts:19](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/constant.ts#L19)
 
 ___
 
-## MIN\_SAFE\_INTEGER <Badge text="0.0.1"/>
+## MIN_SAFE_INTEGER <Badge text="0.0.1"/>
 
 ``` ts
-const  MIN\_SAFE\_INTEGER: number = Number.MIN\_SAFE\_INTEGER \|\| -9007199254740991
+const  MIN_SAFE_INTEGER: number = Number.MIN_SAFE_INTEGER || -9007199254740991
 ```
 
 Number 最小值
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 Number.MIN_SAFE_INTEGER
 
@@ -136,27 +120,23 @@ Number.MIN_SAFE_INTEGER
 MIN_SAFE_INTEGER // => -9007199254740991
 ```
 
-> 定义于 [packages/internal/src/constant.ts:33](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/constant.ts#L33)
+> 定义于 [packages/internal/src/constant.ts:30](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/constant.ts#L30)
 
 ___
 
 ## coreJsData <Badge text="0.0.1"/>
 
 ``` ts
-const  coreJsData: any = root['\_\_core-js\_shared\_\_']
+const  coreJsData: any = root['__core-js_shared__']
 ```
 
 用于检测扩展的 core-js 填充
 
-<h4> 作者</h4>
+<h4> 常量</h4>
 
-roshin
+root['__core-js_shared__']
 
-<h4> constant</h4>
-
-coreJsData
-
-> 定义于 [packages/internal/src/constant.ts:9](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/constant.ts#L9)
+> 定义于 [packages/internal/src/constant.ts:8](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/constant.ts#L8)
 
 ___
 
@@ -168,15 +148,11 @@ const  funcProto: Function = Function.prototype
 
 Function 原型链
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 Function.prototype
 
-> 定义于 [packages/internal/src/constant.ts:90](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/constant.ts#L90)
+> 定义于 [packages/internal/src/constant.ts:81](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/constant.ts#L81)
 
 ___
 
@@ -188,15 +164,11 @@ const  funcToString: () => string = funcProto.toString
 
 Function 原型链
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 Function.prototype
 
-> 定义于 [packages/internal/src/constant.ts:98](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/constant.ts#L98)
+> 定义于 [packages/internal/src/constant.ts:88](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/constant.ts#L88)
 
 ___
 
@@ -208,11 +180,7 @@ const  getPrototypeOf: (o: any) => any = Object.getPrototypeOf
 
 返回对象的原型
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 Object.getPrototypeOf
 
@@ -223,23 +191,19 @@ nativeGetPrototypeOf(obj) === Object.prototype // => true
 nativeGetPrototypeOf([]) === Array.prototype // => true
 ```
 
-> 定义于 [packages/internal/src/constant.ts:82](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/constant.ts#L82)
+> 定义于 [packages/internal/src/constant.ts:74](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/constant.ts#L74)
 
 ___
 
 ## hasOwnProperty <Badge text="0.0.1"/>
 
 ``` ts
-const  hasOwnProperty: (v: string \| number \| symbol) => boolean = objectProto.hasOwnProperty
+const  hasOwnProperty: (v: string | number | symbol) => boolean = objectProto.hasOwnProperty
 ```
 
 基于 Object 原型链上的 hasOwnProperty 方法，检测属性值是否存在
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 Object.prototype.hasOwnProperty
 
@@ -251,7 +215,7 @@ objectHasOwnProperty.call(obj, 'a') // true
 objectHasOwnProperty.call(obj, 'toString') // false
 ```
 
-> 定义于 [packages/internal/src/constant.ts:55](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/constant.ts#L55)
+> 定义于 [packages/internal/src/constant.ts:50](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/constant.ts#L50)
 
 ___
 
@@ -263,15 +227,11 @@ const  objectProto: Object = Object.prototype
 
 Object 原型链
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 Object.prototype
 
-> 定义于 [packages/internal/src/constant.ts:41](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/constant.ts#L41)
+> 定义于 [packages/internal/src/constant.ts:37](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/constant.ts#L37)
 
 ___
 
@@ -283,14 +243,6 @@ const  objectToString: () => string = objectProto.toString
 
 基于 Object 原型链上的 toString 方法，获取对象的类型
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
-
-Object.prototype.toString
-
 <h4> 示例</h4>
 
 ``` js
@@ -299,27 +251,23 @@ objectToString.call([]) // [object Array]
 objectToString.call(function () {}) // [object Function]
 ```
 
-> 定义于 [packages/internal/src/constant.ts:69](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/constant.ts#L69)
+> 定义于 [packages/internal/src/constant.ts:62](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/constant.ts#L62)
 
 ___
 
 ## symbolToStringTag <Badge text="0.0.1"/>
 
 ``` ts
-const  symbolToStringTag: symbol \| undefined = root.Symbol ? root.Symbol.toStringTag : undefined
+const  symbolToStringTag: symbol | undefined = root.Symbol ? root.Symbol.toStringTag : undefined
 ```
 
 定义对象的自定义类型标签，通过 Object.prototype.toString.call 获取
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 Symbol.toStringTag
 
-> 定义于 [packages/internal/src/constant.ts:106](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/constant.ts#L106)
+> 定义于 [packages/internal/src/constant.ts:95](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/constant.ts#L95)
 
 ___
 
@@ -334,22 +282,18 @@ exports 对象检测
 Node.js 原生支持 CommonJS 模块加载机制，在全局环境上会暴露 module 对象和 exports 对象
 :::
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 freeSelf
 
-> 定义于 [packages/internal/src/global.ts:48](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/global.ts#L48)
+> 定义于 [packages/internal/src/global.ts:44](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/global.ts#L44)
 
 ___
 
 ## freeGlobal <Badge text="0.0.1"/>
 
 ``` ts
-const  freeGlobal: Global & *typeof* globalThis \| false = typeof global === 'object' && global !== null && global.Object === Object && global
+const  freeGlobal: Global & *typeof* globalThis | false = typeof global === 'object' && global !== null && global.Object === Object && global
 ```
 
 在 node 环境中捕获 global 变量
@@ -357,22 +301,18 @@ const  freeGlobal: Global & *typeof* globalThis \| false = typeof global === 'ob
 这里有个缺陷 global 是可以被冒充的 => var global = { Object: Object }
 :::
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 freeGlobal
 
-> 定义于 [packages/internal/src/global.ts:10](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/global.ts#L10)
+> 定义于 [packages/internal/src/global.ts:9](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/global.ts#L9)
 
 ___
 
 ## freeGlobalThis <Badge text="0.0.1"/>
 
 ``` ts
-const  freeGlobalThis: *typeof* globalThis \| false = typeof globalThis === 'object' && globalThis !== null && globalThis.Object === Object && globalThis
+const  freeGlobalThis: *typeof* globalThis | false = typeof globalThis === 'object' && globalThis !== null && globalThis.Object === Object && globalThis
 ```
 
 获取 globalThis 变量
@@ -381,22 +321,18 @@ globalThis 提供了一个标准的方式来获取不同环境下的全局 this 
 可以确保代码在不同的环境下，都可以正常工作。
 :::
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 freeGlobalThis
 
-> 定义于 [packages/internal/src/global.ts:23](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/global.ts#L23)
+> 定义于 [packages/internal/src/global.ts:21](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/global.ts#L21)
 
 ___
 
 ## freeModule <Badge text="0.0.1"/>
 
 ``` ts
-const  freeModule: NodeModule \| false = freeExports && typeof module === 'object' && module !== null && !module['nodeType'] && module
+const  freeModule: NodeModule | false = freeExports && typeof module === 'object' && module !== null && !module['nodeType'] && module
 ```
 
 module 对象检测
@@ -404,42 +340,34 @@ module 对象检测
 先判断是否存在 exports 对象, 因为这两个在 Node.js 中肯定是同时存在的
 :::
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 freeSelf
 
-> 定义于 [packages/internal/src/global.ts:59](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/global.ts#L59)
+> 定义于 [packages/internal/src/global.ts:54](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/global.ts#L54)
 
 ___
 
 ## freeProcess <Badge text="0.0.1"/>
 
 ``` ts
-const  freeProcess: Process \| false = moduleExports && freeGlobal && freeGlobal.process
+const  freeProcess: Process | false = moduleExports && freeGlobal && freeGlobal.process
 ```
 
 从 Node.js 中检测可用变量 process
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 freeProcess
 
-> 定义于 [packages/internal/src/global.ts:79](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/global.ts#L79)
+> 定义于 [packages/internal/src/global.ts:72](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/global.ts#L72)
 
 ___
 
 ## freeSelf <Badge text="0.0.1"/>
 
 ``` ts
-const  freeSelf: Window & *typeof* globalThis \| false = typeof self === 'object' && self !== null && self.Object === Object && self
+const  freeSelf: Window & *typeof* globalThis | false = typeof self === 'object' && self !== null && self.Object === Object && self
 ```
 
 获取 self 变量
@@ -448,15 +376,11 @@ self 在浏览器中大部分情况下指向的是当前 window 引用;
 而在 worker 中，只有 self 这个顶层全局对象，是没有 window 对象的;
 :::
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 freeSelf
 
-> 定义于 [packages/internal/src/global.ts:36](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/global.ts#L36)
+> 定义于 [packages/internal/src/global.ts:33](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/global.ts#L33)
 
 ___
 
@@ -471,22 +395,18 @@ const  moduleExports: boolean = freeModule && freeModule.exports === freeExports
 CommonJS 规定，exports 对象必须为 module.exports 的引用。
 :::
 
-<h4> 作者</h4>
-
-roshin
-
-<h4> constant</h4>
+<h4> 常量</h4>
 
 moduleExports
 
-> 定义于 [packages/internal/src/global.ts:71](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/global.ts#L71)
+> 定义于 [packages/internal/src/global.ts:65](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/global.ts#L65)
 
 ___
 
 ## root <Badge text="0.0.1"/>
 
 ``` ts
-const  root: any = freeGlobalThis \|\| freeGlobal \|\| freeSelf \|\| // eslint-disable-next-line @typescript-eslint/no-implied-eval Function('return this')()
+const  root: any = freeGlobalThis || freeGlobal || freeSelf || // eslint-disable-next-line @typescript-eslint/no-implied-eval Function('return this')()
 ```
 
 获取顶层全局对象
@@ -498,15 +418,11 @@ const  root: any = freeGlobalThis \|\| freeGlobal \|\| freeSelf \|\| // eslint-d
 因此也可以使用 Function('return this')() 来获取顶层全局对象。
 :::
 
-<h4> 作者</h4>
+<h4> 常量</h4>
 
-roshin
+root
 
-<h4> constant</h4>
-
-{ any } root
-
-> 定义于 [packages/internal/src/global.ts:94](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/global.ts#L94)
+> 定义于 [packages/internal/src/global.ts:86](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/global.ts#L86)
 
 ___
 
@@ -524,15 +440,11 @@ const isMaskable: (value: any) => boolean
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-<h4> 作者</h4>
-
-roshin
-
 <h4>返回:</h4>
 
 `(boolean)`: 如果参数能够被屏蔽, 返回true, 否则返回false
 
-> 定义于 [packages/internal/src/isMaskable.ts:11](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/isMaskable.ts#L11)
+> 定义于 [packages/internal/src/isMaskable.ts:10](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/isMaskable.ts#L10)
 
 ___
 
@@ -550,15 +462,11 @@ const isMasked: (value: any) => boolean
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-<h4> 作者</h4>
-
-roshin
-
 <h4>返回:</h4>
 
 `(boolean)`: 如果参数被屏蔽, 返回true, 否则返回false
 
-> 定义于 [packages/internal/src/isMasked.ts:18](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/isMasked.ts#L18)
+> 定义于 [packages/internal/src/isMasked.ts:17](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/isMasked.ts#L17)
 
 ___
 
@@ -576,10 +484,6 @@ const toSource: (value: any) => string
 ------ | ------ | ------ |
 `value` | any | 要处理的函数 |
 
-<h4> 作者</h4>
-
-roshin
-
 <h4>返回:</h4>
 
 `(string)`: 返回源代码
@@ -591,6 +495,6 @@ toSource(() => { console.log(1) }) // => "() => { console.log(1) }"
 toSource(console.log) // => "function log() { [native code] }"
 ```
 
-> 定义于 [packages/internal/src/toSource.ts:15](https://github.com/extend-js/extend/blob/be43eb3/packages/internal/src/toSource.ts#L15)
+> 定义于 [packages/internal/src/toSource.ts:14](https://github.com/extend-js/extend/blob/0c5a726/packages/internal/src/toSource.ts#L14)
 
 ___

@@ -17,10 +17,6 @@ const getTag: (value: any) => string
 ------ | ------ | ------ |
 `value` | any | 需要获取类型的参数 |
 
-<h4> 作者</h4>
-
-roshin
-
 <h4>返回:</h4>
 
 `(string)`: 数据类型名称 Null | Undefined | Number | Object | ...
@@ -51,14 +47,14 @@ obj2[Symbol.toStringTag] = 'test'
 getTag(obj2) // => 'Object'
 ```
 
-> 定义于 [packages/validator/src/getTag.ts:34](https://github.com/extend-js/extend/blob/be43eb3/packages/validator/src/getTag.ts#L34)
+> 定义于 [packages/validator/src/getTag.ts:33](https://github.com/extend-js/extend/blob/0c5a726/packages/validator/src/getTag.ts#L33)
 
 ___
 
 ## isFunction <Badge text="0.0.1"/>
 
 ``` ts
-const isFunction: <T\>(value: any) => value is T
+const isFunction: <T>(value: any) => value is T
 ```
 
 检测参数是否为函数类型
@@ -74,10 +70,6 @@ const isFunction: <T\>(value: any) => value is T
 名称 | 类型 | 描述 |
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
-
-<h4> 作者</h4>
-
-roshin
 
 <h4>返回:</h4>
 
@@ -95,7 +87,7 @@ isFunction(/abc/) // => false
 isFunction(null) // => false
 ```
 
-> 定义于 [packages/validator/src/isFunction.ts:21](https://github.com/extend-js/extend/blob/be43eb3/packages/validator/src/isFunction.ts#L21)
+> 定义于 [packages/validator/src/isFunction.ts:20](https://github.com/extend-js/extend/blob/0c5a726/packages/validator/src/isFunction.ts#L20)
 
 ___
 
@@ -119,13 +111,9 @@ const isNative: (value: any) => boolean
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-<h4> 作者</h4>
+<h4> 可能产生的错误</h4>
 
-roshin
-
-<h4> throws</h4>
-
-{ string } This method is not supported with core-js. Try https://github.com/es-shims.
+This method is not supported with core-js. Try https://github.com/es-shims.
 
 <h4>返回:</h4>
 
@@ -138,14 +126,14 @@ isNative(Array.prototype.push) // => true
 isNative(_) // => false
 ```
 
-> 定义于 [packages/validator/src/isNative.ts:22](https://github.com/extend-js/extend/blob/be43eb3/packages/validator/src/isNative.ts#L22)
+> 定义于 [packages/validator/src/isNative.ts:21](https://github.com/extend-js/extend/blob/0c5a726/packages/validator/src/isNative.ts#L21)
 
 ___
 
 ## isNil <Badge text="0.0.1"/>
 
 ``` ts
-const isNil: (value: any) => value is null \| undefined
+const isNil: (value: any) => value is null | undefined
 ```
 
 测试参数是否为 null | undefined
@@ -156,13 +144,9 @@ const isNil: (value: any) => value is null \| undefined
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-<h4> 作者</h4>
-
-roshin
-
 <h4>返回:</h4>
 
-`(value is null \| undefined)`: 如果参数是 null 或者 undefined 返回 true，否则返回 false
+`(value is null | undefined)`: 如果参数是 null 或者 undefined 返回 true，否则返回 false
 
 <h4> 示例</h4>
 
@@ -172,7 +156,7 @@ isNil(void 0) // => true
 isNil(NaN) // => false
 ```
 
-> 定义于 [packages/validator/src/isNil.ts:14](https://github.com/extend-js/extend/blob/be43eb3/packages/validator/src/isNil.ts#L14)
+> 定义于 [packages/validator/src/isNil.ts:13](https://github.com/extend-js/extend/blob/0c5a726/packages/validator/src/isNil.ts#L13)
 
 ___
 
@@ -190,10 +174,6 @@ const isNumber: (value: any) => value is number
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-<h4> 作者</h4>
-
-roshin
-
 <h4>返回:</h4>
 
 `(value is number)`: 如果参数是数字，返回 true，否则返回 false
@@ -209,14 +189,14 @@ isNumber(new Number(2)); // => true
 isNumber('3'); // => false
 ```
 
-> 定义于 [packages/validator/src/isNumber.ts:20](https://github.com/extend-js/extend/blob/be43eb3/packages/validator/src/isNumber.ts#L20)
+> 定义于 [packages/validator/src/isNumber.ts:19](https://github.com/extend-js/extend/blob/0c5a726/packages/validator/src/isNumber.ts#L19)
 
 ___
 
 ## isObject <Badge text="0.0.1"/>
 
 ``` ts
-const isObject: <T\>(value: any) => value is T
+const isObject: <T>(value: any) => value is T
 ```
 
 检测参数是否属于 `Object` (例如：arrays, functions, objects, regexes, `new Number(0)`, `new String('')`)
@@ -233,10 +213,6 @@ const isObject: <T\>(value: any) => value is T
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-<h4> 作者</h4>
-
-roshin
-
 <h4>返回:</h4>
 
 `(value is T)`: 如果参数属于 `Object`，返回 true，否则返回 false
@@ -250,7 +226,7 @@ isObject(function fn() {}) // => true
 isObject(null) // => false
 ```
 
-> 定义于 [packages/validator/src/isObject.ts:15](https://github.com/extend-js/extend/blob/be43eb3/packages/validator/src/isObject.ts#L15)
+> 定义于 [packages/validator/src/isObject.ts:14](https://github.com/extend-js/extend/blob/0c5a726/packages/validator/src/isObject.ts#L14)
 
 ___
 
@@ -268,10 +244,6 @@ const isObjectHost: (value: any) => boolean
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-<h4> 作者</h4>
-
-roshin
-
 <h4>返回:</h4>
 
 `(boolean)`: 如果参数是宿主对象返回 true，否则返回 false
@@ -285,14 +257,14 @@ isHostObject({}) // => ie < 9: false, other: false
 isHostObject(Object) // => ie < 9: false, other: false
 ```
 
-> 定义于 [packages/validator/src/isObjectHost.ts:15](https://github.com/extend-js/extend/blob/be43eb3/packages/validator/src/isObjectHost.ts#L15)
+> 定义于 [packages/validator/src/isObjectHost.ts:14](https://github.com/extend-js/extend/blob/0c5a726/packages/validator/src/isObjectHost.ts#L14)
 
 ___
 
 ## isObjectLike <Badge text="0.0.1"/>
 
 ``` ts
-const isObjectLike: <T\>(value: any) => value is T
+const isObjectLike: <T>(value: any) => value is T
 ```
 
 检测参数是否为类对象(所有 不为 null 且 typeof 后的结果是 "object" 的对象)
@@ -309,10 +281,6 @@ const isObjectLike: <T\>(value: any) => value is T
 ------ | ------ |
 `value` | any |
 
-<h4> 作者</h4>
-
-roshin
-
 <h4>返回:</h4>
 
 `(value is T)`: 如果参数是类对象，返回 true，否则返回 false
@@ -327,7 +295,7 @@ isObjectLike(undefined) // => false
 isObjectLike(null) // => false
 ```
 
-> 定义于 [packages/validator/src/isObjectLike.ts:16](https://github.com/extend-js/extend/blob/be43eb3/packages/validator/src/isObjectLike.ts#L16)
+> 定义于 [packages/validator/src/isObjectLike.ts:15](https://github.com/extend-js/extend/blob/0c5a726/packages/validator/src/isObjectLike.ts#L15)
 
 ___
 
@@ -345,10 +313,6 @@ const isObjectPlain: (value: any) => value is object
 ------ | ------ | ------ |
 `value` | any | 要检测的参数 |
 
-<h4> 作者</h4>
-
-roshin
-
 <h4>返回:</h4>
 
 `(value is object)`: 如果参数是普通对象，返回 true，否则返回 false
@@ -363,6 +327,6 @@ isPlainObject({ 'x': 0, 'y': 0 }); // => true
 isPlainObject(Object.create(null)); // => true
 ```
 
-> 定义于 [packages/validator/src/isObjectPlain.ts:21](https://github.com/extend-js/extend/blob/be43eb3/packages/validator/src/isObjectPlain.ts#L21)
+> 定义于 [packages/validator/src/isObjectPlain.ts:20](https://github.com/extend-js/extend/blob/0c5a726/packages/validator/src/isObjectPlain.ts#L20)
 
 ___

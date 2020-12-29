@@ -22,7 +22,7 @@ export function signatureTitle(this: SignatureReflection): string {
   }
 
   if (this.typeParameters) {
-    md.push(`<${this.typeParameters.map((typeParameter) => typeParameter.name).join(', ')}\\>`);
+    md.push(`<${this.typeParameters.map((typeParameter) => typeParameter.name).join(', ')}>`);
   }
 
   const params = this.parameters
