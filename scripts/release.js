@@ -105,7 +105,7 @@ async function main() {
 
 /**
  * 用户交互部分
- * @returns { object } 交互所产生的值
+ * @returns { Promise<any> } 交互所产生的值
  */
 async function prompts() {
   // 版本发行类型，请根据你的修改正确的使用版本号，语义化版本(https://semver.org/lang/zh-CN/)了解下
@@ -165,7 +165,7 @@ function updateVersions(_version) {
 /**
  * 更新包版本和依赖关系
  * @param { string } pkgRoot package.json 文件路径
- * @param { string } version 将要更新的目标版本
+ * @param { string } _version 将要更新的目标版本
  */
 function updatePackage(pkgRoot, _version) {
   const pkgPath = path.resolve(pkgRoot, './package.json');
@@ -180,7 +180,7 @@ function updatePackage(pkgRoot, _version) {
  * 更新包依赖
  * @param { any } pkg package.json 文件内容
  * @param { "dependencies" | "peerDependencies" } depType "dependencies" | "peerDependencies"
- * @param { string } version 将要更新的目标版本
+ * @param { string } _version 将要更新的目标版本
  */
 function updateDeps(pkg, depType, _version) {
   const deps = pkg[depType];
@@ -196,7 +196,7 @@ function updateDeps(pkg, depType, _version) {
 /**
  * 发布包
  * @param { string } _name 包名称
- * @param { string } version 将要发布的版本
+ * @param { string } _version 将要发布的版本
  * @param { Function } runIfNotDry 运行命令函数
  */
 async function publishPackage(_name, _version, runIfNotDry) {

@@ -5,7 +5,7 @@ import { coreJsData } from './constant';
  */
 const maskSrcKey = (function () {
   const uid = /[^.]+$/.exec((coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO) || '');
-  return uid ? 'Symbol(src)_1.' + uid : '';
+  return uid ? `Symbol(src)_1.${uid}` : '';
 })();
 
 /**

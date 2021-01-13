@@ -45,5 +45,5 @@ export function signatureTitle(this: SignatureReflection): string {
   if (this.type) {
     md.push(` => ${type.call(this.type, true)}`);
   }
-  return md.join('') + '\n```\n';
+  return `${md.join('')}\n\`\`\`\n`;
 }

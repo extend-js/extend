@@ -140,7 +140,7 @@ async function buildDts(_target) {
             return fse.readFile(path.resolve(typesDir, file), 'utf-8');
           })
         );
-        await fse.writeFile(dtsPath, existing + '\n' + toAdd.join('\n'));
+        await fse.writeFile(dtsPath, `${existing}\n${toAdd.join('\n')}`);
       }
       console.log(chalk.bold(chalk.green(`提取程序已成功完成.`)));
     } else {
@@ -167,16 +167,16 @@ function checkAllSizes(_targets) {
 
 /**
  * 检查文件大小
- * @param { string } _target 文件路径
+ * @param { string } _filePath 文件路径
  */
 function checkFileSize(_filePath) {
   if (!fse.existsSync(_filePath)) return;
-  const file = fse.readFileSync(_filePath, 'utf-8');
-  const minSize = (file.length / 1024).toFixed(2) + 'kb';
+  const file = fse.readFileSync(_filePath);
+  const minSize = `${(file.length / 1024).toFixed(2)}kb`;
   const gzipped = gzipSync(file);
-  const gzippedSize = (gzipped.length / 1024).toFixed(2) + 'kb';
+  const gzippedSize = `${(gzipped.length / 1024).toFixed(2)}kb`;
   const compressed = compress(file);
-  const compressedSize = (compressed.length / 1024).toFixed(2) + 'kb';
+  const compressedSize = `${(compressed.length / 1024).toFixed(2)}kb`;
   console.log(
     `${chalk.gray(chalk.bold(path.basename(_filePath)))} min:${minSize} / gzip:${gzippedSize} / brotli:${compressedSize}`
   );

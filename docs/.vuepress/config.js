@@ -102,4 +102,4 @@ module.exports = {
         formatter: require('eslint/lib/cli-engine/formatters/codeframe')
       });
   }
-};
+}

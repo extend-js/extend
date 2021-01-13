@@ -22,9 +22,9 @@ const args: minimist.ParsedArgs = minimist(process.argv.slice(2)); // 命令行�
 const targets: string[] = args._; // 目标项目
 const select: boolean = args.select || args.s; // 选择软件包
 const allMatching: boolean = args.all || args.a; // 匹配所有符合规则的目标，否则只匹配第一次被匹配的的目标
-const isRelease: boolean = args.release || args.r; // 是否需要发布
+const dest = (...args: string[]) => resolveRoot(`temp/docs`, ...args);
 
-fse.removeSync(resolveRoot(`temp/docs`));
+fse.removeSync(dest());
 const app = new Application();
 
 run();
@@ -75,13 +75,10 @@ function makeDocJson(_target: string): any {
 
   if (!project) process.exit(1);
 
-  app.generateDocs(project, resolveRoot(`temp/docs/${_target}`));
+  app.generateDocs(project, dest(_target));
   // app.generateJson(project, resolveRoot(`temp/docs/${_target}.file.json`));
   // app.generateJson(project, resolveRoot(`temp/docs/${_target}.modules.json`));
   // return app.serializer.projectToObject(project);
-  if (isRelease) {
-    fse.copySync(resolveRoot(`temp/docs`), resolveRoot(`./docs/api`));
-  }
 }
 
 /**

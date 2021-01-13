@@ -1,10 +1,6 @@
 // 编辑器常规设置
-
 {
-  "cSpell.userWords": [], // only use words from .cspell.json
-  "cSpell.enabled": true,
   "search.followSymlinks": false, // 关闭rg.exe进程(是否在搜索中跟踪符号链接)
-  "npm.enableScriptExplorer": true, // 启用NPM脚本视图
   "typescript.updateImportsOnFileMove.enabled": "never",
   "diffEditor.ignoreTrimWhitespace": false,
 
@@ -83,8 +79,7 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
-  },
-  "javascript.format.enable": false, // JavaScript 格式化程序
+  }, // JavaScript 格式化程序
   "editor.formatOnSave": false, // 每次保存的时候自动格式化
   // 在保存时运行的代码操作类型。
   "editor.codeActionsOnSave": {
@@ -93,7 +88,7 @@
   },
 
   /* ------ 代码格式检查 eslint ------ */
-  "eslint.enable": true, // 启用eslint
+  // "eslint.enable": true, // 启用eslint
   "eslint.run": "onType", // 在save（onSave）或type（onType）上运行linter
   // eslint 配置选项
   "eslint.options": {
@@ -103,30 +98,22 @@
   },
   // 应该由ESLint验证的语言id数组
   "eslint.validate": [
-    "javascript", // 用eslint的规则检测js文件
+    "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
     "vue",
     "html"
-    // { "language": "typescript", "autoFix": true },			// 检测 typescript 文件，开启保存自动修复的功能
-    // { "language": "html", "autoFix": true },						// 检测 html 文件，开启保存自动修复的功能
-    // { "language": "vue", "autoFix": true }							// 检测 vue 文件，开启保存自动修复的功能
   ],
-
-  /* ------ 代码规范 prettier ------ */
-  // "prettier.singleQuote": true,							// 使用带引号替代双引号
-  // "prettier.semi": true,										// 去掉代码结尾的分号
-  // "prettier.arrowParens": "always",					// 箭头函数加上括号
-  "prettier.eslintIntegration": true,
   
   /* ------ i18n 插件 ------ */
   "i18n-ally.displayLanguage": "zh-CN",
   
   /* ------ javascript ------ */
   "javascript.updateImportsOnFileMove.enabled": "always", // import路径移动或者重命名时，自动更新
-  "javascript.implicitProjectConfig.checkJs": false, // 启用或禁用 JavaScript 文件的语义检查
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true, // 让函数(名)和后面的括号之间加个空格
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
   "[javascript]": {
     "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode" // 针对 [javascript] ，配置默认格式化程序
@@ -142,5 +129,7 @@
     "*.pss": "postcss",
     "*.js": "javascript"
   },
-  "js/ts.implicitProjectConfig.experimentalDecorators": true
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "typescript.suggest.completeFunctionCalls": true
 }

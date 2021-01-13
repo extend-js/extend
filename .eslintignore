@@ -5,3 +5,5 @@
 **/temp/*
 **/coverage/*
 **/scripts-js/*
+!.eslintrc.js
+!.cz-config.js

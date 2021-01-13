@@ -141,7 +141,7 @@ async function buildDts(_target: string): Promise<void> {
             return fse.readFile(path.resolve(typesDir, file), 'utf-8');
           })
         );
-        await fse.writeFile(dtsPath, existing + '\n' + toAdd.join('\n'));
+        await fse.writeFile(dtsPath, `${existing}\n${toAdd.join('\n')}`);
       }
       console.log(chalk.bold(chalk.green(`提取程序已成功完成.`)));
     } else {
@@ -173,11 +173,11 @@ function checkAllSizes(_targets: string[]): void {
 function checkFileSize(_filePath: string): void {
   if (!fse.existsSync(_filePath)) return;
   const file: Buffer = fse.readFileSync(_filePath);
-  const minSize: string = (file.length / 1024).toFixed(2) + 'kb';
+  const minSize: string = `${(file.length / 1024).toFixed(2)}kb`;
   const gzipped: Buffer = gzipSync(file);
-  const gzippedSize: string = (gzipped.length / 1024).toFixed(2) + 'kb';
+  const gzippedSize: string = `${(gzipped.length / 1024).toFixed(2)}kb`;
   const compressed: Uint8Array = compress(file);
-  const compressedSize: string = (compressed.length / 1024).toFixed(2) + 'kb';
+  const compressedSize: string = `${(compressed.length / 1024).toFixed(2)}kb`;
   console.log(
     `${chalk.gray(chalk.bold(path.basename(_filePath)))} min:${minSize} / gzip:${gzippedSize} / brotli:${compressedSize}`
   );

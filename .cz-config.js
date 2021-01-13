@@ -33,7 +33,7 @@ module.exports = {
   // },
   // 覆盖消息
   messages: {
-    type: "选择更改的类型:",
+    type: '选择更改的类型:',
     scope: '表示此次更改的范围(可选):',
     customScope: '表示此次更改的范围:', // allowCustomScopes 为 true 时启用
     subject: '写一个简短的更改描述:',
@@ -41,7 +41,7 @@ module.exports = {
     // breaking: '列出所有更改(可选):',
     breaking: '列出所有非兼容性更改(可选):',
     footer: '列出此次更改关闭的问题(可选)。例如: #31, #34:',
-    confirmCommit: '确定要继续上面的提交?',
+    confirmCommit: '确定要继续上面的提交?'
   },
   allowCustomScopes: true, // 将选项自定义选项添加到范围选择，以便您仍然可以在需要时键入范围，默认 false
   allowBreakingChanges: ['feat', 'fix'], // 您想要 breaking change 提示问题的提交类型列表，默认 'none'
@@ -52,5 +52,5 @@ module.exports = {
   BreakingPrefix: 'BREAKING CHANGE:', // 为提交消息中的 Breaking 块设置自定义前缀，默认 'BREAKING CHANGE：'
   footerPrefix: 'ISSUES CLOSED:', // 在提交消息中为 footer 块设置自定义前缀。设置为空字符串以删除前缀，默认 'ISSUES CLOSED：'
   askForBreakingChangeFirst: true, // 为 true 时,它要求将更改作为第一个问题，默认 false
-  upperCaseSubject: false, // 为 true 时,首字母大写，默认 false
+  upperCaseSubject: false // 为 true 时,首字母大写，默认 false
 };

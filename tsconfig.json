@@ -36,5 +36,5 @@
     "packages/global.d.ts",
     "packages/*/src"
   ],
-  "exclude": ["/node_modules/**", "/scripts/**", "/scripts-dts"]
+  "exclude": ["/node_modules/**"]
 }

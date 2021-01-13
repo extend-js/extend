@@ -3,6 +3,8 @@ language: node_js
 
 # 指定 nodejs 版本
 node_js:
+  - '6'
+  - '8'
   - '10'
   - '12'
   - '14'
@@ -26,10 +28,16 @@ cache:
   directories:
     - node_modules
     - $HOME/.cache/yarn
+    - ~/.npm
+    - ~/.yarn-cache
+    - travis_phantomjs
 
 # 运行的脚本命令
 script:
   - yarn test:coverage # 单元测试并收集测试覆盖信息
+
+# 阶段成功时执行
+after_success:
   - yarn codecov # 将单元测试结果上传到 codecov
 
 # 在多个操作系统上运行

@@ -3,6 +3,6 @@
     "baseUrl": ".",
     "resolveJsonModule": true
   },
-  "include": ["**/*.ts", "**/*.js", "./.eslintrc.js"],
+  "include": ["**/*.ts", "**/*.js", "./.eslintrc.js", "./.cz-config.js"],
   "exclude": []
 }

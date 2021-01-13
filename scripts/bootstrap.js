@@ -117,9 +117,9 @@ targets.forEach((target) => {
   if (!fse.existsSync(indexPath)) {
     fse.outputFileSync(
       indexPath,
-      `
+      `${`
 export default {};
-    `.trim() + '\n'
+    `.trim()}\n`
     );
   }
 
@@ -134,7 +134,7 @@ export default {};
   if (isForce || !fse.existsSync(nodeIndexPath)) {
     fse.outputFileSync(
       nodeIndexPath,
-      `
+      `${`
 'use strict';
 
 if (process.env.NODE_ENV === 'production') {
@@ -142,7 +142,7 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   module.exports = require('./dist/${name}.cjs.js');
 }
-    `.trim() + '\n'
+`.trim()}\n`
     );
   }
 

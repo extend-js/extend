@@ -9,12 +9,10 @@ const reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
 const reIsHostCtor = /^\[object .+?Constructor\]$/;
 // 用于检测是否内置函数
 const reIsNative = RegExp(
-  '^' +
-    funcToString
-      .call(hasOwnProperty)
-      .replace(reRegExpChar, '\\$&')
-      .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') +
-    '$'
+  `^${funcToString
+    .call(hasOwnProperty)
+    .replace(reRegExpChar, '\\$&')
+    .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?')}$`
 );
 
 /**

@@ -21,7 +21,7 @@ export function declarationTitle(this: ParameterReflection | DeclarationReflecti
   if (this.defaultValue) {
     md.push(` = ${stripLineBreaks(escape(stripComments(this.defaultValue)))}`);
   }
-  return md.join('') + '\n```';
+  return `${md.join('')}\n\`\`\``;
 }
 
 function getType(reflection: ParameterReflection | DeclarationReflection) {

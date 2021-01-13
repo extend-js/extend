@@ -75,8 +75,12 @@ module.exports = {
     ],
     eqeqeq: 'error', // 强制全等
     // indent: ['error', 2], // 强制缩进2字符
-    'no-var': 2, // 不要使用 var 声明变量
-    'prefer-const': 2, // 如果一个变量从不重新赋值，使用 const 声明
+    'no-var': 'error', // 不要使用 var 声明变量
+    'prefer-const': 'error', // 如果一个变量从不重新赋值，使用 const 声明
+    'prefer-template': 'warn', // 能使用模板字符串的地方，尽量使用模板字符串
+    'no-template-curly-in-string': 'error', // 防止在单引号或者双引号内出现模板字符串的引用方式，如 "hello ${word}"
+    // 'template-curly-spacing': ['error', 'always'], // 模板字符串内部间距
+    'no-useless-concat': 'error', // 禁止不必要的字符串拼接
     'no-global-assign': ['error', { exceptions: ['console'] }],
 
     /* ----- typescript ----- */

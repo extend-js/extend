@@ -18,7 +18,7 @@ export class DocsaurusFrontMatterComponent extends FrontMatterComponent {
     this._filesArr.push(templateName);
     if (page.contents) {
       page.contents = page.contents
-        .replace(/^/, this.getYamlString(this.getYamlItems(page)) + '\n\n')
+        .replace(/^/, `${this.getYamlString(this.getYamlItems(page))}\n\n`)
         .replace(/[\r\n]{3,}/g, '\n\n');
     }
   }
@@ -36,9 +36,11 @@ ${Object.entries(yamlItems)
     return this.getDefaultValues(page);
   }
 
-  getDefaultValues(page: PageEvent): { id: string; title: string } {
+  getDefaultValues(page: PageEvent): { id: string; title: string; permalink: string } {
+    console.log(page.url);
     return {
       id: this.getId(page),
+      permalink: '/note/6es',
       title: this.getTitle(page)
     };
   }

@@ -156,7 +156,7 @@ export function getFunctionType(modelSignatures: SignatureReflection[]): string 
       : [];
     const returns = type.call(fn.type as Type);
 
-    return typeParams + `(${params.join(', ')}) => ${returns}`;
+    return `${typeParams}(${params.join(', ')}) => ${returns}`;
   });
   return functions.join('');
 }

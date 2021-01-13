@@ -65,7 +65,7 @@ const targets = fse.readdirSync(targetsDir).filter((target) => {
  *  fuzzyMatchTarget([/^a/, /^b/]) // => ['a', 'b']
  *  fuzzyMatchTarget(['b', 'c']) // => ['ab', 'abc']
  */
-const fuzzyMatchTarget = (partialTargets, includeAllMatching) => {
+const fuzzyMatchTarget = (partialTargets, includeAllMatching = false) => {
   const matched = []; // 匹配列表
   partialTargets.forEach((partialTarget) => {
     for (const target of targets) {
